@@ -1,0 +1,1 @@
+//#LTLProperty: []AP(!drop && (hdr.p4calc.op == P4CALC_PLUS) ==> hdr.p4calc.res == hdr.p4calc.operand_a + hdr.p4calc.operand_b)

@@ -1,0 +1,1 @@
+//#LTLProperty: [](AP(valid(hdr.ipv4) ==> (hdr.ipv4.protocol == IP_PROTOCOLS_UDP ==> hdr.ipv4.diffserv == 46) || (hdr.ipv4.protocol == IP_PROTOCOLS_TCP ==> hdr.ipv4.diffserv == 44))

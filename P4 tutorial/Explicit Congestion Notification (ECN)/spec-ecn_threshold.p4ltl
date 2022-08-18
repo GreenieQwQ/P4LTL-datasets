@@ -1,0 +1,1 @@
+//#LTLProperty: [](!AP(drop) ==> AP(standard_metadata.enq_qdepth >= ECN_THRESHOLD && (old(hdr.ipv4.ecn) == 1 || old(hdr.ipv4.ecn) == 2) ==> hdr.ipv4.ecn == 3))

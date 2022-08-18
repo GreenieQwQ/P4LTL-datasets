@@ -1,0 +1,4 @@
+//#LTLVariables: inIP:int,outIP:int
+//#LTLProperty: AP(direction == 1 &&(hdr.ipv4.srcAddr==outIP && hdr.ipv4.dstAddr==inIP) && valid(hdr.ipv4) && valid(hdr.tcp) ==> drop) U AP(hdr.tcp.syn == 1 && !drop && direction == 0 && valid(hdr.ipv4) && valid(hdr.tcp) && (hdr.ipv4.srcAddr==inIP && hdr.ipv4.dstAddr==outIP))
+//#LTLFairness: <>AP(hdr.tcp.syn == 1 && !drop && direction == 0 && valid(hdr.ipv4) && valid(hdr.tcp) && (hdr.ipv4.srcAddr==inIP && hdr.ipv4.dstAddr==outIP))
+// U: φ U ψ if there exists i ≥ 0 such that wi |= ψ and for all 0 ≤ k < i, wk |= φ (φ must remain true until ψ becomes true)
