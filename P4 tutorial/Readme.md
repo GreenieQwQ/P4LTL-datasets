@@ -1,4 +1,10 @@
-## P4tutorial
+## P4 tutorial
+
+### Description
+
+This dataset contains P4 codes/specifications that derive from the official P4 language tutorials from [p4lang/tutorials: P4 language tutorials](https://github.com/p4lang/tutorials).
+
+### Details
 
 - L3 forwarding
   - spec: 当包不被drop，ttl自减（需要考虑ttl == 0的边界条件）
