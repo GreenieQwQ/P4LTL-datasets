@@ -1,0 +1,1 @@
+//#LTLProperty: [](AP(meta.codel.state_dropping == 0 && !(standard_metadata.deq_timedelta < SOJOURN_TARGET) && meta.codel.time_now >= meta.codel.drop_time ==> drop))
