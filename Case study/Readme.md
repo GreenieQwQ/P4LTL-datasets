@@ -11,7 +11,6 @@ This dataset contains P4 codes/specifications that describe packet properties th
     - 13.5-Connection Security-P4NIS [476]
 
   - spec：包会被均匀地分布至端口1、2、3
-
 - CoDel
   - 《A Survey on Data Plane Programming with P4: Fundamentals, Advances, and Applied Research》
   - 10.6-Active Queue Management (AQM) -CoDel[314]
@@ -30,3 +29,8 @@ This dataset contains P4 codes/specifications that describe packet properties th
       - drop状态：
         - 若此时排队的时间小于阈值，则刷新drop time，退出drop状态，这个包正常转发
         - 否则判断是否到达下一个包的最迟接受时间，若未到达则转发，否则丢弃，增加计数器，查询表项，依据drop cnt计算下一个包的最迟接收时间
+- P4xos
+  - P4xos: Consensus as a Network Service
+  - https://github.com/P4xos/P4xos
+  - spec：通过源码可知，如果前一个packet输出的msgtype为PAXOS_2B，且当前packet输出的type为PAXOS_1B，且两个数据包的hdr.paxos.inst相同：则当前数据包的hdr.paxos.vrnd应该是上一个数据包的hdr.paxos.rnd
+  - 可以认为前一数据包的结果会影响后一数据包的值
