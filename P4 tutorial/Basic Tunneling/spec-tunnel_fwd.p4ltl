@@ -1,2 +1,2 @@
-//#LTLProperty: [](AP(!drop) && AP(old(hdr.ethernet.etherType == 0x1212)) ==> AP(fwd(hdr.myTunnel.dst_id))) 
+//#LTLProperty: [](AP(!drop) && AP(old(hdr.ethernet.etherType) == 0x1212) ==> AP(fwd(hdr.myTunnel.dst_id))) 
 // note: we can't verify this for this spec needs control plane
