@@ -17,9 +17,11 @@ This dataset contains P4 codes/specifications that describe packet properties th
   - spec1:  As long as the queuing delay is shorter than the target parameter, no packets are dropped.  If the queuing delay exceeds the target by a value that is at least as large as the interval, a packet is dropped.
     - `meta.codel.state_dropping == 0 && !(standard_metadata.deq_timedelta < SOJOURN_TARGET) && meta.codel.time_now >= meta.codel.drop_time => drop`
   - spec2: This procedure is repeated until the queuing delay is under the target threshold again.
-    - 这个性质“看上去”涉及多个时间步的性质，且适合使用until进行描述——第一印象使用Property`(meta.codel.queue_id = a && meta.codel.time_now >= meta.codel.drop_next ==> drop) U (meta.codel.queue_id = a && standard_metadata.deq_timedelta < SOJOURN_TARGET)`描述，但是这个formulate的方法应该是**错误的**
-      - 因为这个spec**仅在drop state成立**，并不适用于整个trace
-    - 现在暂时没有找到一个好的方法来描述这个until的性质，spec2现在的性质是**错误描述的版本**
+    - until的spec仅在drop state成立
+    - `[]((old(meta.codel.state_dropping) == 1) ==> (meta.codel.queue_id = a && meta.codel.time_now >= meta.codel.drop_next ==> drop) U (meta.codel.queue_id = a && standard_metadata.deq_timedelta < SOJOURN_TARGET))`
+    - 感觉这个until的性质似乎比较有说服力
+      - 因为这个case是一个典型的stateful的数据平面
+      - 并且描述的功能涉及了多个时间步的性质
   - 经调研源码，**Codel的功能基本实现在数据平面 仅设置drop时长需要控制平面的参与 是一个比较典型的stateful数据平面**
     - 处理包的流程大概是这样的：
       - 首先使用寄存器记录上一个包处理的情形，在上一个包处理的时候，就已经计算好了这个包的最迟接收时间——这个接受时间是一个固定值，为`timenow + CONSTANT`（因为使用寄存器存储，天然地可以做到每个port独立计算时间）

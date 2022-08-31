@@ -1,4 +1,3 @@
 //#LTLVariable: a:int
-//#LTLProperty: AP(meta.codel.queue_id == a && meta.codel.state_dropping == 1 && meta.codel.time_now >= meta.codel.drop_next ==> drop) U AP(meta.codel.queue_id == a && standard_metadata.deq_timedelta < SOJOURN_TARGET)
+//#LTLProperty: []((old(meta.codel.state_dropping) == 1) ==> (meta.codel.queue_id = a && meta.codel.time_now >= meta.codel.drop_next ==> drop) U (meta.codel.queue_id = a && standard_metadata.deq_timedelta < SOJOURN_TARGET))
 //#LTLFairness: <>AP(meta.codel.queue_id == a && standard_metadata.deq_timedelta < SOJOURN_TARGET)
-// note: THIS PROPERTY IS NOT IDEAL AT ALL: cann't find a proper way to describe "until" in infinite stateful packet processing  
