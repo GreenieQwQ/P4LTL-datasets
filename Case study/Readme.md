@@ -10,7 +10,11 @@ This dataset contains P4 codes/specifications that describe packet properties th
   - 《A Survey on Data Plane Programming with P4: Fundamentals, Advances, and Applied Research》
     - 13.5-Connection Security-P4NIS [476]
 
-  - spec：包会被均匀地分布至端口1、2、3
+  - spec：负载均衡：包会被分布至多个不同链路（端口1、2、3）
+    - In the first line of defense, packets that belong to one traffic flow are disorderly transmitted via various links.
+      - Fairness: `[]<>(standard_metadata.ingress_port == 0 && hdr.ethernet.dstAddr != 0xfffffffffff && hdr.ethernet.srcAddr != 0x0)`——不断有符合均衡条件的包进入，下用Cond谓词简化描述
+      - Property: `<>(Cond && fwd(1)) && <>(Cond && fwd(2)) && <>(Cond && fwd(3))`
+  
 - CoDel
   - 《A Survey on Data Plane Programming with P4: Fundamentals, Advances, and Applied Research》
   - 10.6-Active Queue Management (AQM) -CoDel[314]
@@ -31,6 +35,17 @@ This dataset contains P4 codes/specifications that describe packet properties th
       - drop状态：
         - 若此时排队的时间小于阈值，则刷新drop time，退出drop状态，这个包正常转发
         - 否则判断是否到达下一个包的最迟接受时间，若未到达则转发，否则丢弃，增加计数器，查询表项，依据drop cnt计算下一个包的最迟接收时间
+- Blink——Routing and Forwarding
+  - 使用register的一个stateful实现
+  - Blink [373] detects failures **without controller interaction** by analyzing TCP signals. The core concept is that the behavior of a TCP flow is predictable when it is disrupted, i.e., the same packet is retransmitted multiple times. 
+  - When **this information** is aggregated over multiple flows, it creates a characteristic failure signal that is leveraged by data plane switches to trigger packet rerouting to another neighbor.
+    -  the same packet is retransmitted multiple times 这个info是如何表现的？
+      - 似乎是sw_sum
+    - trigger packet rerouting to another neighbor是如何表现/说明的？
+      - 似乎代码是基于`nh_avaibility_1_tmp`表现的
+    - `[](pp.tcp.isValid() && custom_metadata.use_blink == 1w1) ==>(custom_metadata.id = a && nh_avaibility_1_tmp = 0 ==> (custom_metadata.id = a && nh_avaibility_1_tmp = 0 U sum_tmp > threshold_tmp))`
+      - 注：用`nh_avaibility_1_tmp`代替了`nh_avaibility_1[a]`对reg的读写，sum同理
+      - 观察代码认为`nh_avaibility_1_tmp`为1应该代表reroute
 - P4xos
   - P4xos: Consensus as a Network Service
   - https://github.com/P4xos/P4xos

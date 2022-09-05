@@ -1,0 +1,2 @@
+//#LTLVariable: a:int
+//#LTLProperty: [](pp.tcp.isValid() && custom_metadata.use_blink == 1w1) ==>(custom_metadata.id = a && nh_avaibility_1_tmp = 0 ==> (custom_metadata.id = a && nh_avaibility_1_tmp = 0 U sum_tmp > threshold_tmp))
