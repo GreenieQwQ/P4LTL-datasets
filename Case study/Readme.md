@@ -4,20 +4,22 @@
 
 This dataset contains P4 codes/specifications that describe packet properties that involve more than one time step.
 
+- 注：验证until一定要小心，因为until包含了“事件一定会发生”的含义，所以可能下面的spec存在until和weak until的混/误用
+
 ### Details
 
 - P4NIS
   - 《A Survey on Data Plane Programming with P4: Fundamentals, Advances, and Applied Research》
-    - 13.5-Connection Security-P4NIS [476]
+    - 13.5-Network Security-Connection Security
 
   - spec：负载均衡：包会被分布至多个不同链路（端口1、2、3）
     - In the first line of defense, packets that belong to one traffic flow are disorderly transmitted via various links.
       - Fairness: `[]<>(standard_metadata.ingress_port == 0 && hdr.ethernet.dstAddr != 0xfffffffffff && hdr.ethernet.srcAddr != 0x0)`——不断有符合均衡条件的包进入，下用Cond谓词简化描述
       - Property: `<>(Cond && fwd(1)) && <>(Cond && fwd(2)) && <>(Cond && fwd(3))`
-  
 - CoDel
   - 《A Survey on Data Plane Programming with P4: Fundamentals, Advances, and Applied Research》
-  - 10.6-Active Queue Management (AQM) -CoDel[314]
+    - 10.6-Traffic Management and Congestion
+      Control-Active Queue Management (AQM) 
   - spec1:  As long as the queuing delay is shorter than the target parameter, no packets are dropped.  If the queuing delay exceeds the target by a value that is at least as large as the interval, a packet is dropped.
     - `meta.codel.state_dropping == 0 && !(standard_metadata.deq_timedelta < SOJOURN_TARGET) && meta.codel.time_now >= meta.codel.drop_time => drop`
   - spec2: This procedure is repeated until the queuing delay is under the target threshold again.
@@ -36,16 +38,30 @@ This dataset contains P4 codes/specifications that describe packet properties th
         - 若此时排队的时间小于阈值，则刷新drop time，退出drop状态，这个包正常转发
         - 否则判断是否到达下一个包的最迟接受时间，若未到达则转发，否则丢弃，增加计数器，查询表项，依据drop cnt计算下一个包的最迟接收时间
 - Blink——Routing and Forwarding
+  - 《A Survey on Data Plane Programming with P4: Fundamentals, Advances, and Applied Research》
+    - 11.5-Routing and Forwarding-Data Plane Resilience
   - 使用register的一个stateful实现
   - Blink [373] detects failures **without controller interaction** by analyzing TCP signals. The core concept is that the behavior of a TCP flow is predictable when it is disrupted, i.e., the same packet is retransmitted multiple times. 
-  - When **this information** is aggregated over multiple flows, it creates a characteristic failure signal that is leveraged by data plane switches to trigger packet rerouting to another neighbor.
-    -  the same packet is retransmitted multiple times 这个info是如何表现的？
+    - 综述的概括
+  - spec: When this information is aggregated over multiple flows, it creates a characteristic failure signal that is leveraged by data plane switches to **trigger** packet rerouting to another neighbor.
+    - 综述的概括
+    - the same packet is retransmitted multiple times 这个info是如何表现的？
       - 似乎是sw_sum
     - trigger packet rerouting to another neighbor是如何表现/说明的？
-      - 似乎代码是基于`nh_avaibility_1_tmp`表现的
+      - 似乎代码是基于`nh_avaibility_1_tmp`表现的，tmp为1表示重路由
     - `[](pp.tcp.isValid() && custom_metadata.use_blink == 1w1) ==>(custom_metadata.id = a && nh_avaibility_1_tmp = 0 ==> (custom_metadata.id = a && nh_avaibility_1_tmp = 0 U sum_tmp > threshold_tmp))`
-      - 注：用`nh_avaibility_1_tmp`代替了`nh_avaibility_1[a]`对reg的读写，sum同理
+      - 注：观察代码，使用`nh_avaibility_1_tmp`代替了`nh_avaibility_1[a]`对reg的读写，sum同理
       - 观察代码认为`nh_avaibility_1_tmp`为1应该代表reroute
+- Dfs
+  - 《A Survey on Data Plane Programming with P4: Fundamentals, Advances, and Applied Research》
+    - 11.5-Routing and Forwarding-Data Plane Resilience
+  - Sedar et al. [359] implement a fast failover mechanism **without control plane interaction** for P4 switches. The mechanism uses P4 registers or metadata fields for bit strings that indicate if a particular port is considered up or down. In a match-action table, the port bit string provides an additional match field to determine whether a particular port is up or down. Depending on the port status, default or backup actions are executed. The authors rely on a local P4 agent to populate the port bit strings.
+    - 综述的概括
+  - spec: we need to guarantee that a packet is sent to a parent node **only after** having been sent through all the other links
+    - Property: ` AP(local_metadata.is_completed == 0) U AP(local_metadata.out_port == local_metadata.pkt_par)`
+      - 除非发给parent，否则遍历完毕其他link这一过程并未complete
+    - Fairness: `[]valid(dfsTag) && <> AP(local_metadata.out_port == local_metadata.pkt_par)` 
+    - 论文《Supporting Emerging Applications With Low-Latency Failover in P4》中的原文描述
 - P4xos
   - P4xos: Consensus as a Network Service
   - https://github.com/P4xos/P4xos
