@@ -1,3 +1,0 @@
-//#LTLVariable: a:int
-//#LTLProperty: [](AP(custom_metadata.id == a && nh_avaibility_1[a] = 0) ==>  (AP(custom_metadata.id == a && custom_metadata.next_hop_port = 3*a) U AP(custom_metadata.id == a && sw_sum[a] > threshold_registers[a])))
-//#LTLFairness: []AP((valid(pp.tcp) && custom_metadata.use_blink == 1))
