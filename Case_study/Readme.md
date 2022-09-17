@@ -54,7 +54,7 @@ This dataset contains P4 codes/specifications that describe packet properties th
   - Property: `[](custom_metadata.id == a && nh_avaibility_1[a] = 0 ==>  (custom_metadata.id == a && custom_metadata.next_hop_port = 3*a U custom_metadata.id == a && sw_sum[a] > threshold_registers[a]))`
   - Fairness: `[](pp.tcp.isValid() && custom_metadata.use_blink == 1)`
 
-#### Dfs
+#### Dfs/Bfs
 
 - 《A Survey on Data Plane Programming with P4: Fundamentals, Advances, and Applied Research》
   - 11.5-Routing and Forwarding-Data Plane Resilience
@@ -66,6 +66,23 @@ This dataset contains P4 codes/specifications that describe packet properties th
   - Fairness: `[]valid(dfsTag) && <> AP(local_metadata.out_port == local_metadata.pkt_par)` 
   - 论文《Supporting Emerging Applications With Low-Latency Failover in P4》中的原文描述
   - 小疑问：是否需要去掉前面的`AP(local_metadata.is_completed == 0) ==>`
+
+#### P4sp
+
+- 《A Survey on Data Plane Programming with P4: Fundamentals, Advances, and Applied Research》
+  - 11.5-Routing and Forwarding-Data Plane Resilience
+- Lindner et al. [368] present a novel prototype for in-network source pro-
+  tection in P4. A P4-capable switch receives sensor data from a primary and secondary sensor, but forwards only the data from the primary sensor if available.
+- 《P4 In-Network Source Protection for Sensor Failover》
+  - 论文中仅有一个单步的性质描述：Data from the redundant sensor is only forwarded, if the elapsed time since the last data portion of the primary sensor exceeds a certain threshold Tt.
+- [![xSvJG4.png](https://s1.ax1x.com/2022/09/17/xSvJG4.png)](https://imgse.com/i/xSvJG4)
+  - 但是论文给出了转发行为的描述图——从图中我们可以归纳出时序性质：“如果没有到阈值包就经由副接口转发了，那么我们可以得到之前必定存在行为发生：到时间阈值后接收到的包为副sensor并被转发”
+  - spec: 
+    - Property: `!(meta.accepted == 1 && standard_metadata.ingress_port == meta.secondary && standard_metadata.ingress_global_timestamp - last_primary[0] <= meta.period && !drop) U  standard_metadata.ingress_port == meta.secondary && standard_metadata.ingress_global_timestamp - last_primary[0] > meta.period && !drop`
+    - Faireness: `[](hdr.ethernet.etherType == ETHERTYPE_PROTECT)`
+      - 注：`ETHERTYPE_PROTECT = 0xDD01`
+    - “不可能出现没有到阈值包就经由副接口转发，直到到时间阈值后接收到的包为副sensor并被转发”
+  - 观察实现，似乎源码并没有实现上述逻辑——因此若UA能够找到反例，我们就得到了一个通过P4LTL找到bug的case了
 
 #### P4xos
 
