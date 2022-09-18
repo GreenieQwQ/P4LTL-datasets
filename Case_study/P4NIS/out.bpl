@@ -1,3 +1,5 @@
+//#LTLProperty: <>(AP(standard_metadata.ingress_port == 0 && old(hdr.ethernet.dstAddr) != 0xffffffffffff && old(hdr.ipv4.dstAddr) != 0x7b7b7b7b && old(hdr.ethernet.srcAddr) != 0x0 && fwd(1))) && <>(AP(standard_metadata.ingress_port == 0 && old(hdr.ethernet.dstAddr) != 0xffffffffffff && old(hdr.ipv4.dstAddr) != 0x7b7b7b7b && old(hdr.ethernet.srcAddr) != 0x0 && fwd(2))) && <>(AP(standard_metadata.ingress_port == 0 && old(hdr.ethernet.dstAddr) != 0xffffffffffff && old(hdr.ipv4.dstAddr) != 0x7b7b7b7b && old(hdr.ethernet.srcAddr) != 0x0 && fwd(3)))
+//#LTLFairness: [](<>(AP(standard_metadata.ingress_port == 0 && old(hdr.ethernet.dstAddr) != 0xffffffffffff && old(hdr.ipv4.dstAddr) != 0x7b7b7b7b && old(hdr.ethernet.srcAddr) != 0x0)))
 type Ref;
 type error=int;
 type HeaderStack = [int]Ref;

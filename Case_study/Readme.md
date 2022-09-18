@@ -15,7 +15,7 @@ This dataset contains P4 codes/specifications that describe packet properties th
 
 - spec：负载均衡：包会被分布至多个不同链路（端口1、2、3）
   - In the first line of defense, packets that belong to one traffic flow are disorderly transmitted via various links.
-    - Fairness: `[]<>(standard_metadata.ingress_port == 0 && hdr.ethernet.dstAddr != 0xfffffffffff && hdr.ethernet.srcAddr != 0x0)`——不断有符合均衡条件的包进入，下用Cond谓词简化描述
+    - Fairness: `[]<>(standard_metadata.ingress_port == 0 && hdr.ethernet.dstAddr != 0xfffffffffff && hdr.ethernet.srcAddr != 0x0 && && hdr.ipv4.dstAddr != 0x7b7b7b7b)`——不断有符合均衡条件的包（不为特殊的以太地址+非dns request）进入，下用Cond谓词简化描述
     - Property: `<>(Cond && fwd(1)) && <>(Cond && fwd(2)) && <>(Cond && fwd(3))`
 
 #### CoDel
