@@ -1,5 +1,5 @@
-//#LTLProperty: [](AP(meta.local_metadata.is_completed == 0) ==> (AP(meta.local_metadata.is_completed == 0) U AP(meta.local_metadata.out_port == meta.local_metadata.pkt_par)))
-//#LTLFairness: [](AP(valid(hdr.dfsTag))) && <>(AP(meta.local_metadata.out_port == meta.local_metadata.pkt_par))
+//#LTLProperty: [](AP(meta.local_metadata.is_completed == 0) ==> ((AP(meta.local_metadata.is_completed == 0) U AP(meta.local_metadata.out_port == meta.local_metadata.pkt_par)) && <>(AP(meta.local_metadata.out_port == meta.local_metadata.pkt_par))))
+//#LTLFairness: [](AP(valid(hdr.dfsTag)))
 type Ref;
 type error=int;
 type HeaderStack = [int]Ref;
@@ -1034,6 +1034,7 @@ procedure {:inline 1} setValid(header:Ref);
 procedure {:inline 1} set_default_route(send_to:int)
 	modifies meta.local_metadata.out_port;
 {
+	assume(send_to != meta.local_metadata.pkt_par);
     meta.local_metadata.out_port := send_to;
 }
 

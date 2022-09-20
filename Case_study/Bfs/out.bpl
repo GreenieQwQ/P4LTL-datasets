@@ -1,3 +1,5 @@
+//#LTLProperty: [](AP(meta.local_metadata.is_completed == 0) ==> ((AP(meta.local_metadata.is_completed == 0) U AP(meta.local_metadata.out_port == meta.local_metadata.pkt_par)) && <>(AP(meta.local_metadata.out_port == meta.local_metadata.pkt_par))))
+//#LTLFairness: [](AP(valid(hdr.bfsTag)))
 type Ref;
 type error=int;
 type HeaderStack = [int]Ref;

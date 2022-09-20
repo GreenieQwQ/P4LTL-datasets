@@ -1,3 +1,5 @@
+//#LTLVariables: a:int
+//#LTLProperty: [](AP(meta.codel.state_dropping == 1) && <>(AP(meta.codel.queue_id == a && standard_metadata.deq_timedelta < 5000)) ==> AP(meta.codel.queue_id == a && meta.codel.time_now >= meta.codel.drop_next ==> drop) U AP(meta.codel.queue_id == a && standard_metadata.deq_timedelta < 5000))
 type Ref;
 type error=int;
 type HeaderStack = [int]Ref;

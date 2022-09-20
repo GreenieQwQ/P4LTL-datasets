@@ -1,4 +1,6 @@
-//#LTLProperty: [](AP(drop))
+//#LTLVariables: a:int
+//#LTLProperty: [](AP(meta.id == a && nh_avaibility_1[a] == 0) ==>  (AP(meta.id == a && meta.next_hop_port == a + a + a) U AP(meta.id == a && sw_sum_0[a] > threshold_registers_0[a])))
+//#LTLFairness: [](AP((valid(hdr.tcp) && meta.use_blink == 1)))
 
 type Ref;
 type error=int;
