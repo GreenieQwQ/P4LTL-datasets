@@ -1,5 +1,3 @@
-//#LTLProperty: AP(!(meta.accepted == 1 && standard_metadata.ingress_port == meta.secondary && standard_metadata.ingress_global_timestamp - protect_c_last_primary[0] <= meta.period && !drop)) U AP(standard_metadata.ingress_port == meta.secondary && standard_metadata.ingress_global_timestamp - protect_c_last_primary[0] > meta.period && !drop)
-//#LTLFairness: [](AP(hdr.ethernet.etherType == 0xDD01))
 type Ref;
 type error=int;
 type HeaderStack = [int]Ref;
@@ -95,7 +93,7 @@ type protect_c_port_config.action;
 const unique protect_c_port_config.action.protect_c_set_ports_0 : protect_c_port_config.action;
 var protect_c_port_config.action_run : protect_c_port_config.action;
 var protect_c_port_config.hit : bool;
-function {:inline true} bugt.bv48(left:int, right:int) : bool{left < right}
+function {:inline true} bugt.bv48(left:int, right:int) : bool{left > right}
 function {:inline true} sub.bv48(left:int, right:int) : int{(power_2_48() + (left%power_2_48()) - (right%power_2_48()))%power_2_48()}
 function {:inline true} power_2_0() : int{1}
 function {:inline true} power_2_1() : int{2}

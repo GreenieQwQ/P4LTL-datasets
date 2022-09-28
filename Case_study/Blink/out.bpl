@@ -1,7 +1,3 @@
-//#LTLVariables: a:int
-//#LTLProperty: [](AP(meta.id == a && nh_avaibility_1[a] == 0) ==>  (AP(meta.id == a && meta.next_hop_port == a + a + a) U AP(meta.id == a && sw_sum_0[a] > threshold_registers_0[a])))
-//#LTLFairness: [](AP((valid(hdr.tcp) && meta.use_blink == 1)))
-
 type Ref;
 type error=int;
 type HeaderStack = [int]Ref;
@@ -323,18 +319,18 @@ type send_0.action;
 const unique send_0.action.set_nh : send_0.action;
 var send_0.action_run : send_0.action;
 var send_0.hit : bool;
-function {:inline true} bugt.bv48(left:int, right:int) : bool{left < right}
+function {:inline true} bugt.bv48(left:int, right:int) : bool{left > right}
 function {:inline true} sub.bv48(left:int, right:int) : int{(power_2_48() + (left%power_2_48()) - (right%power_2_48()))%power_2_48()}
 function {:inline true} shr.bv48_20(num:int) : int {(num-num%power_2_20())/power_2_20()}
 function {:inline true} shr.bv48_10(num:int) : int {(num-num%power_2_10())/power_2_10()}
 function {:inline true} sub.bv16(left:int, right:int) : int{(power_2_16() + (left%power_2_16()) - (right%power_2_16()))%power_2_16()}
 function {:inline true} shl.bv16_2(num:int) : int {(num*power_2_2())%power_2_2()}
-function {:inline true} bugt.bv16(left:int, right:int) : bool{left < right}
-function {:inline true} bugt.bv19(left:int, right:int) : bool{left < right}
+function {:inline true} bugt.bv16(left:int, right:int) : bool{left > right}
+function {:inline true} bugt.bv19(left:int, right:int) : bool{left > right}
 function {:inline true} sub.bv19(left:int, right:int) : int{(power_2_19() + (left%power_2_19()) - (right%power_2_19()))%power_2_19()}
 function {:inline true} mul.bv32(left:int, right:int) : int{((left%power_2_32())*(right%power_2_32()))%power_2_32()}
 function {:inline true} add.bv32(left:int, right:int) : int{((left%power_2_32())+(right%power_2_32()))%power_2_32()}
-function {:inline true} bult.bv19(left:int, right:int) : bool{left > right}
+function {:inline true} bult.bv19(left:int, right:int) : bool{left < right}
 function {:inline true} add.bv19(left:int, right:int) : int{((left%power_2_19())+(right%power_2_19()))%power_2_19()}
 function {:inline true} add.bv4(left:int, right:int) : int{((left%power_2_4())+(right%power_2_4()))%power_2_4()}
 function {:inline true} bsge.bv4(left:int, right:int) : bool{left >= right}
@@ -343,16 +339,16 @@ function {:inline true} add.bv48(left:int, right:int) : int{((left%power_2_48())
 function {:inline true} bsge.(left:int, right:int) : bool{left >= right}
 function {:inline true} shl.bv32_6(num:int) : int {(num*power_2_6())%power_2_6()}
 function {:inline true} bsge.bv9(left:int, right:int) : bool{left >= right}
-function {:inline true} bult.bv48(left:int, right:int) : bool{left > right}
+function {:inline true} bult.bv48(left:int, right:int) : bool{left < right}
 function {:inline true} add.bv6(left:int, right:int) : int{((left%power_2_6())+(right%power_2_6()))%power_2_6()}
-function {:inline true} bult.bv32(left:int, right:int) : bool{left > right}
-function {:inline true} bugt.bv9(left:int, right:int) : bool{left < right}
+function {:inline true} bult.bv32(left:int, right:int) : bool{left < right}
+function {:inline true} bugt.bv9(left:int, right:int) : bool{left > right}
 function {:inline true} sub.bv9(left:int, right:int) : int{(power_2_9() + (left%power_2_9()) - (right%power_2_9()))%power_2_9()}
-function {:inline true} bult.bv9(left:int, right:int) : bool{left > right}
-function {:inline true} bugt.bv32(left:int, right:int) : bool{left < right}
-function {:inline true} bugt.bv6(left:int, right:int) : bool{left < right}
+function {:inline true} bult.bv9(left:int, right:int) : bool{left < right}
+function {:inline true} bugt.bv32(left:int, right:int) : bool{left > right}
+function {:inline true} bugt.bv6(left:int, right:int) : bool{left > right}
 function {:inline true} add.bv2(left:int, right:int) : int{((left%power_2_2())+(right%power_2_2()))%power_2_2()}
-function {:inline true} bult.bv6(left:int, right:int) : bool{left > right}
+function {:inline true} bult.bv6(left:int, right:int) : bool{left < right}
 function {:inline true} shr.bv6_1(num:int) : int {(num-num%power_2_1())/power_2_1()}
 function {:inline true} power_2_0() : int{1}
 function {:inline true} power_2_1() : int{2}

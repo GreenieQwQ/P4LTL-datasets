@@ -647,7 +647,8 @@ procedure {:inline 1} _set_next_port_0()
 	modifies meta.local_metadata.out_port, meta.local_metadata.pkt_curr;
 {
     meta.local_metadata.pkt_curr := add.bv8(meta.local_metadata.pkt_curr, 1);
-    meta.local_metadata.out_port := meta.local_metadata.pkt_curr;
+    assume(meta.local_metadata.pkt_curr != 0);
+	meta.local_metadata.out_port := meta.local_metadata.pkt_curr;
 }
 
 // Action _set_parent_0
@@ -1032,7 +1033,7 @@ procedure {:inline 1} setValid(header:Ref);
 procedure {:inline 1} set_default_route(send_to:int)
 	modifies meta.local_metadata.out_port;
 {
-	// assume(send_to != meta.local_metadata.pkt_par);
+	assume(send_to != meta.local_metadata.pkt_par);
     meta.local_metadata.out_port := send_to;
 }
 
@@ -1042,6 +1043,7 @@ procedure {:inline 1} set_dfs_tags()
 {
     meta.local_metadata.pkt_start := 1;
     hdr.ff_tags.dfs_start := meta.local_metadata.pkt_start;
+	assume(1 != meta.local_metadata.pkt_par);
     meta.local_metadata.out_port := 1;
 }
 

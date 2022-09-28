@@ -1,5 +1,3 @@
-//#LTLVariables: a:int
-//#LTLProperty: [](AP(meta.codel.state_dropping == 1) && <>(AP(meta.codel.queue_id == a && standard_metadata.deq_timedelta < 5000)) ==> AP(meta.codel.queue_id == a && meta.codel.time_now >= meta.codel.drop_next ==> drop) U AP(meta.codel.queue_id == a && standard_metadata.deq_timedelta < 5000))
 type Ref;
 type error=int;
 type HeaderStack = [int]Ref;
@@ -174,12 +172,12 @@ type c_codel_0_t_codel_control_law.action;
 const unique c_codel_0_t_codel_control_law.action.c_codel_0_a_codel_control_law_0 : c_codel_0_t_codel_control_law.action;
 var c_codel_0_t_codel_control_law.action_run : c_codel_0_t_codel_control_law.action;
 var c_codel_0_t_codel_control_law.hit : bool;
-function {:inline true} bult.bv32(left:int, right:int) : bool{left > right}
+function {:inline true} bult.bv32(left:int, right:int) : bool{left < right}
 function {:inline true} bsge.bv48(left:int, right:int) : bool{left >= right}
 function {:inline true} add.bv32(left:int, right:int) : int{((left%power_2_32())+(right%power_2_32()))%power_2_32()}
-function {:inline true} bugt.bv32(left:int, right:int) : bool{left < right}
-function {:inline true} bult.bv48(left:int, right:int) : bool{left > right}
-function {:inline true} bugt.bv16(left:int, right:int) : bool{left < right}
+function {:inline true} bugt.bv32(left:int, right:int) : bool{left > right}
+function {:inline true} bult.bv48(left:int, right:int) : bool{left < right}
+function {:inline true} bugt.bv16(left:int, right:int) : bool{left > right}
 function {:inline true} add.bv16(left:int, right:int) : int{((left%power_2_16())+(right%power_2_16()))%power_2_16()}
 
 // Table forwarding_0 Actionlist Declaration
