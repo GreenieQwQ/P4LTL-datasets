@@ -1,0 +1,1 @@
+//#LTLProperty: [](AP(standard_metadata.ingress_port == 1 && meta.codel.state_dropping == 0 && !(standard_metadata.deq_timedelta < 5000) && meta.codel.time_now >= meta.codel.drop_time ==> drop))

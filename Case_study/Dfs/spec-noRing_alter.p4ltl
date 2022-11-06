@@ -1,2 +1,0 @@
-//#LTLProperty: [](AP(meta.local_metadata.out_port == meta.local_metadata.pkt_par ==> meta.local_metadata.is_completed == 1 && meta.local_metadata.is_completed == 1 ==> meta.local_metadata.out_port == meta.local_metadata.pkt_par))
-//#LTLFairness: [](AP(valid(hdr.dfsTag)))

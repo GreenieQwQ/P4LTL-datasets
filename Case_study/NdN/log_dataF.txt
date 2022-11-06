@@ -1,0 +1,146 @@
+nohup: ignoring input
+[P4->Boogie]:
+hdr.big_content
+hdr.big_name
+hdr.big_tlv0
+hdr.components.next
+hdr.ethernet
+hdr.huge_content
+hdr.huge_name
+hdr.huge_tlv0
+hdr.isha256
+hdr.lifetime
+hdr.medium_content
+hdr.medium_name
+hdr.medium_ndnlp
+hdr.medium_tlv0
+hdr.metainfo
+hdr.nonce
+hdr.signature_info
+hdr.signature_value
+hdr.small_content
+hdr.small_name
+hdr.small_ndnlp
+hdr.small_tlv0
+name: pit_r
+hdr.components.0.valid
+hdr.components.1.valid
+hdr.components.2.valid
+hdr.components.3.valid
+hdr.components.4.valid
+meta.name_metadata.components
+meta.comp_metadata.c1
+meta.comp_metadata.c2
+meta.comp_metadata.c3
+meta.comp_metadata.c4
+meta.name_metadata.name_hash
+meta.flow_metadata.packetType
+meta.flow_metadata.isInPIT
+meta.flow_metadata.hasFIBentry
+name: main
+backend cpu time 0.046966 s
+program cpu time 0.721176 s
+[Boogie->P4LTL + Boogie]:
+[Boogie->Verified Result]:
+This is Ultimate 0.2.2-P4LTL-74c62a6-m
+[2022-10-22 03:45:26,669 INFO  L177        SettingsManager]: Resetting all preferences to default values...
+[2022-10-22 03:45:26,671 INFO  L181        SettingsManager]: Resetting UltimateCore preferences to default values
+[2022-10-22 03:45:26,698 INFO  L184        SettingsManager]: Ultimate Commandline Interface provides no preferences, ignoring...
+[2022-10-22 03:45:26,698 INFO  L181        SettingsManager]: Resetting Boogie Preprocessor preferences to default values
+[2022-10-22 03:45:26,699 INFO  L181        SettingsManager]: Resetting Boogie Procedure Inliner preferences to default values
+[2022-10-22 03:45:26,700 INFO  L181        SettingsManager]: Resetting Abstract Interpretation preferences to default values
+[2022-10-22 03:45:26,701 INFO  L181        SettingsManager]: Resetting LassoRanker preferences to default values
+[2022-10-22 03:45:26,702 INFO  L181        SettingsManager]: Resetting Reaching Definitions preferences to default values
+[2022-10-22 03:45:26,702 INFO  L181        SettingsManager]: Resetting SyntaxChecker preferences to default values
+[2022-10-22 03:45:26,703 INFO  L181        SettingsManager]: Resetting Sifa preferences to default values
+[2022-10-22 03:45:26,703 INFO  L184        SettingsManager]: Büchi Program Product provides no preferences, ignoring...
+[2022-10-22 03:45:26,703 INFO  L181        SettingsManager]: Resetting LTL2Aut preferences to default values
+[2022-10-22 03:45:26,704 INFO  L181        SettingsManager]: Resetting PEA to Boogie preferences to default values
+[2022-10-22 03:45:26,704 INFO  L181        SettingsManager]: Resetting BlockEncodingV2 preferences to default values
+[2022-10-22 03:45:26,714 INFO  L181        SettingsManager]: Resetting ChcToBoogie preferences to default values
+[2022-10-22 03:45:26,715 INFO  L181        SettingsManager]: Resetting AutomataScriptInterpreter preferences to default values
+[2022-10-22 03:45:26,715 INFO  L181        SettingsManager]: Resetting BuchiAutomizer preferences to default values
+[2022-10-22 03:45:26,716 INFO  L181        SettingsManager]: Resetting CACSL2BoogieTranslator preferences to default values
+[2022-10-22 03:45:26,718 INFO  L181        SettingsManager]: Resetting CodeCheck preferences to default values
+[2022-10-22 03:45:26,719 INFO  L181        SettingsManager]: Resetting InvariantSynthesis preferences to default values
+[2022-10-22 03:45:26,720 INFO  L181        SettingsManager]: Resetting RCFGBuilder preferences to default values
+[2022-10-22 03:45:26,720 INFO  L181        SettingsManager]: Resetting Referee preferences to default values
+[2022-10-22 03:45:26,721 INFO  L181        SettingsManager]: Resetting TraceAbstraction preferences to default values
+[2022-10-22 03:45:26,722 INFO  L184        SettingsManager]: TraceAbstractionConcurrent provides no preferences, ignoring...
+[2022-10-22 03:45:26,723 INFO  L184        SettingsManager]: TraceAbstractionWithAFAs provides no preferences, ignoring...
+[2022-10-22 03:45:26,723 INFO  L181        SettingsManager]: Resetting TreeAutomizer preferences to default values
+[2022-10-22 03:45:26,723 INFO  L181        SettingsManager]: Resetting IcfgToChc preferences to default values
+[2022-10-22 03:45:26,724 INFO  L181        SettingsManager]: Resetting IcfgTransformer preferences to default values
+[2022-10-22 03:45:26,724 INFO  L184        SettingsManager]: ReqToTest provides no preferences, ignoring...
+[2022-10-22 03:45:26,725 INFO  L181        SettingsManager]: Resetting ThufvLTL2Aut preferences to default values
+[2022-10-22 03:45:26,725 INFO  L181        SettingsManager]: Resetting ThufvSpecLang preferences to default values
+[2022-10-22 03:45:26,726 INFO  L181        SettingsManager]: Resetting Boogie Printer preferences to default values
+[2022-10-22 03:45:26,726 INFO  L181        SettingsManager]: Resetting ChcSmtPrinter preferences to default values
+[2022-10-22 03:45:26,726 INFO  L181        SettingsManager]: Resetting ReqPrinter preferences to default values
+[2022-10-22 03:45:26,727 INFO  L181        SettingsManager]: Resetting Witness Printer preferences to default values
+[2022-10-22 03:45:26,728 INFO  L184        SettingsManager]: Boogie PL CUP Parser provides no preferences, ignoring...
+[2022-10-22 03:45:26,728 INFO  L181        SettingsManager]: Resetting CDTParser preferences to default values
+[2022-10-22 03:45:26,728 INFO  L184        SettingsManager]: AutomataScriptParser provides no preferences, ignoring...
+[2022-10-22 03:45:26,728 INFO  L184        SettingsManager]: ReqParser provides no preferences, ignoring...
+[2022-10-22 03:45:26,728 INFO  L181        SettingsManager]: Resetting SmtParser preferences to default values
+[2022-10-22 03:45:26,729 INFO  L181        SettingsManager]: Resetting Witness Parser preferences to default values
+[2022-10-22 03:45:26,729 INFO  L188        SettingsManager]: Finished resetting all preferences to default values...
+[2022-10-22 03:45:26,730 INFO  L101        SettingsManager]: Beginning loading settings from /home/p4ltl/Desktop/UP4LTL-linux/config/P4LTL.epf
+[2022-10-22 03:45:26,738 INFO  L113        SettingsManager]: Loading preferences was successful
+[2022-10-22 03:45:26,738 INFO  L115        SettingsManager]: Preferences different from defaults after loading the file:
+[2022-10-22 03:45:26,739 INFO  L136        SettingsManager]: Preferences of LTL2Aut differ from their defaults:
+[2022-10-22 03:45:26,739 INFO  L138        SettingsManager]:  * Read property from file=true
+[2022-10-22 03:45:26,739 INFO  L136        SettingsManager]: Preferences of BlockEncodingV2 differ from their defaults:
+[2022-10-22 03:45:26,739 INFO  L138        SettingsManager]:  * Minimize states using LBE with the strategy=NONE
+[2022-10-22 03:45:26,740 INFO  L136        SettingsManager]: Preferences of BuchiAutomizer differ from their defaults:
+[2022-10-22 03:45:26,740 INFO  L138        SettingsManager]:  * Compute Interpolants along a Counterexample=Craig_TreeInterpolation
+[2022-10-22 03:45:26,740 INFO  L138        SettingsManager]:  * Use old map elimination=false
+[2022-10-22 03:45:26,740 INFO  L138        SettingsManager]:  * Try twofold refinement=false
+[2022-10-22 03:45:26,740 INFO  L136        SettingsManager]: Preferences of CACSL2BoogieTranslator differ from their defaults:
+[2022-10-22 03:45:26,740 INFO  L138        SettingsManager]:  * Overapproximate operations on floating types=true
+[2022-10-22 03:45:26,740 INFO  L138        SettingsManager]:  * Check division by zero=IGNORE
+[2022-10-22 03:45:26,740 INFO  L138        SettingsManager]:  * Pointer to allocated memory at dereference=IGNORE
+[2022-10-22 03:45:26,740 INFO  L138        SettingsManager]:  * If two pointers are subtracted or compared they have the same base address=IGNORE
+[2022-10-22 03:45:26,740 INFO  L138        SettingsManager]:  * Check array bounds for arrays that are off heap=IGNORE
+[2022-10-22 03:45:26,740 INFO  L138        SettingsManager]:  * Check if freed pointer was valid=false
+[2022-10-22 03:45:26,741 INFO  L138        SettingsManager]:  * Pointer base address is valid at dereference=IGNORE
+[2022-10-22 03:45:26,741 INFO  L136        SettingsManager]: Preferences of RCFGBuilder differ from their defaults:
+[2022-10-22 03:45:26,741 INFO  L138        SettingsManager]:  * Size of a code block=SingleStatement
+[2022-10-22 03:45:26,741 INFO  L138        SettingsManager]:  * SMT solver=Internal_SMTInterpol
+[2022-10-22 03:45:26,741 INFO  L138        SettingsManager]:  * Remove assume true statements=false
+[2022-10-22 03:45:26,741 INFO  L136        SettingsManager]: Preferences of TraceAbstraction differ from their defaults:
+[2022-10-22 03:45:26,741 INFO  L138        SettingsManager]:  * Compute Interpolants along a Counterexample=FPandBP
+[2022-10-22 03:45:26,741 INFO  L138        SettingsManager]:  * Trace refinement strategy=CAMEL
+[2022-10-22 03:45:26,741 INFO  L138        SettingsManager]:  * Command for external solver=z3 SMTLIB2_COMPLIANT=true -memory:2024 -smt2 -in
+[2022-10-22 03:45:26,741 INFO  L138        SettingsManager]:  * SMT solver=External_ModelsAndUnsatCoreMode
+[2022-10-22 03:45:26,742 INFO  L136        SettingsManager]: Preferences of Boogie Printer differ from their defaults:
+[2022-10-22 03:45:26,742 INFO  L138        SettingsManager]:  * Dump path:=C:\Users\Greenie\Desktop\Project\P4LTL\trunk\examples\P4LTL
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1 (file:/home/p4ltl/Desktop/UP4LTL-linux/plugins/com.sun.xml.bind_2.2.0.v201505121915.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int)
+WARNING: Please consider reporting this to the maintainers of com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[2022-10-22 03:45:26,987 INFO  L75    nceAwareModelManager]: Repository-Root is: /tmp
+[2022-10-22 03:45:27,015 INFO  L261   ainManager$Toolchain]: [Toolchain 1]: Applicable parser(s) successfully (re)initialized
+[2022-10-22 03:45:27,018 INFO  L217   ainManager$Toolchain]: [Toolchain 1]: Toolchain selected.
+[2022-10-22 03:45:27,019 INFO  L271        PluginConnector]: Initializing Boogie PL CUP Parser...
+[2022-10-22 03:45:27,022 INFO  L275        PluginConnector]: Boogie PL CUP Parser initialized
+[2022-10-22 03:45:27,023 INFO  L432   ainManager$Toolchain]: [Toolchain 1]: Parsing single file: /home/p4ltl/Desktop/UP4LTL-linux/p4ltl_boogie.bpl
+[2022-10-22 03:45:27,024 INFO  L110           BoogieParser]: Parsing: '/home/p4ltl/Desktop/UP4LTL-linux/p4ltl_boogie.bpl'
+[2022-10-22 03:45:27,085 ERROR L748                 Parser]: /home/p4ltl/Desktop/UP4LTL-linux/p4ltl_boogie.bpl:1672:67: syntax error
+[2022-10-22 03:45:27,091 INFO  L299   ainManager$Toolchain]: ####################### [Toolchain 1] #######################
+[2022-10-22 03:45:27,092 INFO  L131        ToolchainWalker]: Walking toolchain with 7 elements.
+[2022-10-22 03:45:27,092 INFO  L184        ToolchainWalker]: Toolchain execution was canceled (user or tool) before executing de.uni_freiburg.informatik.ultimate.boogie.preprocessor
+[2022-10-22 03:45:27,095 INFO  L158              Benchmark]: Toolchain (without parser) took 1.37ms. Allocated memory is still 57.7MB. Free memory was 37.8MB in the beginning and 37.6MB in the end (delta: 130.5kB). There was no memory consumed. Max. memory is 4.3GB.
+[2022-10-22 03:45:27,095 INFO  L158              Benchmark]: Boogie PL CUP Parser took 0.19ms. Allocated memory is still 34.6MB. Free memory is still 14.0MB. There was no memory consumed. Max. memory is 4.3GB.
+[2022-10-22 03:45:27,096 INFO  L339   ainManager$Toolchain]: #######################  End [Toolchain 1] #######################
+ --- Results ---
+ * Results from de.uni_freiburg.informatik.ultimate.core:
+  - StatisticsResult: Toolchain Benchmarks
+    Benchmark results are:
+ * Boogie PL CUP Parser took 0.19ms. Allocated memory is still 34.6MB. Free memory is still 14.0MB. There was no memory consumed. Max. memory is 4.3GB.
+ * Results from de.uni_freiburg.informatik.ultimate.boogie.parser:
+  - SyntaxErrorResult [Line: 1672]: Incorrect Syntax
+    () 1672:67-1672:68)
+RESULT: Ultimate could not prove your program: Incorrect Syntax
+Received shutdown request...
