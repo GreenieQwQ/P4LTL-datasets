@@ -1,4 +1,5 @@
-//#LTLProperty: ![](drop)
+//#LTLProperty: [](AP(drop))
+
 
 type Ref;
 type error=int;

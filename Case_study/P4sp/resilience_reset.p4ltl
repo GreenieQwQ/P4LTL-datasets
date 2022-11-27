@@ -1,0 +1,2 @@
+//#LTLProperty: [](AP(meta.accepted == 1 && standard_metadata.ingress_port == meta.primary) ==> X(AP(standard_metadata.ingress_port == meta.secondary && standard_metadata.ingress_global_timestamp - protect_c_last_primary[0] <= meta.period ==> meta.accepted == 0)))
+//#LTLFairness: [](AP(hdr.ethernet.etherType == 0xDD01))
