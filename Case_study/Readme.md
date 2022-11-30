@@ -1,5 +1,14 @@
 ## Temporal cases
 
+### Test
+To test all, simply run
+
+```
+  python test.py
+```
+
+Yet make sure `Check.sh` is in PATH. Default timeout for each task is 600s, you can change it in the beginning of `test.py`, you can also test some certain directory instead of all by a slight change in the end of `test.py`.
+
 ### Description
 
 This dataset contains P4 codes/specifications that describe packet properties that involve more than one time step.
