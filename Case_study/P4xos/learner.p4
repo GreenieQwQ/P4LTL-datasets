@@ -53,7 +53,7 @@ control ingress(inout headers hdr, inout metadata meta, inout standard_metadata_
     }
 
     action forward(PortId port, bit<16> learnerPort) {
-        standard_metadata.egress_spec = port;
+        standard_metadata.egress_spec = (bit<9>)port;
         hdr.udp.dstPort = learnerPort;
     }
 

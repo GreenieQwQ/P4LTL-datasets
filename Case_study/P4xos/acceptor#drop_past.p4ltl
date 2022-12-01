@@ -1,3 +1,3 @@
 //#LTLVariables: a:int
 //#LTLProperty: [](AP(hdr.paxos.inst == a && !drop ==> (hdr.paxos.rnd >= meta.paxos_metadata.round)))
-//#LTLFairness: [](AP(valid(hdr.ipv4)) && valid(hdr.paxos) )
+//#LTLFairness: [](AP(valid(hdr.ipv4) && valid(hdr.paxos)))

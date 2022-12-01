@@ -15,7 +15,7 @@ action handle_icmp_reply() {
 
 }
 
-table icmp_tbl() {
+table icmp_tbl {
     key = {hdr.icmp.icmpType : exact;}
     actions = {
         handle_icmp_request;

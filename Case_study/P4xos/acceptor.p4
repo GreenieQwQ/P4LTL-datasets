@@ -48,7 +48,7 @@ control ingress(inout headers hdr, inout metadata meta, inout standard_metadata_
     }
 
     action forward(PortId port, bit<48> mac_dst, bit<32> ip_dst, bit<16> udp_dst) {
-        standard_metadata.egress_spec = port;
+        standard_metadata.egress_spec = (bit<9>)port;
         hdr.ethernet.dstAddr = mac_dst;
         // Set MAC destinate to learners
         hdr.ethernet.dstAddr = mac_dst;

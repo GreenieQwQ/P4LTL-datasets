@@ -8,27 +8,27 @@
 #define UDP_PROTOCOL 8w0x11
 #define PAXOS_PROTOCOL 16w0x8888
 
-parser TopParser(packet_in b, out headers p, inout metadata meta, inout standard_metadata_t standard_metadata) {
+parser TopParser(packet_in packet, out headers hdr, inout metadata meta, inout standard_metadata_t standard_metadata) {
     state start {
         transition parse_ethernet;
     }
 
     state parse_ethernet {
-        b.extract(p.ethernet);
-        transition select(p.ethernet.etherType) {
+        packet.extract(hdr.ethernet);
+        transition select(hdr.ethernet.etherType) {
             ETHERTYPE_ARP : parse_arp;
             ETHERTYPE_IPV4 : parse_ipv4;
         }
     }
 
     state parse_arp {
-        b.extract(p.arp);
+        packet.extract(hdr.arp);
         transition accept;
     }
 
     state parse_ipv4 {
-        b.extract(p.ipv4);
-        transition select(p.ipv4.protocol) {
+        packet.extract(hdr.ipv4);
+        transition select(hdr.ipv4.protocol) {
             ICMP_PROTOCOL : parse_icmp;
             UDP_PROTOCOL : parse_udp;
             default : accept;
@@ -36,20 +36,20 @@ parser TopParser(packet_in b, out headers p, inout metadata meta, inout standard
     }
 
     state parse_icmp {
-        b.extract(p.icmp);
+        packet.extract(hdr.icmp);
         transition accept;
     }
 
     state parse_udp {
-        b.extract(p.udp);
-        transition select(p.udp.dstPort) {
+        packet.extract(hdr.udp);
+        transition select(hdr.udp.dstPort) {
             PAXOS_PROTOCOL : parse_paxos;
             default : accept;
         }
     }
 
     state parse_paxos {
-        b.extract(p.paxos);
+        packet.extract(hdr.paxos);
         transition accept;
     }
 }
@@ -65,42 +65,28 @@ control TopDeparser(packet_out packet, in headers hdr) {
     }
 }
 
-control verifyChecksum(in headers hdr, inout metadata meta) {
-    Checksum16() ipv4_checksum;
+control verifyChecksum(inout headers hdr, inout metadata meta) {
     apply {
-        if (hdr.ipv4.hdrChecksum == ipv4_checksum.get({
-                                        hdr.ipv4.version,
-                                        hdr.ipv4.ihl,
-                                        hdr.ipv4.diffserv,
-                                        hdr.ipv4.totalLen,
-                                        hdr.ipv4.identification,
-                                        hdr.ipv4.flags,
-                                        hdr.ipv4.fragOffset,
-                                        hdr.ipv4.ttl,
-                                        hdr.ipv4.protocol,
-                                        hdr.ipv4.srcAddr,
-                                        hdr.ipv4.dstAddr
-                                    }))
-            mark_to_drop();
     }
 }
 
 control computeChecksum(inout headers hdr, inout metadata meta) {
-    Checksum16() ipv4_checksum;
     apply {
-        hdr.ipv4.hdrChecksum = ipv4_checksum.get({
-                                        hdr.ipv4.version,
-                                        hdr.ipv4.ihl,
-                                        hdr.ipv4.diffserv,
-                                        hdr.ipv4.totalLen,
-                                        hdr.ipv4.identification,
-                                        hdr.ipv4.flags,
-                                        hdr.ipv4.fragOffset,
-                                        hdr.ipv4.ttl,
-                                        hdr.ipv4.protocol,
-                                        hdr.ipv4.srcAddr,
-                                        hdr.ipv4.dstAddr
-                                    });
+        update_checksum(
+            hdr.ipv4.isValid(),
+                { hdr.ipv4.version,
+                  hdr.ipv4.ihl,
+                  hdr.ipv4.diffserv,
+                  hdr.ipv4.totalLen,
+                  hdr.ipv4.identification,
+                  hdr.ipv4.flags,
+                  hdr.ipv4.fragOffset,
+                  hdr.ipv4.ttl,
+                  hdr.ipv4.protocol,
+                  hdr.ipv4.srcAddr,
+                  hdr.ipv4.dstAddr },
+                  hdr.ipv4.hdrChecksum,
+                  HashAlgorithm.csum16);
     }
 }
 
