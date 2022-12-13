@@ -1,0 +1,29 @@
+--- Results ---
+ * Results from de.uni_freiburg.informatik.ultimate.plugins.blockencoding:
+  - StatisticsResult: Initial Icfg
+    3297 locations, 5325 edges
+  - StatisticsResult: Encoded RCFG
+    3280 locations, 5299 edges
+ * Results from de.uni_freiburg.informatik.ultimate.core:
+  - StatisticsResult: Toolchain Benchmarks
+    Benchmark results are:
+ * Boogie PL CUP Parser took 0.13ms. Allocated memory is still 50.3MB. Free memory was 34.9MB in the beginning and 34.8MB in the end (delta: 91.4kB). Peak memory consumption was 1.0MB. Max. memory is 4.3GB.
+ * Boogie Preprocessor took 93.74ms. Allocated memory is still 50.3MB. Free memory was 30.4MB in the beginning and 18.2MB in the end (delta: 12.2MB). Peak memory consumption was 11.5MB. Max. memory is 4.3GB.
+ * ThufvSpecLang took 43.85ms. Allocated memory is still 50.3MB. Free memory was 18.2MB in the beginning and 15.6MB in the end (delta: 2.6MB). Peak memory consumption was 3.1MB. Max. memory is 4.3GB.
+ * RCFGBuilder took 781.02ms. Allocated memory was 50.3MB in the beginning and 62.9MB in the end (delta: 12.6MB). Free memory was 15.5MB in the beginning and 31.3MB in the end (delta: -15.9MB). Peak memory consumption was 10.5MB. Max. memory is 4.3GB.
+ * ThufvLTL2Aut took 68.57ms. Allocated memory is still 62.9MB. Free memory was 31.3MB in the beginning and 28.2MB in the end (delta: 3.1MB). Peak memory consumption was 3.1MB. Max. memory is 4.3GB.
+ * Büchi Program Product took 1754.64ms. Allocated memory was 62.9MB in the beginning and 192.9MB in the end (delta: 130.0MB). Free memory was 28.2MB in the beginning and 143.8MB in the end (delta: -115.6MB). Peak memory consumption was 46.6MB. Max. memory is 4.3GB.
+ * BlockEncodingV2 took 418.52ms. Allocated memory is still 192.9MB. Free memory was 143.8MB in the beginning and 124.1MB in the end (delta: 19.7MB). Peak memory consumption was 91.0MB. Max. memory is 4.3GB.
+ * BuchiAutomizer took 387830.14ms. Allocated memory was 192.9MB in the beginning and 809.5MB in the end (delta: 616.6MB). Free memory was 124.1MB in the beginning and 222.8MB in the end (delta: -98.8MB). Peak memory consumption was 517.8MB. Max. memory is 4.3GB.
+ * Results from de.uni_freiburg.informatik.ultimate.buchiprogramproduct:
+  - StatisticsResult: Initial property automaton
+    5 locations, 14 edges
+  - StatisticsResult: Initial RCFG
+    512 locations, 687 edges
+  - StatisticsResult: BuchiProgram size
+    3297 locations, 5325 edges
+ * Results from de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer:
+  - ExceptionOrErrorResult: SMTLIBException: generated interpolants did not pass sanity check
+    de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer: SMTLIBException: generated interpolants did not pass sanity check: de.uni_freiburg.informatik.ultimate.smtinterpol.interpolate.Interpolator.getInterpolants(Interpolator.java:233)
+RESULT: Ultimate could not prove your program: Toolchain returned no result.
+Received shutdown request...

@@ -1,3 +1,3 @@
 //#LTLVariables: a:int
-//#LTLProperty: []((AP(pit_r[a] == 0) ==> (AP(name_metadata.name_hash == a && meta.flow_metadata.packetType == 0x06 && drop) W AP(name_metadata.name_hash == a && flow_metadata.packetType == 0x05) )))
-//#LTLFairness: [](AP(name_metadata.components != 0))
+//#LTLProperty: []((AP(pit_r[a] == 0) ==> (AP(meta.name_metadata.name_hash == a && meta.flow_metadata.packetType == 0x06 && drop) W AP(meta.name_metadata.name_hash == a && meta.flow_metadata.packetType == 0x05) )))
+//#LTLFairness: [](AP(meta.name_metadata.components != 0))

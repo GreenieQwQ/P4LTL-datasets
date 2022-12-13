@@ -1,0 +1,3 @@
+//#LTLVariables: a:int
+//#LTLProperty: [](AP((meta.id == a) ==> (meta.next_hop_port == next_hops_port_0[a + a + a] || meta.next_hop_port == next_hops_port_0[a + a + a + 1] || meta.next_hop_port == next_hops_port_0[a + a + a + 2])))
+//#LTLFairness: [](AP((valid(hdr.tcp) && meta.use_blink == 1 && hdr.ipv4.ttl != 1)))

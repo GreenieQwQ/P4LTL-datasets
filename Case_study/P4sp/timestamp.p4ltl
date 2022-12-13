@@ -1,0 +1,3 @@
+//#LTLVariables: time:int
+//#LTLProperty: [](AP(protect_c_last_primary[0] == time && standard_metadata.ingress_port == meta.primary) ==> (AP(protect_c_last_primary[0] == time) W AP(standard_metadata.ingress_port == meta.secondary)))
+//#LTLFairness: [](AP(hdr.ethernet.etherType == 0xDD01))
