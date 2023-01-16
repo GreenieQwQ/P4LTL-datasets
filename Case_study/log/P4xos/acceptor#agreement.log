@@ -1,0 +1,1712 @@
+Total verification running time: 00:00:03
+Result: Proved
+
+[P4 + P4LTL->Boogie]:
+P4xos/acceptor.p4(16): [--Wwarn=deprecated] warning: mark_to_drop: Using deprecated feature mark_to_drop. Please use mark_to_drop(standard_metadata) instead.
+        mark_to_drop();
+        ^^^^^^^^^^^^
+/home/p4ltl/Desktop/P4B-Translator/build/p4include/v1model.p4(416)
+extern void mark_to_drop();
+            ^^^^^^^^^^^^
+P4xos/acceptor.p4(12): [--Wwarn=unused] warning: learner_mac_address: unused instance
+    register<bit<48>>(1) learner_mac_address;
+                         ^^^^^^^^^^^^^^^^^^^
+P4xos/acceptor.p4(13): [--Wwarn=unused] warning: learner_address: unused instance
+    register<bit<32>>(1) learner_address;
+                         ^^^^^^^^^^^^^^^
+P4LTL parsing result: ([]((AP((((hdr.paxos.inst == a) && (hdr.paxos.msgtype == 3)) && (hdr.paxos.paxosval == b))) ==> (([](AP((((hdr.paxos.msgtype == 1) && (hdr.paxos.inst == a)) ==> (hdr.paxos.paxosval == b))))) || (AP((((hdr.paxos.msgtype == 1) && (hdr.paxos.inst == a)) ==> (hdr.paxos.paxosval == b))) U AP((hdr.paxos.msgtype == 3)))))))
+
+P4LTL parsing result: ([](AP((valid(hdr.ipv4) && valid(hdr.paxos)))))
+
+ERROR: hdr.paxos.paxosval == _p4ltl_free_b is not legal.
+//#LTLProperty:
+ ([]((AP((((_p4ltl_2 == true) && (_p4ltl_0 == true)) && (_p4ltl_1 == true))) ==> (([](AP((((_p4ltl_3 == true) && (_p4ltl_2 == true)) ==> (_p4ltl_1 == true))))) || (AP((((_p4ltl_3 == true) && (_p4ltl_2 == true)) ==> (_p4ltl_1 == true))) U AP((_p4ltl_0 == true)))))))
+//#LTLFairness:
+ ([](AP((hdr.ipv4.valid == true && hdr.paxos.valid == true))))
+backend cpu time 0.066246 s
+program cpu time 0.44935 s
+
+[Boogie Line Num]
+983 /home/p4ltl/Desktop/UP4LTL-linux/p4ltl_boogie.bpl
+
+[Boogie->Verified Result]:
+This is Ultimate 0.2.2-P4LTL-348d754-m
+[2023-01-16 04:16:18,805 INFO  L177        SettingsManager]: Resetting all preferences to default values...
+[2023-01-16 04:16:18,809 INFO  L181        SettingsManager]: Resetting UltimateCore preferences to default values
+[2023-01-16 04:16:18,835 INFO  L184        SettingsManager]: Ultimate Commandline Interface provides no preferences, ignoring...
+[2023-01-16 04:16:18,835 INFO  L181        SettingsManager]: Resetting Boogie Preprocessor preferences to default values
+[2023-01-16 04:16:18,836 INFO  L181        SettingsManager]: Resetting Boogie Procedure Inliner preferences to default values
+[2023-01-16 04:16:18,837 INFO  L181        SettingsManager]: Resetting Abstract Interpretation preferences to default values
+[2023-01-16 04:16:18,839 INFO  L181        SettingsManager]: Resetting LassoRanker preferences to default values
+[2023-01-16 04:16:18,840 INFO  L181        SettingsManager]: Resetting Reaching Definitions preferences to default values
+[2023-01-16 04:16:18,840 INFO  L181        SettingsManager]: Resetting SyntaxChecker preferences to default values
+[2023-01-16 04:16:18,841 INFO  L181        SettingsManager]: Resetting Sifa preferences to default values
+[2023-01-16 04:16:18,842 INFO  L184        SettingsManager]: Büchi Program Product provides no preferences, ignoring...
+[2023-01-16 04:16:18,842 INFO  L181        SettingsManager]: Resetting LTL2Aut preferences to default values
+[2023-01-16 04:16:18,843 INFO  L181        SettingsManager]: Resetting PEA to Boogie preferences to default values
+[2023-01-16 04:16:18,844 INFO  L181        SettingsManager]: Resetting BlockEncodingV2 preferences to default values
+[2023-01-16 04:16:18,844 INFO  L181        SettingsManager]: Resetting ChcToBoogie preferences to default values
+[2023-01-16 04:16:18,845 INFO  L181        SettingsManager]: Resetting AutomataScriptInterpreter preferences to default values
+[2023-01-16 04:16:18,846 INFO  L181        SettingsManager]: Resetting BuchiAutomizer preferences to default values
+[2023-01-16 04:16:18,847 INFO  L181        SettingsManager]: Resetting CACSL2BoogieTranslator preferences to default values
+[2023-01-16 04:16:18,848 INFO  L181        SettingsManager]: Resetting CodeCheck preferences to default values
+[2023-01-16 04:16:18,849 INFO  L181        SettingsManager]: Resetting InvariantSynthesis preferences to default values
+[2023-01-16 04:16:18,892 INFO  L181        SettingsManager]: Resetting RCFGBuilder preferences to default values
+[2023-01-16 04:16:18,893 INFO  L181        SettingsManager]: Resetting Referee preferences to default values
+[2023-01-16 04:16:18,893 INFO  L181        SettingsManager]: Resetting TraceAbstraction preferences to default values
+[2023-01-16 04:16:18,895 INFO  L184        SettingsManager]: TraceAbstractionConcurrent provides no preferences, ignoring...
+[2023-01-16 04:16:18,895 INFO  L184        SettingsManager]: TraceAbstractionWithAFAs provides no preferences, ignoring...
+[2023-01-16 04:16:18,895 INFO  L181        SettingsManager]: Resetting TreeAutomizer preferences to default values
+[2023-01-16 04:16:18,896 INFO  L181        SettingsManager]: Resetting IcfgToChc preferences to default values
+[2023-01-16 04:16:18,896 INFO  L181        SettingsManager]: Resetting IcfgTransformer preferences to default values
+[2023-01-16 04:16:18,897 INFO  L184        SettingsManager]: ReqToTest provides no preferences, ignoring...
+[2023-01-16 04:16:18,897 INFO  L181        SettingsManager]: Resetting ThufvLTL2Aut preferences to default values
+[2023-01-16 04:16:18,897 INFO  L181        SettingsManager]: Resetting ThufvSpecLang preferences to default values
+[2023-01-16 04:16:18,898 INFO  L181        SettingsManager]: Resetting Boogie Printer preferences to default values
+[2023-01-16 04:16:18,899 INFO  L181        SettingsManager]: Resetting ChcSmtPrinter preferences to default values
+[2023-01-16 04:16:18,899 INFO  L181        SettingsManager]: Resetting ReqPrinter preferences to default values
+[2023-01-16 04:16:18,900 INFO  L181        SettingsManager]: Resetting Witness Printer preferences to default values
+[2023-01-16 04:16:18,901 INFO  L184        SettingsManager]: Boogie PL CUP Parser provides no preferences, ignoring...
+[2023-01-16 04:16:18,901 INFO  L181        SettingsManager]: Resetting CDTParser preferences to default values
+[2023-01-16 04:16:18,901 INFO  L184        SettingsManager]: AutomataScriptParser provides no preferences, ignoring...
+[2023-01-16 04:16:18,901 INFO  L184        SettingsManager]: ReqParser provides no preferences, ignoring...
+[2023-01-16 04:16:18,902 INFO  L181        SettingsManager]: Resetting SmtParser preferences to default values
+[2023-01-16 04:16:18,902 INFO  L181        SettingsManager]: Resetting Witness Parser preferences to default values
+[2023-01-16 04:16:18,903 INFO  L188        SettingsManager]: Finished resetting all preferences to default values...
+[2023-01-16 04:16:18,904 INFO  L101        SettingsManager]: Beginning loading settings from /home/p4ltl/Desktop/UP4LTL-linux/config/P4LTL.epf
+[2023-01-16 04:16:18,913 INFO  L113        SettingsManager]: Loading preferences was successful
+[2023-01-16 04:16:18,913 INFO  L115        SettingsManager]: Preferences different from defaults after loading the file:
+[2023-01-16 04:16:18,914 INFO  L136        SettingsManager]: Preferences of LTL2Aut differ from their defaults:
+[2023-01-16 04:16:18,914 INFO  L138        SettingsManager]:  * Read property from file=true
+[2023-01-16 04:16:18,914 INFO  L136        SettingsManager]: Preferences of BlockEncodingV2 differ from their defaults:
+[2023-01-16 04:16:18,915 INFO  L138        SettingsManager]:  * Minimize states using LBE with the strategy=NONE
+[2023-01-16 04:16:18,915 INFO  L136        SettingsManager]: Preferences of BuchiAutomizer differ from their defaults:
+[2023-01-16 04:16:18,915 INFO  L138        SettingsManager]:  * Compute Interpolants along a Counterexample=Craig_TreeInterpolation
+[2023-01-16 04:16:18,915 INFO  L138        SettingsManager]:  * Use old map elimination=false
+[2023-01-16 04:16:18,915 INFO  L138        SettingsManager]:  * Try twofold refinement=false
+[2023-01-16 04:16:18,915 INFO  L136        SettingsManager]: Preferences of CACSL2BoogieTranslator differ from their defaults:
+[2023-01-16 04:16:18,916 INFO  L138        SettingsManager]:  * Overapproximate operations on floating types=true
+[2023-01-16 04:16:18,916 INFO  L138        SettingsManager]:  * Check division by zero=IGNORE
+[2023-01-16 04:16:18,916 INFO  L138        SettingsManager]:  * Pointer to allocated memory at dereference=IGNORE
+[2023-01-16 04:16:18,916 INFO  L138        SettingsManager]:  * If two pointers are subtracted or compared they have the same base address=IGNORE
+[2023-01-16 04:16:18,916 INFO  L138        SettingsManager]:  * Check array bounds for arrays that are off heap=IGNORE
+[2023-01-16 04:16:18,916 INFO  L138        SettingsManager]:  * Check if freed pointer was valid=false
+[2023-01-16 04:16:18,916 INFO  L138        SettingsManager]:  * Pointer base address is valid at dereference=IGNORE
+[2023-01-16 04:16:18,916 INFO  L136        SettingsManager]: Preferences of RCFGBuilder differ from their defaults:
+[2023-01-16 04:16:18,917 INFO  L138        SettingsManager]:  * Size of a code block=SingleStatement
+[2023-01-16 04:16:18,917 INFO  L138        SettingsManager]:  * SMT solver=Internal_SMTInterpol
+[2023-01-16 04:16:18,917 INFO  L138        SettingsManager]:  * Remove assume true statements=false
+[2023-01-16 04:16:18,917 INFO  L136        SettingsManager]: Preferences of TraceAbstraction differ from their defaults:
+[2023-01-16 04:16:18,917 INFO  L138        SettingsManager]:  * Compute Interpolants along a Counterexample=FPandBP
+[2023-01-16 04:16:18,917 INFO  L138        SettingsManager]:  * Trace refinement strategy=CAMEL
+[2023-01-16 04:16:18,917 INFO  L138        SettingsManager]:  * Command for external solver=z3 SMTLIB2_COMPLIANT=true -memory:2024 -smt2 -in
+[2023-01-16 04:16:18,917 INFO  L138        SettingsManager]:  * SMT solver=External_ModelsAndUnsatCoreMode
+[2023-01-16 04:16:18,919 INFO  L136        SettingsManager]: Preferences of Boogie Printer differ from their defaults:
+[2023-01-16 04:16:18,919 INFO  L138        SettingsManager]:  * Dump path:=C:\Users\Greenie\Desktop\Project\P4LTL\trunk\examples\P4LTL
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1 (file:/home/p4ltl/Desktop/UP4LTL-linux/plugins/com.sun.xml.bind_2.2.0.v201505121915.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int)
+WARNING: Please consider reporting this to the maintainers of com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[2023-01-16 04:16:19,133 INFO  L75    nceAwareModelManager]: Repository-Root is: /tmp
+[2023-01-16 04:16:19,150 INFO  L261   ainManager$Toolchain]: [Toolchain 1]: Applicable parser(s) successfully (re)initialized
+[2023-01-16 04:16:19,152 INFO  L217   ainManager$Toolchain]: [Toolchain 1]: Toolchain selected.
+[2023-01-16 04:16:19,153 INFO  L271        PluginConnector]: Initializing Boogie PL CUP Parser...
+[2023-01-16 04:16:19,154 INFO  L275        PluginConnector]: Boogie PL CUP Parser initialized
+[2023-01-16 04:16:19,155 INFO  L432   ainManager$Toolchain]: [Toolchain 1]: Parsing single file: /home/p4ltl/Desktop/UP4LTL-linux/p4ltl_boogie.bpl
+[2023-01-16 04:16:19,155 INFO  L110           BoogieParser]: Parsing: '/home/p4ltl/Desktop/UP4LTL-linux/p4ltl_boogie.bpl'
+[2023-01-16 04:16:19,203 INFO  L299   ainManager$Toolchain]: ####################### [Toolchain 1] #######################
+[2023-01-16 04:16:19,204 INFO  L131        ToolchainWalker]: Walking toolchain with 7 elements.
+[2023-01-16 04:16:19,205 INFO  L113        PluginConnector]: ------------------------Boogie Preprocessor----------------------------
+[2023-01-16 04:16:19,205 INFO  L271        PluginConnector]: Initializing Boogie Preprocessor...
+[2023-01-16 04:16:19,206 INFO  L275        PluginConnector]: Boogie Preprocessor initialized
+[2023-01-16 04:16:19,221 INFO  L185        PluginConnector]: Executing the observer EnsureBoogieModelObserver from plugin Boogie Preprocessor for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 16.01 04:16:19" (1/1) ...
+[2023-01-16 04:16:19,222 INFO  L185        PluginConnector]: Executing the observer TypeChecker from plugin Boogie Preprocessor for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 16.01 04:16:19" (1/1) ...
+[2023-01-16 04:16:19,235 INFO  L185        PluginConnector]: Executing the observer ConstExpander from plugin Boogie Preprocessor for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 16.01 04:16:19" (1/1) ...
+[2023-01-16 04:16:19,235 INFO  L185        PluginConnector]: Executing the observer StructExpander from plugin Boogie Preprocessor for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 16.01 04:16:19" (1/1) ...
+[2023-01-16 04:16:19,250 INFO  L185        PluginConnector]: Executing the observer UnstructureCode from plugin Boogie Preprocessor for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 16.01 04:16:19" (1/1) ...
+[2023-01-16 04:16:19,254 INFO  L185        PluginConnector]: Executing the observer FunctionInliner from plugin Boogie Preprocessor for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 16.01 04:16:19" (1/1) ...
+[2023-01-16 04:16:19,258 INFO  L185        PluginConnector]: Executing the observer BoogieSymbolTableConstructor from plugin Boogie Preprocessor for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 16.01 04:16:19" (1/1) ...
+[2023-01-16 04:16:19,260 INFO  L132        PluginConnector]: ------------------------ END Boogie Preprocessor----------------------------
+[2023-01-16 04:16:19,261 INFO  L113        PluginConnector]: ------------------------ThufvSpecLang----------------------------
+[2023-01-16 04:16:19,261 INFO  L271        PluginConnector]: Initializing ThufvSpecLang...
+[2023-01-16 04:16:19,264 INFO  L275        PluginConnector]: ThufvSpecLang initialized
+[2023-01-16 04:16:19,269 INFO  L185        PluginConnector]: Executing the observer ThufvSpecLangObserver from plugin ThufvSpecLang for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 16.01 04:16:19" (1/1) ...
+[2023-01-16 04:16:19,272 INFO  L184   hufvSpecLangObserver]: P4LTL Spec is: ([]((AP((((_p4ltl_2 == true) && (_p4ltl_0 == true)) && (_p4ltl_1 == true))) ==> (([](AP((((_p4ltl_3 == true) && (_p4ltl_2 == true)) ==> (_p4ltl_1 == true))))) || (AP((((_p4ltl_3 == true) && (_p4ltl_2 == true)) ==> (_p4ltl_1 == true))) U AP((_p4ltl_0 == true)))))))
+[2023-01-16 04:16:19,272 INFO  L312   hufvSpecLangObserver]: translating P4LTL formula: ([]((AP((((_p4ltl_2 == true) && (_p4ltl_0 == true)) && (_p4ltl_1 == true))) ==> (([](AP((((_p4ltl_3 == true) && (_p4ltl_2 == true)) ==> (_p4ltl_1 == true))))) || (AP((((_p4ltl_3 == true) && (_p4ltl_2 == true)) ==> (_p4ltl_1 == true))) U AP((_p4ltl_0 == true)))))))
+[2023-01-16 04:16:19,272 INFO  L331   hufvSpecLangObserver]: Starting to parse P4LTL Formula to AstNode: ([]((AP((((_p4ltl_2 == true) && (_p4ltl_0 == true)) && (_p4ltl_1 == true))) ==> (([](AP((((_p4ltl_3 == true) && (_p4ltl_2 == true)) ==> (_p4ltl_1 == true))))) || (AP((((_p4ltl_3 == true) && (_p4ltl_2 == true)) ==> (_p4ltl_1 == true))) U AP((_p4ltl_0 == true)))))))
+Token: (
+Token: []
+Token: (
+Token: (
+Token: AP
+Token: (
+Token: (
+Token: (
+Token: (
+Token: _p4ltl_2
+Token: ==
+Token: true
+Token: )
+Token: &&
+Token: (
+Token: _p4ltl_0
+Token: ==
+Token: true
+Token: )
+Token: )
+Token: &&
+Token: (
+Token: _p4ltl_1
+Token: ==
+Token: true
+Token: )
+Token: )
+Token: )
+Token: ==>
+Token: (
+Token: (
+Token: []
+Token: (
+Token: AP
+Token: (
+Token: (
+Token: (
+Token: (
+Token: _p4ltl_3
+Token: ==
+Token: true
+Token: )
+Token: &&
+Token: (
+Token: _p4ltl_2
+Token: ==
+Token: true
+Token: )
+Token: )
+Token: ==>
+Token: (
+Token: _p4ltl_1
+Token: ==
+Token: true
+Token: )
+Token: )
+Token: )
+Token: )
+Token: )
+Token: ||
+Token: (
+Token: AP
+Token: (
+Token: (
+Token: (
+Token: (
+Token: _p4ltl_3
+Token: ==
+Token: true
+Token: )
+Token: &&
+Token: (
+Token: _p4ltl_2
+Token: ==
+Token: true
+Token: )
+Token: )
+Token: ==>
+Token: (
+Token: _p4ltl_1
+Token: ==
+Token: true
+Token: )
+Token: )
+Token: )
+Token: U
+Token: AP
+Token: (
+Token: (
+Token: _p4ltl_0
+Token: ==
+Token: true
+Token: )
+Token: )
+Token: )
+Token: )
+Token: )
+Token: )
+Token: )
+Token: 
+Token: 
+[2023-01-16 04:16:19,284 INFO  L336   hufvSpecLangObserver]: Successfully lexed and parsed: ([]((AP((((_p4ltl_2 == true) && (_p4ltl_0 == true)) && (_p4ltl_1 == true))) ==> (([](AP((((_p4ltl_3 == true) && (_p4ltl_2 == true)) ==> (_p4ltl_1 == true))))) || (AP((((_p4ltl_3 == true) && (_p4ltl_2 == true)) ==> (_p4ltl_1 == true))) U AP((_p4ltl_0 == true)))))))
+[2023-01-16 04:16:19,285 INFO  L316   hufvSpecLangObserver]: translated to regular LTL formula: ( [](( AP(( ( _p4ltl_2==true && _p4ltl_0==true ) && _p4ltl_1==true )) ==> ( ( [](AP(( ( _p4ltl_3==true && _p4ltl_2==true ) ==> _p4ltl_1==true ))) ) || ( AP(( ( _p4ltl_3==true && _p4ltl_2==true ) ==> _p4ltl_1==true )) U AP(_p4ltl_0==true) ) ) )) )
+==== class: class ast.UnaryTemporalOperator
+==== class: class ast.BinaryTemporalOperator
+==== class: class ast.P4LTLAtomicProposition
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BinaryOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BinaryOperator
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+==== class: class ast.BinaryTemporalOperator
+==== class: class ast.UnaryTemporalOperator
+==== class: class ast.P4LTLAtomicProposition
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BinaryOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BinaryOperator
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+==== class: class ast.BinaryTemporalOperator
+==== class: class ast.P4LTLAtomicProposition
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BinaryOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BinaryOperator
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+==== class: class ast.P4LTLAtomicProposition
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+[2023-01-16 04:16:19,289 INFO  L218   hufvSpecLangObserver]: P4LTL Fairness Spec is: ([](AP((hdr.ipv4.valid == true && hdr.paxos.valid == true))))
+[2023-01-16 04:16:19,289 INFO  L312   hufvSpecLangObserver]: translating P4LTL formula: ([](AP((hdr.ipv4.valid == true && hdr.paxos.valid == true))))
+[2023-01-16 04:16:19,289 INFO  L331   hufvSpecLangObserver]: Starting to parse P4LTL Formula to AstNode: ([](AP((hdr.ipv4.valid == true && hdr.paxos.valid == true))))
+Token: (
+Token: []
+Token: (
+Token: AP
+Token: (
+Token: (
+Token: hdr.ipv4.valid
+Token: ==
+Token: true
+Token: &&
+Token: hdr.paxos.valid
+Token: ==
+Token: true
+Token: )
+Token: )
+Token: )
+Token: )
+Token: 
+Token: 
+[2023-01-16 04:16:19,289 INFO  L336   hufvSpecLangObserver]: Successfully lexed and parsed: ([](AP((hdr.ipv4.valid == true && hdr.paxos.valid == true))))
+[2023-01-16 04:16:19,289 INFO  L316   hufvSpecLangObserver]: translated to regular LTL formula: ( [](AP(( hdr.ipv4.valid==true && hdr.paxos.valid==true ))) )
+==== class: class ast.UnaryTemporalOperator
+==== class: class ast.P4LTLAtomicProposition
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BinaryOperator
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+==== class: class ast.ExtendedComparativeOperator
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.Name
+==== class: class de.uni_freiburg.informatik.ultimate.ltl2aut.ast.BoolLiteral
+[2023-01-16 04:16:19,291 INFO  L288   hufvSpecLangObserver]: File already exists and will be overwritten: /home/p4ltl/Desktop/UP4LTL-linux/__p4ltl_ast.json
+[2023-01-16 04:16:19,291 INFO  L291   hufvSpecLangObserver]: Writing to file /home/p4ltl/Desktop/UP4LTL-linux/__p4ltl_ast.json
+[2023-01-16 04:16:19,293 INFO  L202        PluginConnector]: Adding new model Hardcoded edu.tsinghua.ss.thufv.specLang AST 16.01 04:16:19 PropertyContainer
+[2023-01-16 04:16:19,293 INFO  L132        PluginConnector]: ------------------------ END ThufvSpecLang----------------------------
+[2023-01-16 04:16:19,293 INFO  L113        PluginConnector]: ------------------------RCFGBuilder----------------------------
+[2023-01-16 04:16:19,294 INFO  L271        PluginConnector]: Initializing RCFGBuilder...
+[2023-01-16 04:16:19,294 INFO  L275        PluginConnector]: RCFGBuilder initialized
+[2023-01-16 04:16:19,296 INFO  L185        PluginConnector]: Executing the observer RCFGBuilderObserver from plugin RCFGBuilder for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 16.01 04:16:19" (1/2) ...
+[2023-01-16 04:16:19,302 INFO  L127          SolverBuilder]: Constructing new instance of SMTInterpol with explicit timeout -1 ms and remaining time -1 ms
+[2023-01-16 04:16:19,375 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_0 given in one single declaration
+[2023-01-16 04:16:19,375 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_0
+[2023-01-16 04:16:19,375 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_0
+[2023-01-16 04:16:19,376 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure ULTIMATE.start given in one single declaration
+[2023-01-16 04:16:19,376 INFO  L130     BoogieDeclarations]: Found specification of procedure ULTIMATE.start
+[2023-01-16 04:16:19,376 INFO  L138     BoogieDeclarations]: Found implementation of procedure ULTIMATE.start
+[2023-01-16 04:16:19,376 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _drop given in one single declaration
+[2023-01-16 04:16:19,376 INFO  L130     BoogieDeclarations]: Found specification of procedure _drop
+[2023-01-16 04:16:19,376 INFO  L138     BoogieDeclarations]: Found implementation of procedure _drop
+[2023-01-16 04:16:19,377 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _drop_4 given in one single declaration
+[2023-01-16 04:16:19,377 INFO  L130     BoogieDeclarations]: Found specification of procedure _drop_4
+[2023-01-16 04:16:19,377 INFO  L138     BoogieDeclarations]: Found implementation of procedure _drop_4
+[2023-01-16 04:16:19,377 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _drop_5 given in one single declaration
+[2023-01-16 04:16:19,377 INFO  L130     BoogieDeclarations]: Found specification of procedure _drop_5
+[2023-01-16 04:16:19,377 INFO  L138     BoogieDeclarations]: Found implementation of procedure _drop_5
+[2023-01-16 04:16:19,378 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _drop_6 given in one single declaration
+[2023-01-16 04:16:19,378 INFO  L130     BoogieDeclarations]: Found specification of procedure _drop_6
+[2023-01-16 04:16:19,378 INFO  L138     BoogieDeclarations]: Found implementation of procedure _drop_6
+[2023-01-16 04:16:19,378 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _parser_TopParser given in one single declaration
+[2023-01-16 04:16:19,378 INFO  L130     BoogieDeclarations]: Found specification of procedure _parser_TopParser
+[2023-01-16 04:16:19,378 INFO  L138     BoogieDeclarations]: Found implementation of procedure _parser_TopParser
+[2023-01-16 04:16:19,378 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure accept given in one single declaration
+[2023-01-16 04:16:19,378 INFO  L130     BoogieDeclarations]: Found specification of procedure accept
+[2023-01-16 04:16:19,379 INFO  L138     BoogieDeclarations]: Found implementation of procedure accept
+[2023-01-16 04:16:19,379 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure acceptor_tbl_0.apply given in one single declaration
+[2023-01-16 04:16:19,379 INFO  L130     BoogieDeclarations]: Found specification of procedure acceptor_tbl_0.apply
+[2023-01-16 04:16:19,379 INFO  L138     BoogieDeclarations]: Found implementation of procedure acceptor_tbl_0.apply
+[2023-01-16 04:16:19,379 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure arp_tbl_0.apply given in one single declaration
+[2023-01-16 04:16:19,379 INFO  L130     BoogieDeclarations]: Found specification of procedure arp_tbl_0.apply
+[2023-01-16 04:16:19,379 INFO  L138     BoogieDeclarations]: Found implementation of procedure arp_tbl_0.apply
+[2023-01-16 04:16:19,379 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure computeChecksum given in one single declaration
+[2023-01-16 04:16:19,380 INFO  L130     BoogieDeclarations]: Found specification of procedure computeChecksum
+[2023-01-16 04:16:19,380 INFO  L138     BoogieDeclarations]: Found implementation of procedure computeChecksum
+[2023-01-16 04:16:19,380 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure egress given in one single declaration
+[2023-01-16 04:16:19,380 INFO  L130     BoogieDeclarations]: Found specification of procedure egress
+[2023-01-16 04:16:19,380 INFO  L138     BoogieDeclarations]: Found implementation of procedure egress
+[2023-01-16 04:16:19,380 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure forward given in one single declaration
+[2023-01-16 04:16:19,380 INFO  L130     BoogieDeclarations]: Found specification of procedure forward
+[2023-01-16 04:16:19,380 INFO  L138     BoogieDeclarations]: Found implementation of procedure forward
+[2023-01-16 04:16:19,380 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure handle_1a given in one single declaration
+[2023-01-16 04:16:19,381 INFO  L130     BoogieDeclarations]: Found specification of procedure handle_1a
+[2023-01-16 04:16:19,381 INFO  L138     BoogieDeclarations]: Found implementation of procedure handle_1a
+[2023-01-16 04:16:19,381 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure handle_2a given in one single declaration
+[2023-01-16 04:16:19,381 INFO  L130     BoogieDeclarations]: Found specification of procedure handle_2a
+[2023-01-16 04:16:19,381 INFO  L138     BoogieDeclarations]: Found implementation of procedure handle_2a
+[2023-01-16 04:16:19,381 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure handle_arp_reply given in one single declaration
+[2023-01-16 04:16:19,381 INFO  L130     BoogieDeclarations]: Found specification of procedure handle_arp_reply
+[2023-01-16 04:16:19,381 INFO  L138     BoogieDeclarations]: Found implementation of procedure handle_arp_reply
+[2023-01-16 04:16:19,382 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure handle_arp_request given in one single declaration
+[2023-01-16 04:16:19,382 INFO  L130     BoogieDeclarations]: Found specification of procedure handle_arp_request
+[2023-01-16 04:16:19,382 INFO  L138     BoogieDeclarations]: Found implementation of procedure handle_arp_request
+[2023-01-16 04:16:19,382 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure handle_icmp_reply given in one single declaration
+[2023-01-16 04:16:19,382 INFO  L130     BoogieDeclarations]: Found specification of procedure handle_icmp_reply
+[2023-01-16 04:16:19,382 INFO  L138     BoogieDeclarations]: Found implementation of procedure handle_icmp_reply
+[2023-01-16 04:16:19,382 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure handle_icmp_request given in one single declaration
+[2023-01-16 04:16:19,382 INFO  L130     BoogieDeclarations]: Found specification of procedure handle_icmp_request
+[2023-01-16 04:16:19,382 INFO  L138     BoogieDeclarations]: Found implementation of procedure handle_icmp_request
+[2023-01-16 04:16:19,382 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure havocProcedure given in one single declaration
+[2023-01-16 04:16:19,383 INFO  L130     BoogieDeclarations]: Found specification of procedure havocProcedure
+[2023-01-16 04:16:19,383 INFO  L138     BoogieDeclarations]: Found implementation of procedure havocProcedure
+[2023-01-16 04:16:19,383 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure icmp_tbl_0.apply given in one single declaration
+[2023-01-16 04:16:19,383 INFO  L130     BoogieDeclarations]: Found specification of procedure icmp_tbl_0.apply
+[2023-01-16 04:16:19,383 INFO  L138     BoogieDeclarations]: Found implementation of procedure icmp_tbl_0.apply
+[2023-01-16 04:16:19,383 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure ingress given in one single declaration
+[2023-01-16 04:16:19,383 INFO  L130     BoogieDeclarations]: Found specification of procedure ingress
+[2023-01-16 04:16:19,383 INFO  L138     BoogieDeclarations]: Found implementation of procedure ingress
+[2023-01-16 04:16:19,383 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure learner_address_0.write given in one single declaration
+[2023-01-16 04:16:19,384 INFO  L130     BoogieDeclarations]: Found specification of procedure learner_address_0.write
+[2023-01-16 04:16:19,384 INFO  L138     BoogieDeclarations]: Found implementation of procedure learner_address_0.write
+[2023-01-16 04:16:19,384 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure learner_mac_address_0.write given in one single declaration
+[2023-01-16 04:16:19,384 INFO  L130     BoogieDeclarations]: Found specification of procedure learner_mac_address_0.write
+[2023-01-16 04:16:19,384 INFO  L138     BoogieDeclarations]: Found implementation of procedure learner_mac_address_0.write
+[2023-01-16 04:16:19,384 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure main given in one single declaration
+[2023-01-16 04:16:19,384 INFO  L130     BoogieDeclarations]: Found specification of procedure main
+[2023-01-16 04:16:19,384 INFO  L138     BoogieDeclarations]: Found implementation of procedure main
+[2023-01-16 04:16:19,384 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure mainProcedure given in one single declaration
+[2023-01-16 04:16:19,385 INFO  L130     BoogieDeclarations]: Found specification of procedure mainProcedure
+[2023-01-16 04:16:19,385 INFO  L138     BoogieDeclarations]: Found implementation of procedure mainProcedure
+[2023-01-16 04:16:19,385 INFO  L130     BoogieDeclarations]: Found specification of procedure mark_to_drop
+[2023-01-16 04:16:19,385 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure my_ip_address_0.write given in one single declaration
+[2023-01-16 04:16:19,385 INFO  L130     BoogieDeclarations]: Found specification of procedure my_ip_address_0.write
+[2023-01-16 04:16:19,385 INFO  L138     BoogieDeclarations]: Found implementation of procedure my_ip_address_0.write
+[2023-01-16 04:16:19,385 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure my_mac_address_0.write given in one single declaration
+[2023-01-16 04:16:19,385 INFO  L130     BoogieDeclarations]: Found specification of procedure my_mac_address_0.write
+[2023-01-16 04:16:19,385 INFO  L138     BoogieDeclarations]: Found implementation of procedure my_mac_address_0.write
+[2023-01-16 04:16:19,386 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure parse_arp given in one single declaration
+[2023-01-16 04:16:19,386 INFO  L130     BoogieDeclarations]: Found specification of procedure parse_arp
+[2023-01-16 04:16:19,386 INFO  L138     BoogieDeclarations]: Found implementation of procedure parse_arp
+[2023-01-16 04:16:19,386 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure parse_icmp given in one single declaration
+[2023-01-16 04:16:19,386 INFO  L130     BoogieDeclarations]: Found specification of procedure parse_icmp
+[2023-01-16 04:16:19,386 INFO  L138     BoogieDeclarations]: Found implementation of procedure parse_icmp
+[2023-01-16 04:16:19,386 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure parse_ipv4 given in one single declaration
+[2023-01-16 04:16:19,386 INFO  L130     BoogieDeclarations]: Found specification of procedure parse_ipv4
+[2023-01-16 04:16:19,386 INFO  L138     BoogieDeclarations]: Found implementation of procedure parse_ipv4
+[2023-01-16 04:16:19,386 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure parse_paxos given in one single declaration
+[2023-01-16 04:16:19,386 INFO  L130     BoogieDeclarations]: Found specification of procedure parse_paxos
+[2023-01-16 04:16:19,387 INFO  L138     BoogieDeclarations]: Found implementation of procedure parse_paxos
+[2023-01-16 04:16:19,387 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure parse_udp given in one single declaration
+[2023-01-16 04:16:19,387 INFO  L130     BoogieDeclarations]: Found specification of procedure parse_udp
+[2023-01-16 04:16:19,387 INFO  L138     BoogieDeclarations]: Found implementation of procedure parse_udp
+[2023-01-16 04:16:19,387 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure place_holder_table_0.apply given in one single declaration
+[2023-01-16 04:16:19,387 INFO  L130     BoogieDeclarations]: Found specification of procedure place_holder_table_0.apply
+[2023-01-16 04:16:19,387 INFO  L138     BoogieDeclarations]: Found implementation of procedure place_holder_table_0.apply
+[2023-01-16 04:16:19,387 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure read_round given in one single declaration
+[2023-01-16 04:16:19,387 INFO  L130     BoogieDeclarations]: Found specification of procedure read_round
+[2023-01-16 04:16:19,388 INFO  L138     BoogieDeclarations]: Found implementation of procedure read_round
+[2023-01-16 04:16:19,388 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure registerAcceptorID_0.write given in one single declaration
+[2023-01-16 04:16:19,388 INFO  L130     BoogieDeclarations]: Found specification of procedure registerAcceptorID_0.write
+[2023-01-16 04:16:19,388 INFO  L138     BoogieDeclarations]: Found implementation of procedure registerAcceptorID_0.write
+[2023-01-16 04:16:19,388 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure registerRound_0.write given in one single declaration
+[2023-01-16 04:16:19,388 INFO  L130     BoogieDeclarations]: Found specification of procedure registerRound_0.write
+[2023-01-16 04:16:19,388 INFO  L138     BoogieDeclarations]: Found implementation of procedure registerRound_0.write
+[2023-01-16 04:16:19,388 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure registerVRound_0.write given in one single declaration
+[2023-01-16 04:16:19,388 INFO  L130     BoogieDeclarations]: Found specification of procedure registerVRound_0.write
+[2023-01-16 04:16:19,389 INFO  L138     BoogieDeclarations]: Found implementation of procedure registerVRound_0.write
+[2023-01-16 04:16:19,389 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure registerValue_0.write given in one single declaration
+[2023-01-16 04:16:19,389 INFO  L130     BoogieDeclarations]: Found specification of procedure registerValue_0.write
+[2023-01-16 04:16:19,389 INFO  L138     BoogieDeclarations]: Found implementation of procedure registerValue_0.write
+[2023-01-16 04:16:19,389 INFO  L130     BoogieDeclarations]: Found specification of procedure reject
+[2023-01-16 04:16:19,389 INFO  L130     BoogieDeclarations]: Found specification of procedure setInvalid
+[2023-01-16 04:16:19,389 INFO  L130     BoogieDeclarations]: Found specification of procedure setValid
+[2023-01-16 04:16:19,389 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure start given in one single declaration
+[2023-01-16 04:16:19,389 INFO  L130     BoogieDeclarations]: Found specification of procedure start
+[2023-01-16 04:16:19,389 INFO  L138     BoogieDeclarations]: Found implementation of procedure start
+[2023-01-16 04:16:19,390 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure transport_tbl_0.apply given in one single declaration
+[2023-01-16 04:16:19,390 INFO  L130     BoogieDeclarations]: Found specification of procedure transport_tbl_0.apply
+[2023-01-16 04:16:19,390 INFO  L138     BoogieDeclarations]: Found implementation of procedure transport_tbl_0.apply
+[2023-01-16 04:16:19,390 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure verifyChecksum given in one single declaration
+[2023-01-16 04:16:19,390 INFO  L130     BoogieDeclarations]: Found specification of procedure verifyChecksum
+[2023-01-16 04:16:19,390 INFO  L138     BoogieDeclarations]: Found implementation of procedure verifyChecksum
+[2023-01-16 04:16:19,437 INFO  L234             CfgBuilder]: Building ICFG
+[2023-01-16 04:16:19,438 INFO  L260             CfgBuilder]: Building CFG for each procedure with an implementation
+[2023-01-16 04:16:19,672 INFO  L275             CfgBuilder]: Performing block encoding
+[2023-01-16 04:16:19,692 INFO  L294             CfgBuilder]: Using the 1 location(s) as analysis (start of procedure ULTIMATE.start)
+[2023-01-16 04:16:19,692 INFO  L299             CfgBuilder]: Removed 0 assume(true) statements.
+[2023-01-16 04:16:19,695 INFO  L202        PluginConnector]: Adding new model p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.plugins.generator.rcfgbuilder CFG 16.01 04:16:19 BoogieIcfgContainer
+[2023-01-16 04:16:19,695 INFO  L185        PluginConnector]: Executing the observer RCFGBuilderObserver from plugin RCFGBuilder for "Hardcoded edu.tsinghua.ss.thufv.specLang AST 16.01 04:16:19" (2/2) ...
+[2023-01-16 04:16:19,696 INFO  L82     RCFGBuilderObserver]: No WrapperNode. Let Ultimate process with next node
+[2023-01-16 04:16:19,696 INFO  L205        PluginConnector]: Invalid model from RCFGBuilder for observer de.uni_freiburg.informatik.ultimate.plugins.generator.rcfgbuilder.RCFGBuilderObserver@5fc544e6 and model type Hardcoded de.uni_freiburg.informatik.ultimate.plugins.generator.rcfgbuilder CFG 16.01 04:16:19, skipping insertion in model container
+[2023-01-16 04:16:19,696 INFO  L132        PluginConnector]: ------------------------ END RCFGBuilder----------------------------
+[2023-01-16 04:16:19,697 INFO  L113        PluginConnector]: ------------------------ThufvLTL2Aut----------------------------
+[2023-01-16 04:16:19,697 INFO  L271        PluginConnector]: Initializing ThufvLTL2Aut...
+[2023-01-16 04:16:19,697 INFO  L275        PluginConnector]: ThufvLTL2Aut initialized
+[2023-01-16 04:16:19,699 INFO  L185        PluginConnector]: Executing the observer ThufvLTL2AutObserver from plugin ThufvLTL2Aut for "Hardcoded edu.tsinghua.ss.thufv.specLang AST 16.01 04:16:19" (2/3) ...
+[2023-01-16 04:16:19,699 INFO  L119   ThufvLTL2AutObserver]: Checking fairness + property: !(( [](AP(( hdr.ipv4.valid==true && hdr.paxos.valid==true ))) )) || ( ( [](( AP(( ( _p4ltl_2==true && _p4ltl_0==true ) && _p4ltl_1==true )) ==> ( ( [](AP(( ( _p4ltl_3==true && _p4ltl_2==true ) ==> _p4ltl_1==true ))) ) || ( AP(( ( _p4ltl_3==true && _p4ltl_2==true ) ==> _p4ltl_1==true )) U AP(_p4ltl_0==true) ) ) )) ))
+[2023-01-16 04:16:19,706 INFO  L189       MonitoredProcess]: No working directory specified, using /home/p4ltl/Desktop/UP4LTL-linux/ltl2ba
+[2023-01-16 04:16:19,736 INFO  L229       MonitoredProcess]: Starting monitored process 1 with /home/p4ltl/Desktop/UP4LTL-linux/ltl2ba -f ! ( ! ( ( [] ( a ) ) ) || ( ( [] ( ( b -> ( ( [] ( c ) ) || ( c U d ) ) ) ) ) ) )  (exit command is null, workingDir is null)
+[2023-01-16 04:16:19,738 INFO  L552       MonitoredProcess]: [MP /home/p4ltl/Desktop/UP4LTL-linux/ltl2ba -f ! ( ! ( ( [] ( a ) ) ) || ( ( [] ( ( b -> ( ( [] ( c ) ) || ( c U d ) ) ) ) ) ) )  (1)] Ended with exit code 0
+[2023-01-16 04:16:19,756 INFO  L133   ThufvLTL2AutObserver]: LTL Property is: !(( []((hdr.ipv4.valid == true && hdr.paxos.valid == true)) )) || ( ( [](( ((_p4ltl_2 == true && _p4ltl_0 == true) && _p4ltl_1 == true) ==> ( ( []((_p4ltl_3 == true && _p4ltl_2 == true ==> _p4ltl_1 == true)) ) || ( (_p4ltl_3 == true && _p4ltl_2 == true ==> _p4ltl_1 == true) U (_p4ltl_0 == true) ) ) )) ))
+[2023-01-16 04:16:19,757 INFO  L202        PluginConnector]: Adding new model Hardcoded edu.tsinghua.ss.thufv.ltl2aut AST 16.01 04:16:19 NWAContainer
+[2023-01-16 04:16:19,757 INFO  L132        PluginConnector]: ------------------------ END ThufvLTL2Aut----------------------------
+[2023-01-16 04:16:19,758 INFO  L113        PluginConnector]: ------------------------Büchi Program Product----------------------------
+[2023-01-16 04:16:19,758 INFO  L271        PluginConnector]: Initializing Büchi Program Product...
+[2023-01-16 04:16:19,759 INFO  L275        PluginConnector]: Büchi Program Product initialized
+[2023-01-16 04:16:19,760 INFO  L185        PluginConnector]: Executing the observer BuchiProductObserver from plugin Büchi Program Product for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.plugins.generator.rcfgbuilder CFG 16.01 04:16:19" (3/4) ...
+[2023-01-16 04:16:19,761 INFO  L205        PluginConnector]: Invalid model from Büchi Program Product for observer de.uni_freiburg.informatik.ultimate.buchiprogramproduct.BuchiProductObserver@5d2861e4 and model type LTL+Program Product de.uni_freiburg.informatik.ultimate.buchiprogramproduct OTHER 16.01 04:16:19, skipping insertion in model container
+[2023-01-16 04:16:19,761 INFO  L185        PluginConnector]: Executing the observer BuchiProductObserver from plugin Büchi Program Product for "Hardcoded edu.tsinghua.ss.thufv.ltl2aut AST 16.01 04:16:19" (4/4) ...
+[2023-01-16 04:16:19,764 INFO  L104   BuchiProductObserver]: Initial property automaton 3 locations, 6 edges
+[2023-01-16 04:16:19,766 INFO  L110   BuchiProductObserver]: Initial RCFG 306 locations, 371 edges
+[2023-01-16 04:16:19,766 INFO  L93    BuchiProductObserver]: Beginning generation of product automaton
+[2023-01-16 04:16:19,769 INFO  L170       ProductGenerator]: ----- Annotating TransactionInfo ...
+[2023-01-16 04:16:19,769 INFO  L189       ProductGenerator]: +++++ Call method name: registerValue_0.write
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: mainProcedure
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: handle_arp_request
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: NoAction_0
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: arp_tbl_0.apply
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: _drop_6
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: main
+[2023-01-16 04:16:19,770 INFO  L192       ProductGenerator]: ----- Handling transaction edge from mainEXIT to L842-1
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: transport_tbl_0.apply
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: _drop_5
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: _drop_4
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: handle_icmp_request
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: parse_icmp
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: egress
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: parse_arp
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: computeChecksum
+[2023-01-16 04:16:19,770 INFO  L189       ProductGenerator]: +++++ Call method name: icmp_tbl_0.apply
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: handle_1a
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: _parser_TopParser
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: forward
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: _drop
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: start
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: read_round
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: registerVRound_0.write
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: registerRound_0.write
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: registerRound_0.write
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: accept
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: accept
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: accept
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: acceptor_tbl_0.apply
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: handle_icmp_reply
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: ingress
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: parse_paxos
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: handle_2a
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: place_holder_table_0.apply
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: parse_ipv4
+[2023-01-16 04:16:19,771 INFO  L189       ProductGenerator]: +++++ Call method name: parse_udp
+[2023-01-16 04:16:19,772 INFO  L189       ProductGenerator]: +++++ Call method name: verifyChecksum
+[2023-01-16 04:16:19,772 INFO  L189       ProductGenerator]: +++++ Call method name: handle_arp_reply
+[2023-01-16 04:16:19,772 INFO  L189       ProductGenerator]: +++++ Call method name: havocProcedure
+[2023-01-16 04:16:19,776 INFO  L244       ProductGenerator]: Creating Product States...
+[2023-01-16 04:16:19,776 INFO  L277       ProductGenerator]: ==== location: learner_mac_address_0.writeEXIT
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L652
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L904
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L699
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L737
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: registerVRound_0.writeEXIT
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: havocProcedureEXIT
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: handle_2aEXIT
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: registerRound_0.writeEXIT
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: acceptor_tbl_0.applyEXIT
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L677
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L705
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L781-1
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L666
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: _drop_4ENTRY
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: handle_icmp_requestEXIT
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L682
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: transport_tbl_0.applyENTRY
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L725
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L622
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: L730
+[2023-01-16 04:16:19,777 INFO  L277       ProductGenerator]: ==== location: arp_tbl_0.applyENTRY
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: egressFINAL
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L668
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L687
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L688
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: handle_icmp_replyEXIT
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: place_holder_table_0.applyEXIT
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L584
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L749
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: arp_tbl_0.applyEXIT
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: mainProcedureFINAL
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L964
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L747
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L831-1
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: registerRound_0.writeFINAL
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: parse_arpFINAL
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L707
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: mainProcedureEXIT
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L567
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L741
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: computeChecksumEXIT
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: handle_icmp_requestFINAL
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: _drop_4EXIT
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: L736
+[2023-01-16 04:16:19,778 INFO  L277       ProductGenerator]: ==== location: registerAcceptorID_0.writeENTRY
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: my_mac_address_0.writeFINAL
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L903
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L827
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: learner_address_0.writeENTRY
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L528
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L651
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L712
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L719
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L762
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: parse_udpENTRY
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L973
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L637
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L703
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: parse_paxosFINAL
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L714
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L641
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: _drop_6ENTRY
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L654
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L975
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L657
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L540
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L698
+[2023-01-16 04:16:19,779 INFO  L277       ProductGenerator]: ==== location: L746
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: startEXIT
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: read_roundFINAL
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L620
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L716
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L723
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: NoAction_0FINAL
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L650
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: _drop_6FINAL
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L613
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: forwardEXIT
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L523
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L683
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: handle_icmp_requestENTRY
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L543
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L735
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L803
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L842-1
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: learner_mac_address_0.writeENTRY
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L525
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L702
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: handle_2aENTRY
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L882
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: NoAction_0EXIT
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L691
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L621
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L733
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L724
+[2023-01-16 04:16:19,780 INFO  L277       ProductGenerator]: ==== location: L758
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: _drop_5EXIT
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: L580
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: parse_ipv4ENTRY
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: L655
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: L726
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: havocProcedureFINAL
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: acceptor_tbl_0.applyENTRY
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: L728
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: L565
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: registerRound_0.writeENTRY
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: L732
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: L795
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: startENTRY
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: _dropFINAL
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: L713
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: L640
+[2023-01-16 04:16:19,781 INFO  L277       ProductGenerator]: ==== location: mainEXIT
+[2023-01-16 04:16:19,781 INFO  L310       ProductGenerator]: ####final State Node: L842-1
+[2023-01-16 04:16:19,781 INFO  L310       ProductGenerator]: ####final State Node: L842
+[2023-01-16 04:16:19,783 INFO  L263       ProductGenerator]: ------- Adding ACCEPTING State: L842-1_accept_S3
+[2023-01-16 04:16:19,785 INFO  L263       ProductGenerator]: ------- Adding ACCEPTING State: L842_accept_S3
+[2023-01-16 04:16:19,785 INFO  L479       ProductGenerator]: learner_mac_address_0.writeEXIT_accept_S3 --> learner_mac_address_0.writeEXIT_accept_S3
+[2023-01-16 04:16:19,785 INFO  L479       ProductGenerator]: learner_mac_address_0.writeEXIT_T0_S2 --> learner_mac_address_0.writeEXIT_T0_S2
+[2023-01-16 04:16:19,786 INFO  L479       ProductGenerator]: learner_mac_address_0.writeEXIT_T1_init --> learner_mac_address_0.writeEXIT_T1_init
+[2023-01-16 04:16:19,786 INFO  L479       ProductGenerator]: L652_accept_S3 --> L652_accept_S3
+[2023-01-16 04:16:19,786 INFO  L479       ProductGenerator]: L652_T0_S2 --> L652_T0_S2
+[2023-01-16 04:16:19,786 INFO  L479       ProductGenerator]: L652_T1_init --> L652_T1_init
+[2023-01-16 04:16:19,786 INFO  L483       ProductGenerator]: Handling product edge call: call parse_paxos();
+[2023-01-16 04:16:19,786 INFO  L483       ProductGenerator]: Handling product edge call: call parse_paxos();
+[2023-01-16 04:16:19,786 INFO  L483       ProductGenerator]: Handling product edge call: call parse_paxos();
+[2023-01-16 04:16:19,786 INFO  L479       ProductGenerator]: L699_accept_S3 --> L699_accept_S3
+[2023-01-16 04:16:19,786 INFO  L479       ProductGenerator]: L699_T0_S2 --> L699_T0_S2
+[2023-01-16 04:16:19,786 INFO  L479       ProductGenerator]: L699_T1_init --> L699_T1_init
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L737_accept_S3 --> L737_accept_S3
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L737_T0_S2 --> L737_T0_S2
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L737_T1_init --> L737_T1_init
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L677_accept_S3 --> L677_accept_S3
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L677_T0_S2 --> L677_T0_S2
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L677_T1_init --> L677_T1_init
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L705_accept_S3 --> L705_accept_S3
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L705_T0_S2 --> L705_T0_S2
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L705_T1_init --> L705_T1_init
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L781-1_accept_S3 --> L781-1_accept_S3
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L781-1_T0_S2 --> L781-1_T0_S2
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L781-1_T1_init --> L781-1_T1_init
+[2023-01-16 04:16:19,787 INFO  L479       ProductGenerator]: L666_accept_S3 --> L666_accept_S3
+[2023-01-16 04:16:19,788 INFO  L479       ProductGenerator]: L666_T0_S2 --> L666_T0_S2
+[2023-01-16 04:16:19,788 INFO  L479       ProductGenerator]: L666_T1_init --> L666_T1_init
+[2023-01-16 04:16:19,788 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _drop_4ENTRY
+[2023-01-16 04:16:19,808 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _drop_4ENTRY
+[2023-01-16 04:16:19,812 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _drop_4ENTRY
+[2023-01-16 04:16:19,815 INFO  L479       ProductGenerator]: L682_accept_S3 --> L682_accept_S3
+[2023-01-16 04:16:19,815 INFO  L479       ProductGenerator]: L682_T0_S2 --> L682_T0_S2
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: L682_T1_init --> L682_T1_init
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: transport_tbl_0.applyENTRY_accept_S3 --> transport_tbl_0.applyENTRY_accept_S3
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: transport_tbl_0.applyENTRY_T0_S2 --> transport_tbl_0.applyENTRY_T0_S2
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: transport_tbl_0.applyENTRY_T1_init --> transport_tbl_0.applyENTRY_T1_init
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: transport_tbl_0.applyENTRY_accept_S3 --> transport_tbl_0.applyENTRY_accept_S3
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: transport_tbl_0.applyENTRY_T0_S2 --> transport_tbl_0.applyENTRY_T0_S2
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: transport_tbl_0.applyENTRY_T1_init --> transport_tbl_0.applyENTRY_T1_init
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: L725_accept_S3 --> L725_accept_S3
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: L725_T0_S2 --> L725_T0_S2
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: L725_T1_init --> L725_T1_init
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: L622_accept_S3 --> L622_accept_S3
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: L622_T0_S2 --> L622_T0_S2
+[2023-01-16 04:16:19,816 INFO  L479       ProductGenerator]: L622_T1_init --> L622_T1_init
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: L730_accept_S3 --> L730_accept_S3
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: L730_T0_S2 --> L730_T0_S2
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: L730_T1_init --> L730_T1_init
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: arp_tbl_0.applyENTRY_accept_S3 --> arp_tbl_0.applyENTRY_accept_S3
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: arp_tbl_0.applyENTRY_T0_S2 --> arp_tbl_0.applyENTRY_T0_S2
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: arp_tbl_0.applyENTRY_T1_init --> arp_tbl_0.applyENTRY_T1_init
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: arp_tbl_0.applyENTRY_accept_S3 --> arp_tbl_0.applyENTRY_accept_S3
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: arp_tbl_0.applyENTRY_T0_S2 --> arp_tbl_0.applyENTRY_T0_S2
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: arp_tbl_0.applyENTRY_T1_init --> arp_tbl_0.applyENTRY_T1_init
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: egressFINAL_accept_S3 --> egressFINAL_accept_S3
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: egressFINAL_T0_S2 --> egressFINAL_T0_S2
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: egressFINAL_T1_init --> egressFINAL_T1_init
+[2023-01-16 04:16:19,817 INFO  L479       ProductGenerator]: L668_accept_S3 --> L668_accept_S3
+[2023-01-16 04:16:19,818 INFO  L479       ProductGenerator]: L668_T0_S2 --> L668_T0_S2
+[2023-01-16 04:16:19,818 INFO  L479       ProductGenerator]: L668_T1_init --> L668_T1_init
+[2023-01-16 04:16:19,818 INFO  L479       ProductGenerator]: L687_accept_S3 --> L687_accept_S3
+[2023-01-16 04:16:19,818 INFO  L479       ProductGenerator]: L687_T0_S2 --> L687_T0_S2
+[2023-01-16 04:16:19,818 INFO  L479       ProductGenerator]: L687_T1_init --> L687_T1_init
+[2023-01-16 04:16:19,818 INFO  L479       ProductGenerator]: L688_accept_S3 --> L688_accept_S3
+[2023-01-16 04:16:19,818 INFO  L479       ProductGenerator]: L688_T0_S2 --> L688_T0_S2
+[2023-01-16 04:16:19,818 INFO  L479       ProductGenerator]: L688_T1_init --> L688_T1_init
+[2023-01-16 04:16:19,818 INFO  L483       ProductGenerator]: Handling product edge call: call registerRound_0.write(hdr.paxos.inst, hdr.paxos.rnd);
+[2023-01-16 04:16:19,818 INFO  L483       ProductGenerator]: Handling product edge call: call registerRound_0.write(hdr.paxos.inst, hdr.paxos.rnd);
+[2023-01-16 04:16:19,819 INFO  L483       ProductGenerator]: Handling product edge call: call registerRound_0.write(hdr.paxos.inst, hdr.paxos.rnd);
+[2023-01-16 04:16:19,819 INFO  L479       ProductGenerator]: L749_accept_S3 --> L749_accept_S3
+[2023-01-16 04:16:19,819 INFO  L479       ProductGenerator]: L749_T0_S2 --> L749_T0_S2
+[2023-01-16 04:16:19,819 INFO  L479       ProductGenerator]: L749_T1_init --> L749_T1_init
+[2023-01-16 04:16:19,819 INFO  L479       ProductGenerator]: mainProcedureFINAL_accept_S3 --> mainProcedureFINAL_accept_S3
+[2023-01-16 04:16:19,819 INFO  L479       ProductGenerator]: mainProcedureFINAL_T0_S2 --> mainProcedureFINAL_T0_S2
+[2023-01-16 04:16:19,819 INFO  L479       ProductGenerator]: mainProcedureFINAL_T1_init --> mainProcedureFINAL_T1_init
+[2023-01-16 04:16:19,819 INFO  L483       ProductGenerator]: Handling product edge call: call parse_ipv4();
+[2023-01-16 04:16:19,819 INFO  L483       ProductGenerator]: Handling product edge call: call parse_ipv4();
+[2023-01-16 04:16:19,819 INFO  L483       ProductGenerator]: Handling product edge call: call parse_ipv4();
+[2023-01-16 04:16:19,819 INFO  L479       ProductGenerator]: L747_accept_S3 --> L747_accept_S3
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L747_T0_S2 --> L747_T0_S2
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L747_T1_init --> L747_T1_init
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L831-1_accept_S3 --> L831-1_accept_S3
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L831-1_T0_S2 --> L831-1_T0_S2
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L831-1_T1_init --> L831-1_T1_init
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: registerRound_0.writeFINAL_accept_S3 --> registerRound_0.writeFINAL_accept_S3
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: registerRound_0.writeFINAL_T0_S2 --> registerRound_0.writeFINAL_T0_S2
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: registerRound_0.writeFINAL_T1_init --> registerRound_0.writeFINAL_T1_init
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: parse_arpFINAL_accept_S3 --> parse_arpFINAL_accept_S3
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: parse_arpFINAL_T0_S2 --> parse_arpFINAL_T0_S2
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: parse_arpFINAL_T1_init --> parse_arpFINAL_T1_init
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L707_accept_S3 --> L707_accept_S3
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L707_T0_S2 --> L707_T0_S2
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L707_T1_init --> L707_T1_init
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: mainProcedureEXIT_accept_S3 --> mainProcedureEXIT_accept_S3
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: mainProcedureEXIT_T0_S2 --> mainProcedureEXIT_T0_S2
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: mainProcedureEXIT_T1_init --> mainProcedureEXIT_T1_init
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L567_accept_S3 --> L567_accept_S3
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L567_T0_S2 --> L567_T0_S2
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L567_T1_init --> L567_T1_init
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L741_accept_S3 --> L741_accept_S3
+[2023-01-16 04:16:19,820 INFO  L479       ProductGenerator]: L741_T0_S2 --> L741_T0_S2
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: L741_T1_init --> L741_T1_init
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: handle_icmp_requestFINAL_accept_S3 --> handle_icmp_requestFINAL_accept_S3
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: handle_icmp_requestFINAL_T0_S2 --> handle_icmp_requestFINAL_T0_S2
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: handle_icmp_requestFINAL_T1_init --> handle_icmp_requestFINAL_T1_init
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: L736_accept_S3 --> L736_accept_S3
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: L736_T0_S2 --> L736_T0_S2
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: L736_T1_init --> L736_T1_init
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: registerAcceptorID_0.writeENTRY_accept_S3 --> registerAcceptorID_0.writeENTRY_accept_S3
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: registerAcceptorID_0.writeENTRY_T0_S2 --> registerAcceptorID_0.writeENTRY_T0_S2
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: registerAcceptorID_0.writeENTRY_T1_init --> registerAcceptorID_0.writeENTRY_T1_init
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: my_mac_address_0.writeFINAL_accept_S3 --> my_mac_address_0.writeFINAL_accept_S3
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: my_mac_address_0.writeFINAL_T0_S2 --> my_mac_address_0.writeFINAL_T0_S2
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: my_mac_address_0.writeFINAL_T1_init --> my_mac_address_0.writeFINAL_T1_init
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: L903_accept_S3 --> L903_accept_S3
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: L903_T0_S2 --> L903_T0_S2
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: L903_T1_init --> L903_T1_init
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: L903_accept_S3 --> L903_accept_S3
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: L903_T0_S2 --> L903_T0_S2
+[2023-01-16 04:16:19,821 INFO  L479       ProductGenerator]: L903_T1_init --> L903_T1_init
+[2023-01-16 04:16:19,821 INFO  L483       ProductGenerator]: Handling product edge call: call ingress();
+[2023-01-16 04:16:19,821 INFO  L483       ProductGenerator]: Handling product edge call: call ingress();
+[2023-01-16 04:16:19,822 INFO  L483       ProductGenerator]: Handling product edge call: call ingress();
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: learner_address_0.writeENTRY_accept_S3 --> learner_address_0.writeENTRY_accept_S3
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: learner_address_0.writeENTRY_T0_S2 --> learner_address_0.writeENTRY_T0_S2
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: learner_address_0.writeENTRY_T1_init --> learner_address_0.writeENTRY_T1_init
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L528_accept_S3 --> L528_accept_S3
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L528_T0_S2 --> L528_T0_S2
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L528_T1_init --> L528_T1_init
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L528_accept_S3 --> L528_accept_S3
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L528_T0_S2 --> L528_T0_S2
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L528_T1_init --> L528_T1_init
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L651_accept_S3 --> L651_accept_S3
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L651_T0_S2 --> L651_T0_S2
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L651_T1_init --> L651_T1_init
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L712_accept_S3 --> L712_accept_S3
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L712_T0_S2 --> L712_T0_S2
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L712_T1_init --> L712_T1_init
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L719_accept_S3 --> L719_accept_S3
+[2023-01-16 04:16:19,822 INFO  L479       ProductGenerator]: L719_T0_S2 --> L719_T0_S2
+[2023-01-16 04:16:19,823 INFO  L479       ProductGenerator]: L719_T1_init --> L719_T1_init
+[2023-01-16 04:16:19,823 INFO  L479       ProductGenerator]: L762_accept_S3 --> L762_accept_S3
+[2023-01-16 04:16:19,823 INFO  L479       ProductGenerator]: L762_T0_S2 --> L762_T0_S2
+[2023-01-16 04:16:19,823 INFO  L479       ProductGenerator]: L762_T1_init --> L762_T1_init
+[2023-01-16 04:16:19,829 INFO  L479       ProductGenerator]: parse_udpENTRY_accept_S3 --> parse_udpENTRY_accept_S3
+[2023-01-16 04:16:19,830 INFO  L479       ProductGenerator]: parse_udpENTRY_T0_S2 --> parse_udpENTRY_T0_S2
+[2023-01-16 04:16:19,830 INFO  L479       ProductGenerator]: parse_udpENTRY_T1_init --> parse_udpENTRY_T1_init
+[2023-01-16 04:16:19,830 INFO  L483       ProductGenerator]: Handling product edge call: call _drop_4();
+[2023-01-16 04:16:19,830 INFO  L483       ProductGenerator]: Handling product edge call: call _drop_4();
+[2023-01-16 04:16:19,830 INFO  L483       ProductGenerator]: Handling product edge call: call _drop_4();
+[2023-01-16 04:16:19,830 INFO  L479       ProductGenerator]: L637_accept_S3 --> L637_accept_S3
+[2023-01-16 04:16:19,830 INFO  L479       ProductGenerator]: L637_T0_S2 --> L637_T0_S2
+[2023-01-16 04:16:19,830 INFO  L479       ProductGenerator]: L637_T1_init --> L637_T1_init
+[2023-01-16 04:16:19,830 INFO  L479       ProductGenerator]: L703_accept_S3 --> L703_accept_S3
+[2023-01-16 04:16:19,830 INFO  L479       ProductGenerator]: L703_T0_S2 --> L703_T0_S2
+[2023-01-16 04:16:19,830 INFO  L479       ProductGenerator]: L703_T1_init --> L703_T1_init
+[2023-01-16 04:16:19,830 INFO  L479       ProductGenerator]: parse_paxosFINAL_accept_S3 --> parse_paxosFINAL_accept_S3
+[2023-01-16 04:16:19,830 INFO  L479       ProductGenerator]: parse_paxosFINAL_T0_S2 --> parse_paxosFINAL_T0_S2
+[2023-01-16 04:16:19,831 INFO  L479       ProductGenerator]: parse_paxosFINAL_T1_init --> parse_paxosFINAL_T1_init
+[2023-01-16 04:16:19,831 INFO  L479       ProductGenerator]: L714_accept_S3 --> L714_accept_S3
+[2023-01-16 04:16:19,831 INFO  L479       ProductGenerator]: L714_T0_S2 --> L714_T0_S2
+[2023-01-16 04:16:19,831 INFO  L479       ProductGenerator]: L714_T1_init --> L714_T1_init
+[2023-01-16 04:16:19,831 INFO  L479       ProductGenerator]: L641_accept_S3 --> L641_accept_S3
+[2023-01-16 04:16:19,831 INFO  L479       ProductGenerator]: L641_T0_S2 --> L641_T0_S2
+[2023-01-16 04:16:19,831 INFO  L479       ProductGenerator]: L641_T1_init --> L641_T1_init
+[2023-01-16 04:16:19,831 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _drop_6ENTRY
+[2023-01-16 04:16:19,835 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _drop_6ENTRY
+[2023-01-16 04:16:19,837 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _drop_6ENTRY
+[2023-01-16 04:16:19,839 INFO  L479       ProductGenerator]: L654_accept_S3 --> L654_accept_S3
+[2023-01-16 04:16:19,839 INFO  L479       ProductGenerator]: L654_T0_S2 --> L654_T0_S2
+[2023-01-16 04:16:19,839 INFO  L479       ProductGenerator]: L654_T1_init --> L654_T1_init
+[2023-01-16 04:16:19,839 INFO  L479       ProductGenerator]: L975_accept_S3 --> L975_accept_S3
+[2023-01-16 04:16:19,839 INFO  L479       ProductGenerator]: L975_T0_S2 --> L975_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L975_T1_init --> L975_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L975_accept_S3 --> L975_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L975_T0_S2 --> L975_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L975_T1_init --> L975_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L657_accept_S3 --> L657_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L657_T0_S2 --> L657_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L657_T1_init --> L657_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L540_accept_S3 --> L540_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L540_T0_S2 --> L540_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L540_T1_init --> L540_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L540_accept_S3 --> L540_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L540_T0_S2 --> L540_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L540_T1_init --> L540_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L698_accept_S3 --> L698_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L698_T0_S2 --> L698_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L698_T1_init --> L698_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L746_accept_S3 --> L746_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L746_T0_S2 --> L746_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L746_T1_init --> L746_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: read_roundFINAL_accept_S3 --> read_roundFINAL_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: read_roundFINAL_T0_S2 --> read_roundFINAL_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: read_roundFINAL_T1_init --> read_roundFINAL_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L620_accept_S3 --> L620_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L620_T0_S2 --> L620_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L620_T1_init --> L620_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L716_accept_S3 --> L716_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L716_T0_S2 --> L716_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L716_T1_init --> L716_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L723_accept_S3 --> L723_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L723_T0_S2 --> L723_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L723_T1_init --> L723_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: NoAction_0FINAL_accept_S3 --> NoAction_0FINAL_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: NoAction_0FINAL_T0_S2 --> NoAction_0FINAL_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: NoAction_0FINAL_T1_init --> NoAction_0FINAL_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L650_accept_S3 --> L650_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L650_T0_S2 --> L650_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: L650_T1_init --> L650_T1_init
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: _drop_6FINAL_accept_S3 --> _drop_6FINAL_accept_S3
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: _drop_6FINAL_T0_S2 --> _drop_6FINAL_T0_S2
+[2023-01-16 04:16:19,840 INFO  L479       ProductGenerator]: _drop_6FINAL_T1_init --> _drop_6FINAL_T1_init
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L613_accept_S3 --> L613_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L613_T0_S2 --> L613_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L613_T1_init --> L613_T1_init
+[2023-01-16 04:16:19,841 INFO  L483       ProductGenerator]: Handling product edge call: call handle_1a(acceptor_tbl_0.handle_1a.learner_port);
+[2023-01-16 04:16:19,841 INFO  L483       ProductGenerator]: Handling product edge call: call handle_1a(acceptor_tbl_0.handle_1a.learner_port);
+[2023-01-16 04:16:19,841 INFO  L483       ProductGenerator]: Handling product edge call: call handle_1a(acceptor_tbl_0.handle_1a.learner_port);
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L683_accept_S3 --> L683_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L683_T0_S2 --> L683_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L683_T1_init --> L683_T1_init
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: handle_icmp_requestENTRY_accept_S3 --> handle_icmp_requestENTRY_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: handle_icmp_requestENTRY_T0_S2 --> handle_icmp_requestENTRY_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: handle_icmp_requestENTRY_T1_init --> handle_icmp_requestENTRY_T1_init
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L543_accept_S3 --> L543_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L543_T0_S2 --> L543_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L543_T1_init --> L543_T1_init
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L543_accept_S3 --> L543_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L543_T0_S2 --> L543_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L543_T1_init --> L543_T1_init
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L735_accept_S3 --> L735_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L735_T0_S2 --> L735_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L735_T1_init --> L735_T1_init
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L803_accept_S3 --> L803_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L803_T0_S2 --> L803_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L803_T1_init --> L803_T1_init
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L803_accept_S3 --> L803_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L803_T0_S2 --> L803_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L803_T1_init --> L803_T1_init
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L842-1_accept_S3 --> L842-1_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L842-1_T0_S2 --> L842-1_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L842-1_T1_init --> L842-1_T1_init
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L842-1_accept_S3 --> L842-1_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L842-1_T0_S2 --> L842-1_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: L842-1_T1_init --> L842-1_T1_init
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: learner_mac_address_0.writeENTRY_accept_S3 --> learner_mac_address_0.writeENTRY_accept_S3
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: learner_mac_address_0.writeENTRY_T0_S2 --> learner_mac_address_0.writeENTRY_T0_S2
+[2023-01-16 04:16:19,841 INFO  L479       ProductGenerator]: learner_mac_address_0.writeENTRY_T1_init --> learner_mac_address_0.writeENTRY_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L525_accept_S3 --> L525_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L525_T0_S2 --> L525_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L525_T1_init --> L525_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L525_accept_S3 --> L525_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L525_T0_S2 --> L525_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L525_T1_init --> L525_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L702_accept_S3 --> L702_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L702_T0_S2 --> L702_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L702_T1_init --> L702_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: handle_2aENTRY_accept_S3 --> handle_2aENTRY_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: handle_2aENTRY_T0_S2 --> handle_2aENTRY_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: handle_2aENTRY_T1_init --> handle_2aENTRY_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L882_accept_S3 --> L882_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L882_T0_S2 --> L882_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L882_T1_init --> L882_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L882_accept_S3 --> L882_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L882_T0_S2 --> L882_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L882_T1_init --> L882_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L691_accept_S3 --> L691_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L691_T0_S2 --> L691_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L691_T1_init --> L691_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L621_accept_S3 --> L621_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L621_T0_S2 --> L621_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L621_T1_init --> L621_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L733_accept_S3 --> L733_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L733_T0_S2 --> L733_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L733_T1_init --> L733_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L724_accept_S3 --> L724_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L724_T0_S2 --> L724_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L724_T1_init --> L724_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L758_accept_S3 --> L758_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L758_T0_S2 --> L758_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L758_T1_init --> L758_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L580_accept_S3 --> L580_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L580_T0_S2 --> L580_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L580_T1_init --> L580_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: parse_ipv4ENTRY_accept_S3 --> parse_ipv4ENTRY_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: parse_ipv4ENTRY_T0_S2 --> parse_ipv4ENTRY_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: parse_ipv4ENTRY_T1_init --> parse_ipv4ENTRY_T1_init
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L655_accept_S3 --> L655_accept_S3
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L655_T0_S2 --> L655_T0_S2
+[2023-01-16 04:16:19,842 INFO  L479       ProductGenerator]: L655_T1_init --> L655_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L726_accept_S3 --> L726_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L726_T0_S2 --> L726_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L726_T1_init --> L726_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: havocProcedureFINAL_accept_S3 --> havocProcedureFINAL_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: havocProcedureFINAL_T0_S2 --> havocProcedureFINAL_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: havocProcedureFINAL_T1_init --> havocProcedureFINAL_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: acceptor_tbl_0.applyENTRY_accept_S3 --> acceptor_tbl_0.applyENTRY_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: acceptor_tbl_0.applyENTRY_T0_S2 --> acceptor_tbl_0.applyENTRY_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: acceptor_tbl_0.applyENTRY_T1_init --> acceptor_tbl_0.applyENTRY_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: acceptor_tbl_0.applyENTRY_accept_S3 --> acceptor_tbl_0.applyENTRY_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: acceptor_tbl_0.applyENTRY_T0_S2 --> acceptor_tbl_0.applyENTRY_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: acceptor_tbl_0.applyENTRY_T1_init --> acceptor_tbl_0.applyENTRY_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L728_accept_S3 --> L728_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L728_T0_S2 --> L728_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L728_T1_init --> L728_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L565_accept_S3 --> L565_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L565_T0_S2 --> L565_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L565_T1_init --> L565_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: registerRound_0.writeENTRY_accept_S3 --> registerRound_0.writeENTRY_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: registerRound_0.writeENTRY_T0_S2 --> registerRound_0.writeENTRY_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: registerRound_0.writeENTRY_T1_init --> registerRound_0.writeENTRY_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L732_accept_S3 --> L732_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L732_T0_S2 --> L732_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L732_T1_init --> L732_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L795_accept_S3 --> L795_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L795_T0_S2 --> L795_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L795_T1_init --> L795_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L795_accept_S3 --> L795_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L795_T0_S2 --> L795_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L795_T1_init --> L795_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: startENTRY_accept_S3 --> startENTRY_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: startENTRY_T0_S2 --> startENTRY_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: startENTRY_T1_init --> startENTRY_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: _dropFINAL_accept_S3 --> _dropFINAL_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: _dropFINAL_T0_S2 --> _dropFINAL_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: _dropFINAL_T1_init --> _dropFINAL_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L713_accept_S3 --> L713_accept_S3
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L713_T0_S2 --> L713_T0_S2
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L713_T1_init --> L713_T1_init
+[2023-01-16 04:16:19,843 INFO  L479       ProductGenerator]: L640_accept_S3 --> L640_accept_S3
+[2023-01-16 04:16:19,844 INFO  L479       ProductGenerator]: L640_T0_S2 --> L640_T0_S2
+[2023-01-16 04:16:19,844 INFO  L479       ProductGenerator]: L640_T1_init --> L640_T1_init
+[2023-01-16 04:16:19,844 INFO  L479       ProductGenerator]: L748_accept_S3 --> L748_accept_S3
+[2023-01-16 04:16:19,844 INFO  L479       ProductGenerator]: L748_T0_S2 --> L748_T0_S2
+[2023-01-16 04:16:19,844 INFO  L479       ProductGenerator]: L748_T1_init --> L748_T1_init
+[2023-01-16 04:16:19,844 INFO  L479       ProductGenerator]: learner_mac_address_0.writeFINAL_accept_S3 --> learner_mac_address_0.writeFINAL_accept_S3
+[2023-01-16 04:16:19,844 INFO  L479       ProductGenerator]: learner_mac_address_0.writeFINAL_T0_S2 --> learner_mac_address_0.writeFINAL_T0_S2
+[2023-01-16 04:16:19,844 INFO  L479       ProductGenerator]: learner_mac_address_0.writeFINAL_T1_init --> learner_mac_address_0.writeFINAL_T1_init
+[2023-01-16 04:16:19,844 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _drop_5ENTRY
+[2023-01-16 04:16:19,846 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _drop_5ENTRY
+[2023-01-16 04:16:19,848 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _drop_5ENTRY
+[2023-01-16 04:16:19,851 INFO  L483       ProductGenerator]: Handling product edge call: call registerValue_0.write(hdr.paxos.inst, hdr.paxos.paxosval);
+[2023-01-16 04:16:19,851 INFO  L483       ProductGenerator]: Handling product edge call: call registerValue_0.write(hdr.paxos.inst, hdr.paxos.paxosval);
+[2023-01-16 04:16:19,851 INFO  L483       ProductGenerator]: Handling product edge call: call registerValue_0.write(hdr.paxos.inst, hdr.paxos.paxosval);
+[2023-01-16 04:16:19,851 INFO  L479       ProductGenerator]: L616_accept_S3 --> L616_accept_S3
+[2023-01-16 04:16:19,851 INFO  L479       ProductGenerator]: L616_T0_S2 --> L616_T0_S2
+[2023-01-16 04:16:19,851 INFO  L479       ProductGenerator]: L616_T1_init --> L616_T1_init
+[2023-01-16 04:16:19,851 INFO  L479       ProductGenerator]: my_ip_address_0.writeFINAL_accept_S3 --> my_ip_address_0.writeFINAL_accept_S3
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: my_ip_address_0.writeFINAL_T0_S2 --> my_ip_address_0.writeFINAL_T0_S2
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: my_ip_address_0.writeFINAL_T1_init --> my_ip_address_0.writeFINAL_T1_init
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L885-1_accept_S3 --> L885-1_accept_S3
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L885-1_T0_S2 --> L885-1_T0_S2
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L885-1_T1_init --> L885-1_T1_init
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L684_accept_S3 --> L684_accept_S3
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L684_T0_S2 --> L684_T0_S2
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L684_T1_init --> L684_T1_init
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L765_accept_S3 --> L765_accept_S3
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L765_T0_S2 --> L765_T0_S2
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L765_T1_init --> L765_T1_init
+[2023-01-16 04:16:19,852 INFO  L483       ProductGenerator]: Handling product edge call: call _drop();
+[2023-01-16 04:16:19,852 INFO  L483       ProductGenerator]: Handling product edge call: call _drop();
+[2023-01-16 04:16:19,852 INFO  L483       ProductGenerator]: Handling product edge call: call _drop();
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L729_accept_S3 --> L729_accept_S3
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L729_T0_S2 --> L729_T0_S2
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L729_T1_init --> L729_T1_init
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L528-1_accept_S3 --> L528-1_accept_S3
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L528-1_T0_S2 --> L528-1_T0_S2
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L528-1_T1_init --> L528-1_T1_init
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L704_accept_S3 --> L704_accept_S3
+[2023-01-16 04:16:19,852 INFO  L479       ProductGenerator]: L704_T0_S2 --> L704_T0_S2
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L704_T1_init --> L704_T1_init
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L960_accept_S3 --> L960_accept_S3
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L960_T0_S2 --> L960_T0_S2
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L960_T1_init --> L960_T1_init
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L960_accept_S3 --> L960_accept_S3
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L960_T0_S2 --> L960_T0_S2
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L960_T1_init --> L960_T1_init
+[2023-01-16 04:16:19,853 INFO  L483       ProductGenerator]: Handling product edge call: call acceptor_tbl_0.apply();
+[2023-01-16 04:16:19,853 INFO  L483       ProductGenerator]: Handling product edge call: call acceptor_tbl_0.apply();
+[2023-01-16 04:16:19,853 INFO  L483       ProductGenerator]: Handling product edge call: call acceptor_tbl_0.apply();
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L706_accept_S3 --> L706_accept_S3
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L706_T0_S2 --> L706_T0_S2
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L706_T1_init --> L706_T1_init
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: acceptFINAL_accept_S3 --> acceptFINAL_accept_S3
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: acceptFINAL_T0_S2 --> acceptFINAL_T0_S2
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: acceptFINAL_T1_init --> acceptFINAL_T1_init
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: registerAcceptorID_0.writeEXIT_accept_S3 --> registerAcceptorID_0.writeEXIT_accept_S3
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: registerAcceptorID_0.writeEXIT_T0_S2 --> registerAcceptorID_0.writeEXIT_T0_S2
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: registerAcceptorID_0.writeEXIT_T1_init --> registerAcceptorID_0.writeEXIT_T1_init
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L615_accept_S3 --> L615_accept_S3
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L615_T0_S2 --> L615_T0_S2
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L615_T1_init --> L615_T1_init
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L569_accept_S3 --> L569_accept_S3
+[2023-01-16 04:16:19,853 INFO  L479       ProductGenerator]: L569_T0_S2 --> L569_T0_S2
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L569_T1_init --> L569_T1_init
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: _drop_5FINAL_accept_S3 --> _drop_5FINAL_accept_S3
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: _drop_5FINAL_T0_S2 --> _drop_5FINAL_T0_S2
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: _drop_5FINAL_T1_init --> _drop_5FINAL_T1_init
+[2023-01-16 04:16:19,854 INFO  L483       ProductGenerator]: Handling product edge call: call verifyChecksum();
+[2023-01-16 04:16:19,854 INFO  L483       ProductGenerator]: Handling product edge call: call verifyChecksum();
+[2023-01-16 04:16:19,854 INFO  L483       ProductGenerator]: Handling product edge call: call verifyChecksum();
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L649_accept_S3 --> L649_accept_S3
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L649_T0_S2 --> L649_T0_S2
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L649_T1_init --> L649_T1_init
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L721_accept_S3 --> L721_accept_S3
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L721_T0_S2 --> L721_T0_S2
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L721_T1_init --> L721_T1_init
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L663_accept_S3 --> L663_accept_S3
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L663_T0_S2 --> L663_T0_S2
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L663_T1_init --> L663_T1_init
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L885_accept_S3 --> L885_accept_S3
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L885_T0_S2 --> L885_T0_S2
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L885_T1_init --> L885_T1_init
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L885_accept_S3 --> L885_accept_S3
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L885_T0_S2 --> L885_T0_S2
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L885_T1_init --> L885_T1_init
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L709_accept_S3 --> L709_accept_S3
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L709_T0_S2 --> L709_T0_S2
+[2023-01-16 04:16:19,854 INFO  L479       ProductGenerator]: L709_T1_init --> L709_T1_init
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: learner_address_0.writeEXIT_accept_S3 --> learner_address_0.writeEXIT_accept_S3
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: learner_address_0.writeEXIT_T0_S2 --> learner_address_0.writeEXIT_T0_S2
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: learner_address_0.writeEXIT_T1_init --> learner_address_0.writeEXIT_T1_init
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: registerVRound_0.writeFINAL_accept_S3 --> registerVRound_0.writeFINAL_accept_S3
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: registerVRound_0.writeFINAL_T0_S2 --> registerVRound_0.writeFINAL_T0_S2
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: registerVRound_0.writeFINAL_T1_init --> registerVRound_0.writeFINAL_T1_init
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: havocProcedureENTRY_accept_S3 --> havocProcedureENTRY_accept_S3
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: havocProcedureENTRY_T0_S2 --> havocProcedureENTRY_T0_S2
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: havocProcedureENTRY_T1_init --> havocProcedureENTRY_T1_init
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: _drop_4FINAL_accept_S3 --> _drop_4FINAL_accept_S3
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: _drop_4FINAL_T0_S2 --> _drop_4FINAL_T0_S2
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: _drop_4FINAL_T1_init --> _drop_4FINAL_T1_init
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: handle_arp_requestENTRY_accept_S3 --> handle_arp_requestENTRY_accept_S3
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: handle_arp_requestENTRY_T0_S2 --> handle_arp_requestENTRY_T0_S2
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: handle_arp_requestENTRY_T1_init --> handle_arp_requestENTRY_T1_init
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: L658_accept_S3 --> L658_accept_S3
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: L658_T0_S2 --> L658_T0_S2
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: L658_T1_init --> L658_T1_init
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: L566_accept_S3 --> L566_accept_S3
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: L566_T0_S2 --> L566_T0_S2
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: L566_T1_init --> L566_T1_init
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: L662_accept_S3 --> L662_accept_S3
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: L662_T0_S2 --> L662_T0_S2
+[2023-01-16 04:16:19,855 INFO  L479       ProductGenerator]: L662_T1_init --> L662_T1_init
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L673_accept_S3 --> L673_accept_S3
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L673_T0_S2 --> L673_T0_S2
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L673_T1_init --> L673_T1_init
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: mainFINAL_accept_S3 --> mainFINAL_accept_S3
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: mainFINAL_T0_S2 --> mainFINAL_T0_S2
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: mainFINAL_T1_init --> mainFINAL_T1_init
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: registerValue_0.writeFINAL_accept_S3 --> registerValue_0.writeFINAL_accept_S3
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: registerValue_0.writeFINAL_T0_S2 --> registerValue_0.writeFINAL_T0_S2
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: registerValue_0.writeFINAL_T1_init --> registerValue_0.writeFINAL_T1_init
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: parse_icmpFINAL_accept_S3 --> parse_icmpFINAL_accept_S3
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: parse_icmpFINAL_T0_S2 --> parse_icmpFINAL_T0_S2
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: parse_icmpFINAL_T1_init --> parse_icmpFINAL_T1_init
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L648_accept_S3 --> L648_accept_S3
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L648_T0_S2 --> L648_T0_S2
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L648_T1_init --> L648_T1_init
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L711_accept_S3 --> L711_accept_S3
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L711_T0_S2 --> L711_T0_S2
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L711_T1_init --> L711_T1_init
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L727_accept_S3 --> L727_accept_S3
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L727_T0_S2 --> L727_T0_S2
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L727_T1_init --> L727_T1_init
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L739_accept_S3 --> L739_accept_S3
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L739_T0_S2 --> L739_T0_S2
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L739_T1_init --> L739_T1_init
+[2023-01-16 04:16:19,856 INFO  L479       ProductGenerator]: L740_accept_S3 --> L740_accept_S3
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L740_T0_S2 --> L740_T0_S2
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L740_T1_init --> L740_T1_init
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: my_mac_address_0.writeENTRY_accept_S3 --> my_mac_address_0.writeENTRY_accept_S3
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: my_mac_address_0.writeENTRY_T0_S2 --> my_mac_address_0.writeENTRY_T0_S2
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: my_mac_address_0.writeENTRY_T1_init --> my_mac_address_0.writeENTRY_T1_init
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L697_accept_S3 --> L697_accept_S3
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L697_T0_S2 --> L697_T0_S2
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L697_T1_init --> L697_T1_init
+[2023-01-16 04:16:19,857 INFO  L483       ProductGenerator]: Handling product edge call: call registerRound_0.write(hdr.paxos.inst, hdr.paxos.rnd);
+[2023-01-16 04:16:19,857 INFO  L483       ProductGenerator]: Handling product edge call: call registerRound_0.write(hdr.paxos.inst, hdr.paxos.rnd);
+[2023-01-16 04:16:19,857 INFO  L483       ProductGenerator]: Handling product edge call: call registerRound_0.write(hdr.paxos.inst, hdr.paxos.rnd);
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L685_accept_S3 --> L685_accept_S3
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L685_T0_S2 --> L685_T0_S2
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L685_T1_init --> L685_T1_init
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L835_accept_S3 --> L835_accept_S3
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L835_T0_S2 --> L835_T0_S2
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L835_T1_init --> L835_T1_init
+[2023-01-16 04:16:19,857 INFO  L483       ProductGenerator]: Handling product edge call: call NoAction_0();
+[2023-01-16 04:16:19,857 INFO  L483       ProductGenerator]: Handling product edge call: call NoAction_0();
+[2023-01-16 04:16:19,857 INFO  L483       ProductGenerator]: Handling product edge call: call NoAction_0();
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L582_accept_S3 --> L582_accept_S3
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L582_T0_S2 --> L582_T0_S2
+[2023-01-16 04:16:19,857 INFO  L479       ProductGenerator]: L582_T1_init --> L582_T1_init
+[2023-01-16 04:16:19,858 INFO  L483       ProductGenerator]: Handling product edge call: call handle_arp_reply();
+[2023-01-16 04:16:19,858 INFO  L483       ProductGenerator]: Handling product edge call: call handle_arp_reply();
+[2023-01-16 04:16:19,858 INFO  L483       ProductGenerator]: Handling product edge call: call handle_arp_reply();
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L768_accept_S3 --> L768_accept_S3
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L768_T0_S2 --> L768_T0_S2
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L768_T1_init --> L768_T1_init
+[2023-01-16 04:16:19,858 INFO  L483       ProductGenerator]: Handling product edge call: call accept();
+[2023-01-16 04:16:19,858 INFO  L483       ProductGenerator]: Handling product edge call: call accept();
+[2023-01-16 04:16:19,858 INFO  L483       ProductGenerator]: Handling product edge call: call accept();
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L759_accept_S3 --> L759_accept_S3
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L759_T0_S2 --> L759_T0_S2
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L759_T1_init --> L759_T1_init
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L670_accept_S3 --> L670_accept_S3
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L670_T0_S2 --> L670_T0_S2
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L670_T1_init --> L670_T1_init
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L656_accept_S3 --> L656_accept_S3
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L656_T0_S2 --> L656_T0_S2
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L656_T1_init --> L656_T1_init
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L669_accept_S3 --> L669_accept_S3
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L669_T0_S2 --> L669_T0_S2
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L669_T1_init --> L669_T1_init
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L722_accept_S3 --> L722_accept_S3
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L722_T0_S2 --> L722_T0_S2
+[2023-01-16 04:16:19,858 INFO  L479       ProductGenerator]: L722_T1_init --> L722_T1_init
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: forwardENTRY_accept_S3 --> forwardENTRY_accept_S3
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: forwardENTRY_T0_S2 --> forwardENTRY_T0_S2
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: forwardENTRY_T1_init --> forwardENTRY_T1_init
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L708_accept_S3 --> L708_accept_S3
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L708_T0_S2 --> L708_T0_S2
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L708_T1_init --> L708_T1_init
+[2023-01-16 04:16:19,859 INFO  L483       ProductGenerator]: Handling product edge call: call havocProcedure();
+[2023-01-16 04:16:19,859 INFO  L483       ProductGenerator]: Handling product edge call: call havocProcedure();
+[2023-01-16 04:16:19,859 INFO  L483       ProductGenerator]: Handling product edge call: call havocProcedure();
+[2023-01-16 04:16:19,859 INFO  L483       ProductGenerator]: Handling product edge call: call parse_udp();
+[2023-01-16 04:16:19,859 INFO  L483       ProductGenerator]: Handling product edge call: call parse_udp();
+[2023-01-16 04:16:19,859 INFO  L483       ProductGenerator]: Handling product edge call: call parse_udp();
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L667_accept_S3 --> L667_accept_S3
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L667_T0_S2 --> L667_T0_S2
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L667_T1_init --> L667_T1_init
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L718_accept_S3 --> L718_accept_S3
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L718_T0_S2 --> L718_T0_S2
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L718_T1_init --> L718_T1_init
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L753_accept_S3 --> L753_accept_S3
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L753_T0_S2 --> L753_T0_S2
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L753_T1_init --> L753_T1_init
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L738_accept_S3 --> L738_accept_S3
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L738_T0_S2 --> L738_T0_S2
+[2023-01-16 04:16:19,859 INFO  L479       ProductGenerator]: L738_T1_init --> L738_T1_init
+[2023-01-16 04:16:19,860 INFO  L483       ProductGenerator]: Handling product edge call: call computeChecksum();
+[2023-01-16 04:16:19,860 INFO  L483       ProductGenerator]: Handling product edge call: call computeChecksum();
+[2023-01-16 04:16:19,860 INFO  L483       ProductGenerator]: Handling product edge call: call computeChecksum();
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L639_accept_S3 --> L639_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L639_T0_S2 --> L639_T0_S2
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L639_T1_init --> L639_T1_init
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L694_accept_S3 --> L694_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L694_T0_S2 --> L694_T0_S2
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L694_T1_init --> L694_T1_init
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: icmp_tbl_0.applyENTRY_accept_S3 --> icmp_tbl_0.applyENTRY_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: icmp_tbl_0.applyENTRY_T0_S2 --> icmp_tbl_0.applyENTRY_T0_S2
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: icmp_tbl_0.applyENTRY_T1_init --> icmp_tbl_0.applyENTRY_T1_init
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: icmp_tbl_0.applyENTRY_accept_S3 --> icmp_tbl_0.applyENTRY_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: icmp_tbl_0.applyENTRY_T0_S2 --> icmp_tbl_0.applyENTRY_T0_S2
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: icmp_tbl_0.applyENTRY_T1_init --> icmp_tbl_0.applyENTRY_T1_init
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L763_accept_S3 --> L763_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L763_T0_S2 --> L763_T0_S2
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L763_T1_init --> L763_T1_init
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L676_accept_S3 --> L676_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L676_T0_S2 --> L676_T0_S2
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L676_T1_init --> L676_T1_init
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L638_accept_S3 --> L638_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L638_T0_S2 --> L638_T0_S2
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L638_T1_init --> L638_T1_init
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L696_accept_S3 --> L696_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L696_T0_S2 --> L696_T0_S2
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L696_T1_init --> L696_T1_init
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: handle_arp_requestFINAL_accept_S3 --> handle_arp_requestFINAL_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: handle_arp_requestFINAL_T0_S2 --> handle_arp_requestFINAL_T0_S2
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: handle_arp_requestFINAL_T1_init --> handle_arp_requestFINAL_T1_init
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L903-1_accept_S3 --> L903-1_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L903-1_T0_S2 --> L903-1_T0_S2
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L903-1_T1_init --> L903-1_T1_init
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L674_accept_S3 --> L674_accept_S3
+[2023-01-16 04:16:19,860 INFO  L479       ProductGenerator]: L674_T0_S2 --> L674_T0_S2
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L674_T1_init --> L674_T1_init
+[2023-01-16 04:16:19,861 INFO  L483       ProductGenerator]: Handling product edge call: call parse_arp();
+[2023-01-16 04:16:19,861 INFO  L483       ProductGenerator]: Handling product edge call: call parse_arp();
+[2023-01-16 04:16:19,861 INFO  L483       ProductGenerator]: Handling product edge call: call parse_arp();
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L832_accept_S3 --> L832_accept_S3
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L832_T0_S2 --> L832_T0_S2
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L832_T1_init --> L832_T1_init
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L794_accept_S3 --> L794_accept_S3
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L794_T0_S2 --> L794_T0_S2
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L794_T1_init --> L794_T1_init
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L794_accept_S3 --> L794_accept_S3
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L794_T0_S2 --> L794_T0_S2
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L794_T1_init --> L794_T1_init
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L701_accept_S3 --> L701_accept_S3
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L701_T0_S2 --> L701_T0_S2
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L701_T1_init --> L701_T1_init
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L618_accept_S3 --> L618_accept_S3
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L618_T0_S2 --> L618_T0_S2
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L618_T1_init --> L618_T1_init
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: handle_arp_replyFINAL_accept_S3 --> handle_arp_replyFINAL_accept_S3
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: handle_arp_replyFINAL_T0_S2 --> handle_arp_replyFINAL_T0_S2
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: handle_arp_replyFINAL_T1_init --> handle_arp_replyFINAL_T1_init
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L755_accept_S3 --> L755_accept_S3
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L755_T0_S2 --> L755_T0_S2
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L755_T1_init --> L755_T1_init
+[2023-01-16 04:16:19,861 INFO  L479       ProductGenerator]: L757_accept_S3 --> L757_accept_S3
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L757_T0_S2 --> L757_T0_S2
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L757_T1_init --> L757_T1_init
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L680_accept_S3 --> L680_accept_S3
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L680_T0_S2 --> L680_T0_S2
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L680_T1_init --> L680_T1_init
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L750_accept_S3 --> L750_accept_S3
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L750_T0_S2 --> L750_T0_S2
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L750_T1_init --> L750_T1_init
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L686_accept_S3 --> L686_accept_S3
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L686_T0_S2 --> L686_T0_S2
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L686_T1_init --> L686_T1_init
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L695_accept_S3 --> L695_accept_S3
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L695_T0_S2 --> L695_T0_S2
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L695_T1_init --> L695_T1_init
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: registerVRound_0.writeENTRY_accept_S3 --> registerVRound_0.writeENTRY_accept_S3
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: registerVRound_0.writeENTRY_T0_S2 --> registerVRound_0.writeENTRY_T0_S2
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: registerVRound_0.writeENTRY_T1_init --> registerVRound_0.writeENTRY_T1_init
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call _parser_TopParser();
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call _parser_TopParser();
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call _parser_TopParser();
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L690_accept_S3 --> L690_accept_S3
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L690_T0_S2 --> L690_T0_S2
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L690_T1_init --> L690_T1_init
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: verifyChecksumFINAL_accept_S3 --> verifyChecksumFINAL_accept_S3
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: verifyChecksumFINAL_T0_S2 --> verifyChecksumFINAL_T0_S2
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: verifyChecksumFINAL_T1_init --> verifyChecksumFINAL_T1_init
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call handle_arp_request();
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call handle_arp_request();
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call handle_arp_request();
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call accept();
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call accept();
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call accept();
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L742_accept_S3 --> L742_accept_S3
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L742_T0_S2 --> L742_T0_S2
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L742_T1_init --> L742_T1_init
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L975-1_accept_S3 --> L975-1_accept_S3
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L975-1_T0_S2 --> L975-1_T0_S2
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L975-1_T1_init --> L975-1_T1_init
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call egress();
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call egress();
+[2023-01-16 04:16:19,862 INFO  L483       ProductGenerator]: Handling product edge call: call egress();
+[2023-01-16 04:16:19,862 INFO  L479       ProductGenerator]: L963-1_accept_S3 --> L963-1_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L963-1_T0_S2 --> L963-1_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L963-1_T1_init --> L963-1_T1_init
+[2023-01-16 04:16:19,863 INFO  L483       ProductGenerator]: Handling product edge call: call forward(transport_tbl_0.forward.port, transport_tbl_0.forward.mac_dst, transport_tbl_0.forward.ip_dst, transport_tbl_0.forward.udp_dst);
+[2023-01-16 04:16:19,863 INFO  L483       ProductGenerator]: Handling product edge call: call forward(transport_tbl_0.forward.port, transport_tbl_0.forward.mac_dst, transport_tbl_0.forward.ip_dst, transport_tbl_0.forward.udp_dst);
+[2023-01-16 04:16:19,863 INFO  L483       ProductGenerator]: Handling product edge call: call forward(transport_tbl_0.forward.port, transport_tbl_0.forward.mac_dst, transport_tbl_0.forward.ip_dst, transport_tbl_0.forward.udp_dst);
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L679_accept_S3 --> L679_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L679_T0_S2 --> L679_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L679_T1_init --> L679_T1_init
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L761_accept_S3 --> L761_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L761_T0_S2 --> L761_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L761_T1_init --> L761_T1_init
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L836_accept_S3 --> L836_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L836_T0_S2 --> L836_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L836_T1_init --> L836_T1_init
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: parse_icmpENTRY_accept_S3 --> parse_icmpENTRY_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: parse_icmpENTRY_T0_S2 --> parse_icmpENTRY_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: parse_icmpENTRY_T1_init --> parse_icmpENTRY_T1_init
+[2023-01-16 04:16:19,863 INFO  L483       ProductGenerator]: Handling product edge call: call parse_icmp();
+[2023-01-16 04:16:19,863 INFO  L483       ProductGenerator]: Handling product edge call: call parse_icmp();
+[2023-01-16 04:16:19,863 INFO  L483       ProductGenerator]: Handling product edge call: call parse_icmp();
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L568_accept_S3 --> L568_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L568_T0_S2 --> L568_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L568_T1_init --> L568_T1_init
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: parse_arpENTRY_accept_S3 --> parse_arpENTRY_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: parse_arpENTRY_T0_S2 --> parse_arpENTRY_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: parse_arpENTRY_T1_init --> parse_arpENTRY_T1_init
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: ingressENTRY_accept_S3 --> ingressENTRY_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: ingressENTRY_T0_S2 --> ingressENTRY_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: ingressENTRY_T1_init --> ingressENTRY_T1_init
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: ingressENTRY_accept_S3 --> ingressENTRY_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: ingressENTRY_T0_S2 --> ingressENTRY_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: ingressENTRY_T1_init --> ingressENTRY_T1_init
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L752_accept_S3 --> L752_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L752_T0_S2 --> L752_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L752_T1_init --> L752_T1_init
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L678_accept_S3 --> L678_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L678_T0_S2 --> L678_T0_S2
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L678_T1_init --> L678_T1_init
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L692_accept_S3 --> L692_accept_S3
+[2023-01-16 04:16:19,863 INFO  L479       ProductGenerator]: L692_T0_S2 --> L692_T0_S2
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L692_T1_init --> L692_T1_init
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: handle_1aFINAL_accept_S3 --> handle_1aFINAL_accept_S3
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: handle_1aFINAL_T0_S2 --> handle_1aFINAL_T0_S2
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: handle_1aFINAL_T1_init --> handle_1aFINAL_T1_init
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L731_accept_S3 --> L731_accept_S3
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L731_T0_S2 --> L731_T0_S2
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L731_T1_init --> L731_T1_init
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: handle_1aENTRY_accept_S3 --> handle_1aENTRY_accept_S3
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: handle_1aENTRY_T0_S2 --> handle_1aENTRY_T0_S2
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: handle_1aENTRY_T1_init --> handle_1aENTRY_T1_init
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L660_accept_S3 --> L660_accept_S3
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L660_T0_S2 --> L660_T0_S2
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L660_T1_init --> L660_T1_init
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L754_accept_S3 --> L754_accept_S3
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L754_T0_S2 --> L754_T0_S2
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L754_T1_init --> L754_T1_init
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: computeChecksumFINAL_accept_S3 --> computeChecksumFINAL_accept_S3
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: computeChecksumFINAL_T0_S2 --> computeChecksumFINAL_T0_S2
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: computeChecksumFINAL_T1_init --> computeChecksumFINAL_T1_init
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L671_accept_S3 --> L671_accept_S3
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L671_T0_S2 --> L671_T0_S2
+[2023-01-16 04:16:19,864 INFO  L479       ProductGenerator]: L671_T1_init --> L671_T1_init
+[2023-01-16 04:16:19,864 INFO  L483       ProductGenerator]: Handling product edge call: call read_round();
+[2023-01-16 04:16:19,864 INFO  L483       ProductGenerator]: Handling product edge call: call read_round();
+[2023-01-16 04:16:19,865 INFO  L483       ProductGenerator]: Handling product edge call: call read_round();
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L751_accept_S3 --> L751_accept_S3
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L751_T0_S2 --> L751_T0_S2
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L751_T1_init --> L751_T1_init
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L659_accept_S3 --> L659_accept_S3
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L659_T0_S2 --> L659_T0_S2
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L659_T1_init --> L659_T1_init
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L756_accept_S3 --> L756_accept_S3
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L756_T0_S2 --> L756_T0_S2
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L756_T1_init --> L756_T1_init
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: registerValue_0.writeENTRY_accept_S3 --> registerValue_0.writeENTRY_accept_S3
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: registerValue_0.writeENTRY_T0_S2 --> registerValue_0.writeENTRY_T0_S2
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: registerValue_0.writeENTRY_T1_init --> registerValue_0.writeENTRY_T1_init
+[2023-01-16 04:16:19,865 INFO  L483       ProductGenerator]: Handling product edge call: call handle_icmp_request();
+[2023-01-16 04:16:19,865 INFO  L483       ProductGenerator]: Handling product edge call: call handle_icmp_request();
+[2023-01-16 04:16:19,865 INFO  L483       ProductGenerator]: Handling product edge call: call handle_icmp_request();
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L614_accept_S3 --> L614_accept_S3
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L614_T0_S2 --> L614_T0_S2
+[2023-01-16 04:16:19,865 INFO  L479       ProductGenerator]: L614_T1_init --> L614_T1_init
+[2023-01-16 04:16:19,865 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _dropENTRY
+[2023-01-16 04:16:19,869 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _dropENTRY
+[2023-01-16 04:16:19,871 INFO  L486       ProductGenerator]: Handling product edge summary: SUMMARY for call mark_to_drop(); srcloc: _dropENTRY
+[2023-01-16 04:16:19,873 INFO  L483       ProductGenerator]: Handling product edge call: call arp_tbl_0.apply();
+[2023-01-16 04:16:19,874 INFO  L483       ProductGenerator]: Handling product edge call: call arp_tbl_0.apply();
+[2023-01-16 04:16:19,874 INFO  L483       ProductGenerator]: Handling product edge call: call arp_tbl_0.apply();
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L720_accept_S3 --> L720_accept_S3
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L720_T0_S2 --> L720_T0_S2
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L720_T1_init --> L720_T1_init
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L764_accept_S3 --> L764_accept_S3
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L764_T0_S2 --> L764_T0_S2
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L764_T1_init --> L764_T1_init
+[2023-01-16 04:16:19,874 INFO  L483       ProductGenerator]: Handling product edge call: call registerVRound_0.write(hdr.paxos.inst, hdr.paxos.rnd);
+[2023-01-16 04:16:19,874 INFO  L483       ProductGenerator]: Handling product edge call: call registerVRound_0.write(hdr.paxos.inst, hdr.paxos.rnd);
+[2023-01-16 04:16:19,874 INFO  L483       ProductGenerator]: Handling product edge call: call registerVRound_0.write(hdr.paxos.inst, hdr.paxos.rnd);
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L693_accept_S3 --> L693_accept_S3
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L693_T0_S2 --> L693_T0_S2
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L693_T1_init --> L693_T1_init
+[2023-01-16 04:16:19,874 INFO  L483       ProductGenerator]: Handling product edge call: call _drop_5();
+[2023-01-16 04:16:19,874 INFO  L483       ProductGenerator]: Handling product edge call: call _drop_5();
+[2023-01-16 04:16:19,874 INFO  L483       ProductGenerator]: Handling product edge call: call _drop_5();
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L778_accept_S3 --> L778_accept_S3
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L778_T0_S2 --> L778_T0_S2
+[2023-01-16 04:16:19,874 INFO  L479       ProductGenerator]: L778_T1_init --> L778_T1_init
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L778_accept_S3 --> L778_accept_S3
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L778_T0_S2 --> L778_T0_S2
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L778_T1_init --> L778_T1_init
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L715_accept_S3 --> L715_accept_S3
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L715_T0_S2 --> L715_T0_S2
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L715_T1_init --> L715_T1_init
+[2023-01-16 04:16:19,875 INFO  L483       ProductGenerator]: Handling product edge call: call place_holder_table_0.apply();
+[2023-01-16 04:16:19,875 INFO  L483       ProductGenerator]: Handling product edge call: call place_holder_table_0.apply();
+[2023-01-16 04:16:19,875 INFO  L483       ProductGenerator]: Handling product edge call: call place_holder_table_0.apply();
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L766_accept_S3 --> L766_accept_S3
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L766_T0_S2 --> L766_T0_S2
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L766_T1_init --> L766_T1_init
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L681_accept_S3 --> L681_accept_S3
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L681_T0_S2 --> L681_T0_S2
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L681_T1_init --> L681_T1_init
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: read_roundENTRY_accept_S3 --> read_roundENTRY_accept_S3
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: read_roundENTRY_T0_S2 --> read_roundENTRY_T0_S2
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: read_roundENTRY_T1_init --> read_roundENTRY_T1_init
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L593_accept_S3 --> L593_accept_S3
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L593_T0_S2 --> L593_T0_S2
+[2023-01-16 04:16:19,875 INFO  L479       ProductGenerator]: L593_T1_init --> L593_T1_init
+[2023-01-16 04:16:19,875 INFO  L483       ProductGenerator]: Handling product edge call: call transport_tbl_0.apply();
+[2023-01-16 04:16:19,875 INFO  L483       ProductGenerator]: Handling product edge call: call transport_tbl_0.apply();
+[2023-01-16 04:16:19,875 INFO  L483       ProductGenerator]: Handling product edge call: call transport_tbl_0.apply();
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L665_accept_S3 --> L665_accept_S3
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L665_T0_S2 --> L665_T0_S2
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L665_T1_init --> L665_T1_init
+[2023-01-16 04:16:19,876 INFO  L483       ProductGenerator]: Handling product edge call: call handle_2a(acceptor_tbl_0.handle_2a.learner_port);
+[2023-01-16 04:16:19,876 INFO  L483       ProductGenerator]: Handling product edge call: call handle_2a(acceptor_tbl_0.handle_2a.learner_port);
+[2023-01-16 04:16:19,876 INFO  L483       ProductGenerator]: Handling product edge call: call handle_2a(acceptor_tbl_0.handle_2a.learner_port);
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L794-1_accept_S3 --> L794-1_accept_S3
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L794-1_T0_S2 --> L794-1_T0_S2
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L794-1_T1_init --> L794-1_T1_init
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L700_accept_S3 --> L700_accept_S3
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L700_T0_S2 --> L700_T0_S2
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L700_T1_init --> L700_T1_init
+[2023-01-16 04:16:19,876 INFO  L483       ProductGenerator]: Handling product edge call: call start();
+[2023-01-16 04:16:19,876 INFO  L483       ProductGenerator]: Handling product edge call: call start();
+[2023-01-16 04:16:19,876 INFO  L483       ProductGenerator]: Handling product edge call: call start();
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L767_accept_S3 --> L767_accept_S3
+[2023-01-16 04:16:19,876 INFO  L479       ProductGenerator]: L767_T0_S2 --> L767_T0_S2
+[2023-01-16 04:16:19,930 INFO  L479       ProductGenerator]: L767_T1_init --> L767_T1_init
+[2023-01-16 04:16:19,930 INFO  L479       ProductGenerator]: L664_accept_S3 --> L664_accept_S3
+[2023-01-16 04:16:19,930 INFO  L479       ProductGenerator]: L664_T0_S2 --> L664_T0_S2
+[2023-01-16 04:16:19,930 INFO  L479       ProductGenerator]: L664_T1_init --> L664_T1_init
+[2023-01-16 04:16:19,930 INFO  L479       ProductGenerator]: L675_accept_S3 --> L675_accept_S3
+[2023-01-16 04:16:19,930 INFO  L479       ProductGenerator]: L675_T0_S2 --> L675_T0_S2
+[2023-01-16 04:16:19,931 INFO  L479       ProductGenerator]: L675_T1_init --> L675_T1_init
+[2023-01-16 04:16:19,931 INFO  L483       ProductGenerator]: Handling product edge call: call accept();
+[2023-01-16 04:16:19,931 INFO  L483       ProductGenerator]: Handling product edge call: call accept();
+[2023-01-16 04:16:19,931 INFO  L483       ProductGenerator]: Handling product edge call: call accept();
+[2023-01-16 04:16:19,931 INFO  L479       ProductGenerator]: L830_accept_S3 --> L830_accept_S3
+[2023-01-16 04:16:19,931 INFO  L479       ProductGenerator]: L830_T0_S2 --> L830_T0_S2
+[2023-01-16 04:16:19,931 INFO  L479       ProductGenerator]: L830_T1_init --> L830_T1_init
+[2023-01-16 04:16:19,931 INFO  L479       ProductGenerator]: L830_accept_S3 --> L830_accept_S3
+[2023-01-16 04:16:19,931 INFO  L479       ProductGenerator]: L830_T0_S2 --> L830_T0_S2
+[2023-01-16 04:16:19,931 INFO  L479       ProductGenerator]: L830_T1_init --> L830_T1_init
+[2023-01-16 04:16:19,931 INFO  L479       ProductGenerator]: handle_icmp_replyFINAL_accept_S3 --> handle_icmp_replyFINAL_accept_S3
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: handle_icmp_replyFINAL_T0_S2 --> handle_icmp_replyFINAL_T0_S2
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: handle_icmp_replyFINAL_T1_init --> handle_icmp_replyFINAL_T1_init
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: L743_accept_S3 --> L743_accept_S3
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: L743_T0_S2 --> L743_T0_S2
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: L743_T1_init --> L743_T1_init
+[2023-01-16 04:16:19,932 INFO  L483       ProductGenerator]: Handling product edge call: call handle_icmp_reply();
+[2023-01-16 04:16:19,932 INFO  L483       ProductGenerator]: Handling product edge call: call handle_icmp_reply();
+[2023-01-16 04:16:19,932 INFO  L483       ProductGenerator]: Handling product edge call: call handle_icmp_reply();
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: my_mac_address_0.writeEXIT_accept_S3 --> my_mac_address_0.writeEXIT_accept_S3
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: my_mac_address_0.writeEXIT_T0_S2 --> my_mac_address_0.writeEXIT_T0_S2
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: my_mac_address_0.writeEXIT_T1_init --> my_mac_address_0.writeEXIT_T1_init
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: L642_accept_S3 --> L642_accept_S3
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: L642_T0_S2 --> L642_T0_S2
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: L642_T1_init --> L642_T1_init
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: L911_accept_S3 --> L911_accept_S3
+[2023-01-16 04:16:19,932 INFO  L479       ProductGenerator]: L911_T0_S2 --> L911_T0_S2
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L911_T1_init --> L911_T1_init
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L796-1_accept_S3 --> L796-1_accept_S3
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L796-1_T0_S2 --> L796-1_T0_S2
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L796-1_T1_init --> L796-1_T1_init
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L796-1_accept_S3 --> L796-1_accept_S3
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L796-1_T0_S2 --> L796-1_T0_S2
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L796-1_T1_init --> L796-1_T1_init
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L734_accept_S3 --> L734_accept_S3
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L734_T0_S2 --> L734_T0_S2
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L734_T1_init --> L734_T1_init
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L661_accept_S3 --> L661_accept_S3
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L661_T0_S2 --> L661_T0_S2
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: L661_T1_init --> L661_T1_init
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: my_ip_address_0.writeENTRY_accept_S3 --> my_ip_address_0.writeENTRY_accept_S3
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: my_ip_address_0.writeENTRY_T0_S2 --> my_ip_address_0.writeENTRY_T0_S2
+[2023-01-16 04:16:19,933 INFO  L479       ProductGenerator]: my_ip_address_0.writeENTRY_T1_init --> my_ip_address_0.writeENTRY_T1_init
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L745_accept_S3 --> L745_accept_S3
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L745_T0_S2 --> L745_T0_S2
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L745_T1_init --> L745_T1_init
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L760_accept_S3 --> L760_accept_S3
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L760_T0_S2 --> L760_T0_S2
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L760_T1_init --> L760_T1_init
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L710_accept_S3 --> L710_accept_S3
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L710_T0_S2 --> L710_T0_S2
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L710_T1_init --> L710_T1_init
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L653_accept_S3 --> L653_accept_S3
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L653_T0_S2 --> L653_T0_S2
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L653_T1_init --> L653_T1_init
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: learner_address_0.writeFINAL_accept_S3 --> learner_address_0.writeFINAL_accept_S3
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: learner_address_0.writeFINAL_T0_S2 --> learner_address_0.writeFINAL_T0_S2
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: learner_address_0.writeFINAL_T1_init --> learner_address_0.writeFINAL_T1_init
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L672_accept_S3 --> L672_accept_S3
+[2023-01-16 04:16:19,934 INFO  L479       ProductGenerator]: L672_T0_S2 --> L672_T0_S2
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: L672_T1_init --> L672_T1_init
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: parse_paxosENTRY_accept_S3 --> parse_paxosENTRY_accept_S3
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: parse_paxosENTRY_T0_S2 --> parse_paxosENTRY_T0_S2
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: parse_paxosENTRY_T1_init --> parse_paxosENTRY_T1_init
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: _parser_TopParserFINAL_accept_S3 --> _parser_TopParserFINAL_accept_S3
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: _parser_TopParserFINAL_T0_S2 --> _parser_TopParserFINAL_T0_S2
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: _parser_TopParserFINAL_T1_init --> _parser_TopParserFINAL_T1_init
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: forwardFINAL_accept_S3 --> forwardFINAL_accept_S3
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: forwardFINAL_T0_S2 --> forwardFINAL_T0_S2
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: forwardFINAL_T1_init --> forwardFINAL_T1_init
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: registerAcceptorID_0.writeFINAL_accept_S3 --> registerAcceptorID_0.writeFINAL_accept_S3
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: registerAcceptorID_0.writeFINAL_T0_S2 --> registerAcceptorID_0.writeFINAL_T0_S2
+[2023-01-16 04:16:19,935 INFO  L479       ProductGenerator]: registerAcceptorID_0.writeFINAL_T1_init --> registerAcceptorID_0.writeFINAL_T1_init
+[2023-01-16 04:16:19,935 INFO  L483       ProductGenerator]: Handling product edge call: call _drop_6();
+[2023-01-16 04:16:19,936 INFO  L483       ProductGenerator]: Handling product edge call: call _drop_6();
+[2023-01-16 04:16:19,936 INFO  L483       ProductGenerator]: Handling product edge call: call _drop_6();
+[2023-01-16 04:16:19,936 INFO  L479       ProductGenerator]: L781_accept_S3 --> L781_accept_S3
+[2023-01-16 04:16:19,936 INFO  L479       ProductGenerator]: L781_T0_S2 --> L781_T0_S2
+[2023-01-16 04:16:19,936 INFO  L479       ProductGenerator]: L781_T1_init --> L781_T1_init
+[2023-01-16 04:16:19,936 INFO  L479       ProductGenerator]: L781_accept_S3 --> L781_accept_S3
+[2023-01-16 04:16:19,936 INFO  L479       ProductGenerator]: L781_T0_S2 --> L781_T0_S2
+[2023-01-16 04:16:19,936 INFO  L479       ProductGenerator]: L781_T1_init --> L781_T1_init
+[2023-01-16 04:16:19,936 INFO  L479       ProductGenerator]: L689_accept_S3 --> L689_accept_S3
+[2023-01-16 04:16:19,936 INFO  L479       ProductGenerator]: L689_T0_S2 --> L689_T0_S2
+[2023-01-16 04:16:19,936 INFO  L479       ProductGenerator]: L689_T1_init --> L689_T1_init
+[2023-01-16 04:16:19,936 INFO  L483       ProductGenerator]: Handling product edge call: call icmp_tbl_0.apply();
+[2023-01-16 04:16:19,936 INFO  L483       ProductGenerator]: Handling product edge call: call icmp_tbl_0.apply();
+[2023-01-16 04:16:19,936 INFO  L483       ProductGenerator]: Handling product edge call: call icmp_tbl_0.apply();
+[2023-01-16 04:16:19,936 INFO  L483       ProductGenerator]: Handling product edge call: call main();
+[2023-01-16 04:16:19,937 INFO  L483       ProductGenerator]: Handling product edge call: call main();
+[2023-01-16 04:16:19,937 INFO  L483       ProductGenerator]: Handling product edge call: call main();
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: my_ip_address_0.writeEXIT_accept_S3 --> my_ip_address_0.writeEXIT_accept_S3
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: my_ip_address_0.writeEXIT_T0_S2 --> my_ip_address_0.writeEXIT_T0_S2
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: my_ip_address_0.writeEXIT_T1_init --> my_ip_address_0.writeEXIT_T1_init
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: L963_accept_S3 --> L963_accept_S3
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: L963_T0_S2 --> L963_T0_S2
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: L963_T1_init --> L963_T1_init
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: L963_accept_S3 --> L963_accept_S3
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: L963_T0_S2 --> L963_T0_S2
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: L963_T1_init --> L963_T1_init
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: place_holder_table_0.applyENTRY_accept_S3 --> place_holder_table_0.applyENTRY_accept_S3
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: place_holder_table_0.applyENTRY_T0_S2 --> place_holder_table_0.applyENTRY_T0_S2
+[2023-01-16 04:16:19,937 INFO  L479       ProductGenerator]: place_holder_table_0.applyENTRY_T1_init --> place_holder_table_0.applyENTRY_T1_init
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: place_holder_table_0.applyENTRY_accept_S3 --> place_holder_table_0.applyENTRY_accept_S3
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: place_holder_table_0.applyENTRY_T0_S2 --> place_holder_table_0.applyENTRY_T0_S2
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: place_holder_table_0.applyENTRY_T1_init --> place_holder_table_0.applyENTRY_T1_init
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: L744_accept_S3 --> L744_accept_S3
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: L744_T0_S2 --> L744_T0_S2
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: L744_T1_init --> L744_T1_init
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: L578_accept_S3 --> L578_accept_S3
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: L578_T0_S2 --> L578_T0_S2
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: L578_T1_init --> L578_T1_init
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: L543-1_accept_S3 --> L543-1_accept_S3
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: L543-1_T0_S2 --> L543-1_T0_S2
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: L543-1_T1_init --> L543-1_T1_init
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: handle_2aFINAL_accept_S3 --> handle_2aFINAL_accept_S3
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: handle_2aFINAL_T0_S2 --> handle_2aFINAL_T0_S2
+[2023-01-16 04:16:19,938 INFO  L479       ProductGenerator]: handle_2aFINAL_T1_init --> handle_2aFINAL_T1_init
+[2023-01-16 04:16:19,939 INFO  L479       ProductGenerator]: L717_accept_S3 --> L717_accept_S3
+[2023-01-16 04:16:19,939 INFO  L479       ProductGenerator]: L717_T0_S2 --> L717_T0_S2
+[2023-01-16 04:16:19,939 INFO  L479       ProductGenerator]: L717_T1_init --> L717_T1_init
+[2023-01-16 04:16:19,939 INFO  L479       ProductGenerator]: L623_accept_S3 --> L623_accept_S3
+[2023-01-16 04:16:19,939 INFO  L479       ProductGenerator]: L623_T0_S2 --> L623_T0_S2
+[2023-01-16 04:16:19,939 INFO  L479       ProductGenerator]: L623_T1_init --> L623_T1_init
+[2023-01-16 04:16:19,939 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from registerVRound_0.writeEXIT to L597
+[2023-01-16 04:16:19,939 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from havocProcedureEXIT to L825
+[2023-01-16 04:16:19,939 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from handle_2aEXIT to L528-1
+[2023-01-16 04:16:19,939 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from registerRound_0.writeEXIT to handle_1aFINAL
+[2023-01-16 04:16:19,939 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from registerRound_0.writeEXIT to L595-1
+[2023-01-16 04:16:19,939 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from acceptor_tbl_0.applyEXIT to L798-1
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from handle_icmp_requestEXIT to L781-1
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from handle_icmp_replyEXIT to L781-1
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from place_holder_table_0.applyEXIT to egressFINAL
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from arp_tbl_0.applyEXIT to L794-1
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from mainProcedureEXIT to ULTIMATE.startFINAL
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from computeChecksumEXIT to L830
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from _drop_4EXIT to L975-1
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from startEXIT to _parser_TopParserFINAL
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from forwardEXIT to L975-1
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from NoAction_0EXIT to L911
+[2023-01-16 04:16:19,940 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from _drop_5EXIT to L543-1
+[2023-01-16 04:16:19,941 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from mainEXIT to L842-1
+[2023-01-16 04:16:19,941 INFO  L749       ProductGenerator]: ==== Handling return program step: #388#return;
+[2023-01-16 04:16:19,941 INFO  L749       ProductGenerator]: ==== Handling return program step: #388#return;
+[2023-01-16 04:16:19,941 INFO  L749       ProductGenerator]: ==== Handling return program step: #388#return;
+[2023-01-16 04:16:19,941 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from parse_icmpEXIT to L885-1
+[2023-01-16 04:16:19,941 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from handle_1aEXIT to L528-1
+[2023-01-16 04:16:19,941 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from read_roundEXIT to L796-1
+[2023-01-16 04:16:19,941 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from parse_ipv4EXIT to L963-1
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from ingressEXIT to L828
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from _parser_TopParserEXIT to L826
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from parse_arpEXIT to L963-1
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from handle_arp_replyEXIT to L543-1
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from verifyChecksumEXIT to L827
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from handle_arp_requestEXIT to L543-1
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from parse_udpEXIT to L885-1
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from acceptEXIT to parse_icmpFINAL
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from acceptEXIT to parse_arpFINAL
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from acceptEXIT to parse_paxosFINAL
+[2023-01-16 04:16:19,942 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from icmp_tbl_0.applyEXIT to L794-1
+[2023-01-16 04:16:19,943 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from registerValue_0.writeEXIT to handle_2aFINAL
+[2023-01-16 04:16:19,943 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from _drop_6EXIT to L781-1
+[2023-01-16 04:16:19,943 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from parse_paxosEXIT to L903-1
+[2023-01-16 04:16:19,943 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from egressEXIT to L829
+[2023-01-16 04:16:19,943 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from transport_tbl_0.applyEXIT to L794-1
+[2023-01-16 04:16:19,943 INFO  L375       ProductGenerator]: ---------- Handling double product return edge from _dropEXIT to L528-1
+[2023-01-16 04:16:20,147 INFO  L97    BuchiProductObserver]: Finished generation of product automaton successfully
+[2023-01-16 04:16:20,148 INFO  L110   BuchiProductObserver]: BuchiProgram size 1143 locations, 1457 edges
+[2023-01-16 04:16:20,149 INFO  L202        PluginConnector]: Adding new model LTL+Program Product de.uni_freiburg.informatik.ultimate.buchiprogramproduct OTHER 16.01 04:16:20 BoogieIcfgContainer
+[2023-01-16 04:16:20,149 INFO  L132        PluginConnector]: ------------------------ END Büchi Program Product----------------------------
+[2023-01-16 04:16:20,150 INFO  L113        PluginConnector]: ------------------------BlockEncodingV2----------------------------
+[2023-01-16 04:16:20,150 INFO  L271        PluginConnector]: Initializing BlockEncodingV2...
+[2023-01-16 04:16:20,153 INFO  L275        PluginConnector]: BlockEncodingV2 initialized
+[2023-01-16 04:16:20,154 INFO  L185        PluginConnector]: Executing the observer BlockEncodingObserver from plugin BlockEncodingV2 for "LTL+Program Product de.uni_freiburg.informatik.ultimate.buchiprogramproduct OTHER 16.01 04:16:20" (1/1) ...
+[2023-01-16 04:16:20,192 INFO  L313           BlockEncoder]: Initial Icfg 1143 locations, 1457 edges
+[2023-01-16 04:16:20,192 INFO  L258           BlockEncoder]: Using Remove infeasible edges
+[2023-01-16 04:16:20,192 INFO  L263           BlockEncoder]: Using Maximize final states
+[2023-01-16 04:16:20,193 INFO  L270           BlockEncoder]: Using Minimize states even if more edges are added than removed.=false
+[2023-01-16 04:16:20,193 INFO  L296           BlockEncoder]: Using Remove sink states
+[2023-01-16 04:16:20,194 INFO  L171           BlockEncoder]: Using Apply optimizations until nothing changes=true
+[2023-01-16 04:16:20,201 INFO  L70    emoveInfeasibleEdges]: Removed 8 edges and 3 locations because of local infeasibility
+[2023-01-16 04:16:20,203 INFO  L71     MaximizeFinalStates]: 0 new accepting states
+[2023-01-16 04:16:20,206 INFO  L70        RemoveSinkStates]: Removed 0 edges and 0 locations by removing sink states
+[2023-01-16 04:16:20,208 INFO  L70    emoveInfeasibleEdges]: Removed 0 edges and 0 locations because of local infeasibility
+[2023-01-16 04:16:20,209 INFO  L71     MaximizeFinalStates]: 0 new accepting states
+[2023-01-16 04:16:20,209 INFO  L70        RemoveSinkStates]: Removed 0 edges and 0 locations by removing sink states
+[2023-01-16 04:16:20,210 INFO  L237           BlockEncoder]: Using Create parallel compositions if possible
+[2023-01-16 04:16:20,210 INFO  L68        ParallelComposer]: Creating parallel compositions
+[2023-01-16 04:16:20,211 INFO  L313           BlockEncoder]: Encoded RCFG 378 locations, 480 edges
+[2023-01-16 04:16:20,212 INFO  L202        PluginConnector]: Adding new model LTL+Program Product de.uni_freiburg.informatik.ultimate.plugins.blockencoding CFG 16.01 04:16:20 BasicIcfg
+[2023-01-16 04:16:20,212 INFO  L132        PluginConnector]: ------------------------ END BlockEncodingV2----------------------------
+[2023-01-16 04:16:20,212 INFO  L113        PluginConnector]: ------------------------BuchiAutomizer----------------------------
+[2023-01-16 04:16:20,212 INFO  L271        PluginConnector]: Initializing BuchiAutomizer...
+[2023-01-16 04:16:20,214 INFO  L275        PluginConnector]: BuchiAutomizer initialized
+[2023-01-16 04:16:20,215 INFO  L99          BuchiAutomizer]: Safety of program was proven or not checked, starting termination analysis
+[2023-01-16 04:16:20,215 INFO  L185        PluginConnector]: Executing the observer BuchiAutomizerObserver from plugin BuchiAutomizer for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 16.01 04:16:19" (1/6) ...
+[2023-01-16 04:16:20,216 INFO  L205        PluginConnector]: Invalid model from BuchiAutomizer for observer de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer.BuchiAutomizerObserver@b01f2a and model type p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer AST 16.01 04:16:20, skipping insertion in model container
+[2023-01-16 04:16:20,216 INFO  L99          BuchiAutomizer]: Safety of program was proven or not checked, starting termination analysis
+[2023-01-16 04:16:20,216 INFO  L185        PluginConnector]: Executing the observer BuchiAutomizerObserver from plugin BuchiAutomizer for "Hardcoded edu.tsinghua.ss.thufv.specLang AST 16.01 04:16:19" (2/6) ...
+[2023-01-16 04:16:20,216 INFO  L205        PluginConnector]: Invalid model from BuchiAutomizer for observer de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer.BuchiAutomizerObserver@b01f2a and model type Hardcoded de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer AST 16.01 04:16:20, skipping insertion in model container
+[2023-01-16 04:16:20,216 INFO  L99          BuchiAutomizer]: Safety of program was proven or not checked, starting termination analysis
+[2023-01-16 04:16:20,216 INFO  L185        PluginConnector]: Executing the observer BuchiAutomizerObserver from plugin BuchiAutomizer for "p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.plugins.generator.rcfgbuilder CFG 16.01 04:16:19" (3/6) ...
+[2023-01-16 04:16:20,217 INFO  L205        PluginConnector]: Invalid model from BuchiAutomizer for observer de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer.BuchiAutomizerObserver@b01f2a and model type p4ltl_boogie.bpl de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer CFG 16.01 04:16:20, skipping insertion in model container
+[2023-01-16 04:16:20,217 INFO  L99          BuchiAutomizer]: Safety of program was proven or not checked, starting termination analysis
+[2023-01-16 04:16:20,217 INFO  L185        PluginConnector]: Executing the observer BuchiAutomizerObserver from plugin BuchiAutomizer for "Hardcoded edu.tsinghua.ss.thufv.ltl2aut AST 16.01 04:16:19" (4/6) ...
+[2023-01-16 04:16:20,217 INFO  L205        PluginConnector]: Invalid model from BuchiAutomizer for observer de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer.BuchiAutomizerObserver@b01f2a and model type Hardcoded de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer AST 16.01 04:16:20, skipping insertion in model container
+[2023-01-16 04:16:20,217 INFO  L99          BuchiAutomizer]: Safety of program was proven or not checked, starting termination analysis
+[2023-01-16 04:16:20,217 INFO  L185        PluginConnector]: Executing the observer BuchiAutomizerObserver from plugin BuchiAutomizer for "LTL+Program Product de.uni_freiburg.informatik.ultimate.buchiprogramproduct OTHER 16.01 04:16:20" (5/6) ...
+[2023-01-16 04:16:20,217 INFO  L205        PluginConnector]: Invalid model from BuchiAutomizer for observer de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer.BuchiAutomizerObserver@b01f2a and model type LTL+Program Product de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer OTHER 16.01 04:16:20, skipping insertion in model container
+[2023-01-16 04:16:20,217 INFO  L99          BuchiAutomizer]: Safety of program was proven or not checked, starting termination analysis
+[2023-01-16 04:16:20,217 INFO  L185        PluginConnector]: Executing the observer BuchiAutomizerObserver from plugin BuchiAutomizer for "LTL+Program Product de.uni_freiburg.informatik.ultimate.plugins.blockencoding CFG 16.01 04:16:20" (6/6) ...
+[2023-01-16 04:16:20,218 INFO  L354   chiAutomizerObserver]: Analyzing ICFG p4ltl_boogie.bpl_BEv2
+[2023-01-16 04:16:20,257 INFO  L255   stractBuchiCegarLoop]: Interprodecural is true
+[2023-01-16 04:16:20,258 INFO  L256   stractBuchiCegarLoop]: Hoare is false
+[2023-01-16 04:16:20,258 INFO  L257   stractBuchiCegarLoop]: Compute interpolants for Craig_TreeInterpolation
+[2023-01-16 04:16:20,258 INFO  L258   stractBuchiCegarLoop]: Backedges is STRAIGHT_LINE
+[2023-01-16 04:16:20,258 INFO  L259   stractBuchiCegarLoop]: Determinization is PREDICATE_ABSTRACTION
+[2023-01-16 04:16:20,258 INFO  L260   stractBuchiCegarLoop]: Difference is false
+[2023-01-16 04:16:20,258 INFO  L261   stractBuchiCegarLoop]: Minimize is MINIMIZE_SEVPA
+[2023-01-16 04:16:20,258 INFO  L265   stractBuchiCegarLoop]: ======== Iteration 0 == of CEGAR loop == BuchiAutomatonCegarLoop ========
+[2023-01-16 04:16:20,263 INFO  L72            BuchiIsEmpty]: Start buchiIsEmpty. Operand  has 378 states, 304 states have (on average 1.075657894736842) internal successors, (327), 301 states have internal predecessors, (327), 39 states have call successors, (39), 39 states have call predecessors, (39), 35 states have return successors, (38), 38 states have call predecessors, (38), 38 states have call successors, (38)
+[2023-01-16 04:16:20,291 INFO  L131   ngComponentsAnalysis]: Automaton has 0 accepting balls. 0
+[2023-01-16 04:16:20,291 INFO  L87            BuchiIsEmpty]: Finished buchiIsEmpty Result is true
+[2023-01-16 04:16:20,295 INFO  L202        PluginConnector]: Adding new model LTL+Program Product de.uni_freiburg.informatik.ultimate.plugins.generator.buchiautomizer CFG 16.01 04:16:20 BasicIcfg
+[2023-01-16 04:16:20,295 INFO  L132        PluginConnector]: ------------------------ END BuchiAutomizer----------------------------
+[2023-01-16 04:16:20,296 INFO  L158              Benchmark]: Toolchain (without parser) took 1091.92ms. Allocated memory was 38.8MB in the beginning and 82.8MB in the end (delta: 44.0MB). Free memory was 22.8MB in the beginning and 28.9MB in the end (delta: -6.1MB). Peak memory consumption was 37.5MB. Max. memory is 4.3GB.
+[2023-01-16 04:16:20,297 INFO  L158              Benchmark]: Boogie PL CUP Parser took 0.13ms. Allocated memory is still 38.8MB. Free memory is still 16.9MB. There was no memory consumed. Max. memory is 4.3GB.
+[2023-01-16 04:16:20,297 INFO  L158              Benchmark]: Boogie Preprocessor took 55.48ms. Allocated memory is still 38.8MB. Free memory was 22.7MB in the beginning and 18.0MB in the end (delta: 4.7MB). Peak memory consumption was 5.2MB. Max. memory is 4.3GB.
+[2023-01-16 04:16:20,298 INFO  L158              Benchmark]: ThufvSpecLang took 31.67ms. Allocated memory is still 38.8MB. Free memory was 18.0MB in the beginning and 15.7MB in the end (delta: 2.4MB). Peak memory consumption was 2.1MB. Max. memory is 4.3GB.
+[2023-01-16 04:16:20,298 INFO  L158              Benchmark]: RCFGBuilder took 402.72ms. Allocated memory was 38.8MB in the beginning and 64.0MB in the end (delta: 25.2MB). Free memory was 15.5MB in the beginning and 37.4MB in the end (delta: -21.8MB). Peak memory consumption was 10.5MB. Max. memory is 4.3GB.
+[2023-01-16 04:16:20,298 INFO  L158              Benchmark]: ThufvLTL2Aut took 60.50ms. Allocated memory is still 64.0MB. Free memory was 37.4MB in the beginning and 34.2MB in the end (delta: 3.2MB). Peak memory consumption was 3.1MB. Max. memory is 4.3GB.
+[2023-01-16 04:16:20,299 INFO  L158              Benchmark]: Büchi Program Product took 391.59ms. Allocated memory was 64.0MB in the beginning and 82.8MB in the end (delta: 18.9MB). Free memory was 34.2MB in the beginning and 50.4MB in the end (delta: -16.2MB). Peak memory consumption was 24.9MB. Max. memory is 4.3GB.
+[2023-01-16 04:16:20,299 INFO  L158              Benchmark]: BlockEncodingV2 took 61.65ms. Allocated memory is still 82.8MB. Free memory was 50.4MB in the beginning and 36.2MB in the end (delta: 14.2MB). Peak memory consumption was 13.6MB. Max. memory is 4.3GB.
+[2023-01-16 04:16:20,299 INFO  L158              Benchmark]: BuchiAutomizer took 83.01ms. Allocated memory is still 82.8MB. Free memory was 36.2MB in the beginning and 28.9MB in the end (delta: 7.3MB). Peak memory consumption was 7.3MB. Max. memory is 4.3GB.
+[2023-01-16 04:16:20,302 INFO  L339   ainManager$Toolchain]: #######################  End [Toolchain 1] #######################
+ --- Results ---
+ * Results from de.uni_freiburg.informatik.ultimate.plugins.blockencoding:
+  - StatisticsResult: Initial Icfg
+    1143 locations, 1457 edges
+  - StatisticsResult: Encoded RCFG
+    378 locations, 480 edges
+ * Results from de.uni_freiburg.informatik.ultimate.core:
+  - StatisticsResult: Toolchain Benchmarks
+    Benchmark results are:
+ * Boogie PL CUP Parser took 0.13ms. Allocated memory is still 38.8MB. Free memory is still 16.9MB. There was no memory consumed. Max. memory is 4.3GB.
+ * Boogie Preprocessor took 55.48ms. Allocated memory is still 38.8MB. Free memory was 22.7MB in the beginning and 18.0MB in the end (delta: 4.7MB). Peak memory consumption was 5.2MB. Max. memory is 4.3GB.
+ * ThufvSpecLang took 31.67ms. Allocated memory is still 38.8MB. Free memory was 18.0MB in the beginning and 15.7MB in the end (delta: 2.4MB). Peak memory consumption was 2.1MB. Max. memory is 4.3GB.
+ * RCFGBuilder took 402.72ms. Allocated memory was 38.8MB in the beginning and 64.0MB in the end (delta: 25.2MB). Free memory was 15.5MB in the beginning and 37.4MB in the end (delta: -21.8MB). Peak memory consumption was 10.5MB. Max. memory is 4.3GB.
+ * ThufvLTL2Aut took 60.50ms. Allocated memory is still 64.0MB. Free memory was 37.4MB in the beginning and 34.2MB in the end (delta: 3.2MB). Peak memory consumption was 3.1MB. Max. memory is 4.3GB.
+ * Büchi Program Product took 391.59ms. Allocated memory was 64.0MB in the beginning and 82.8MB in the end (delta: 18.9MB). Free memory was 34.2MB in the beginning and 50.4MB in the end (delta: -16.2MB). Peak memory consumption was 24.9MB. Max. memory is 4.3GB.
+ * BlockEncodingV2 took 61.65ms. Allocated memory is still 82.8MB. Free memory was 50.4MB in the beginning and 36.2MB in the end (delta: 14.2MB). Peak memory consumption was 13.6MB. Max. memory is 4.3GB.
+ * BuchiAutomizer took 83.01ms. Allocated memory is still 82.8MB. Free memory was 36.2MB in the beginning and 28.9MB in the end (delta: 7.3MB). Peak memory consumption was 7.3MB. Max. memory is 4.3GB.
+ * Results from de.uni_freiburg.informatik.ultimate.buchiprogramproduct:
+  - StatisticsResult: Initial property automaton
+    3 locations, 6 edges
+  - StatisticsResult: Initial RCFG
+    306 locations, 371 edges
+  - StatisticsResult: BuchiProgram size
+    1143 locations, 1457 edges
+ * Results from de.uni_freiburg.informatik.ultimate.plugins.generator.traceabstraction:
+  - StatisticsResult: Constructed decomposition of program
+    Trivial decomposition. There is no loop in your program.
+  - StatisticsResult: Timing statistics
+    BüchiAutomizer plugin needed 0.0s and 0 iterations.  TraceHistogramMax:0. Analysis of lassos took 0.0s. Construction of modules took 0.0s. Büchi inclusion checks took 0.0s. Highest rank in rank-based complementation 0. Minimization of det autom 0. Minimization of nondet autom 0. Automata minimization No data available. Non-live state removal took 0.0s Buchi closure took 0.0s. Biggest automaton had -1 states and ocurred in iteration -1.	Nontrivial modules had stage [0, 0, 0, 0, 0].	InterpolantCoveringCapabilityFinite: 0/0	InterpolantCoveringCapabilityBuchi: 0/0	HoareTripleCheckerStatistics: 	LassoAnalysisResults: nont0 unkn0 SFLI0 SFLT0 conc0 concLT0 SILN0 SILU0 SILI0 SILT0 lasso0 LassoPreprocessingBenchmarks: LassoTerminationAnalysisBenchmarks: not availableLassoTerminationAnalysisBenchmarks: LassoNonterminationAnalysisSatFixpoint: 0	LassoNonterminationAnalysisSatUnbounded: 0	LassoNonterminationAnalysisUnsat: 0	LassoNonterminationAnalysisUnknown: 0	LassoNonterminationAnalysisTime: 0.0s	InitialAbstractionConstructionTime: 0.0s
+  - AllSpecificationsHoldResult: All specifications hold
+    Buchi Automizer proved that the LTL property !(( []((hdr.ipv4.valid == true && hdr.paxos.valid == true)) )) || ( ( [](( ((_p4ltl_2 == true && _p4ltl_0 == true) && _p4ltl_1 == true) ==> ( ( []((_p4ltl_3 == true && _p4ltl_2 == true ==> _p4ltl_1 == true)) ) || ( (_p4ltl_3 == true && _p4ltl_2 == true ==> _p4ltl_1 == true) U (_p4ltl_0 == true) ) ) )) )) holds
+RESULT: Ultimate proved your program to be correct!
+Received shutdown request...

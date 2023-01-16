@@ -3,7 +3,7 @@ import sys
 import subprocess
 import time
 
-timeoutSecs = 600
+timeoutSecs = 3600
 
 logDir = "./log"
 if not os.path.isdir(logDir):
@@ -55,7 +55,19 @@ def testDir(dirName):
                 strout = e.stdout.decode()
             # endtry
 
-            strout = f"Total verification running time: {time.strftime('%H:%M:%S', time.gmtime(end-start))}\n" + strout
+            def checkCorrect(tol=10):
+                lines = strout.splitlines()
+                for index in range(-tol, 0):
+                    line = lines[index]
+                    if line == "RESULT: Ultimate proved your program to be correct!":
+                        return True
+                # endfor
+                return False
+
+            isProved = checkCorrect()
+            strout = f"Total verification running time: {time.strftime('%H:%M:%S', time.gmtime(end-start))}\n"  + \
+                    f"Result: {'Proved' if isProved else 'Timeout/Counter Example/Error'}\n" + \
+                    strout
             with open(logFile, "w") as f:
                 f.write(strout)
                 print(f"Done processing at {p4program}-{propertyFile}.")
@@ -76,5 +88,4 @@ if __name__ == "__main__":
     # test all
     # main()
     # test some dir
-    testDir("P4xos")
-
+    testDir("NdN")

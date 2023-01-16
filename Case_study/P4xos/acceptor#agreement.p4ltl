@@ -1,3 +1,3 @@
-//#LTLVariables: a:int, b:int
+//#LTLVariables: a:bv32, b:bv32
 //#LTLProperty: [](AP(hdr.paxos.inst == a && hdr.paxos.msgtype == 3 && hdr.paxos.paxosval == b) ==> (AP(hdr.paxos.msgtype == 1 && hdr.paxos.inst == a ==> hdr.paxos.paxosval == b) W AP(hdr.paxos.msgtype == 3)))
 //#LTLFairness: [](AP(valid(hdr.ipv4) && valid(hdr.paxos)))

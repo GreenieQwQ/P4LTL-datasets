@@ -1,6 +1,6 @@
 //#LTLVariables: a:bv16
-//#LTLProperty: [](AP(meta.name_metadata.name_hash == a && meta.flow_metadata.packetType == 0x06) ==> X(AP((meta.name_metadata.name_hash == a && meta.flow_metadata.packetType == 0x06) ==> drop)))
-//#LTLFairness: [](AP(meta.name_metadata.components != 0 && (meta.flow_metadata.packetType == 0x05 || meta.flow_metadata.packetType == 0x06)))
+//#LTLProperty: []((AP(pit_r[a] == 0 && meta.flow_metadata.packetType == 0x06 && meta.flow_metadata.isInPIT == 0) ==> (AP((meta.flow_metadata.packetType == 0x06) && drop) W AP(meta.flow_metadata.packetType == 0x05) )))
+//#LTLFairness: [](AP(meta.name_metadata.components != 0 && meta.name_metadata.name_hash == a && (meta.flow_metadata.packetType == 0x05 || meta.flow_metadata.packetType == 0x06)))
 //#CPI: [](AP((Apply(pit_table_0) && Key(pit_table_0, meta.flow_metadata.packetType) == 0x05) ==> Apply(pit_table_0, readPitEntry)))
 //#CPI: [](AP((Apply(pit_table_0) && Key(pit_table_0, meta.flow_metadata.packetType) == 0x06) ==> Apply(pit_table_0, cleanPitEntry)))
 //#CPI: [](AP((Apply(updatePit_table_0) && Key(updatePit_table_0, meta.flow_metadata.hasFIBentry) == 1) ==> Apply(updatePit_table_0, updatePit_entry)))

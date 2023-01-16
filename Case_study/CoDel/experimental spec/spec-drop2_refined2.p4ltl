@@ -1,0 +1,8 @@
+//#LTLVariables: a:int
+//#LTLProperty: [](AP(meta.codel.time_now >= meta.codel.drop_time && meta.codel.queue_id == a && meta.codel.state_dropping == 1) ==> (AP(meta.codel.queue_id == a && meta.codel.time_now >= meta.codel.drop_next ==> drop) W AP(meta.codel.queue_id == a && standard_metadata.deq_timedelta < 5000)))
+//#LTLFairness: [](AP(standard_metadata.ingress_port == 1))
+
+
+
+
+
