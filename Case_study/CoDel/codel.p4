@@ -91,8 +91,8 @@ control c_codel(inout headers hdr, inout metadata meta, inout standard_metadata_
             else {
                 if (meta.codel.time_now >= meta.codel.drop_next) {
                     mark_to_drop(standard_metadata);
-        	    meta.codel.drop_cnt = meta.codel.drop_cnt + 32w1;
-        	    r_drop_count.write((bit<32>)meta.codel.queue_id, (bit<32>)meta.codel.drop_cnt);
+            	    meta.codel.drop_cnt = meta.codel.drop_cnt + 32w1;
+            	    r_drop_count.write((bit<32>)meta.codel.queue_id, (bit<32>)meta.codel.drop_cnt);
                     t_codel_control_law.apply();
                 }
             }

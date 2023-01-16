@@ -1,0 +1,498 @@
+This is Ultimate 0.2.2-P4LTL-b27e90e-m
+[2022-12-21 12:21:49,804 INFO  L177        SettingsManager]: Resetting all preferences to default values...
+[2022-12-21 12:21:49,815 INFO  L181        SettingsManager]: Resetting UltimateCore preferences to default values
+[2022-12-21 12:21:49,887 INFO  L184        SettingsManager]: Ultimate Commandline Interface provides no preferences, ignoring...
+[2022-12-21 12:21:49,887 INFO  L181        SettingsManager]: Resetting Boogie Preprocessor preferences to default values
+[2022-12-21 12:21:49,889 INFO  L181        SettingsManager]: Resetting Boogie Procedure Inliner preferences to default values
+[2022-12-21 12:21:49,890 INFO  L181        SettingsManager]: Resetting Abstract Interpretation preferences to default values
+[2022-12-21 12:21:49,892 INFO  L181        SettingsManager]: Resetting LassoRanker preferences to default values
+[2022-12-21 12:21:49,897 INFO  L181        SettingsManager]: Resetting Reaching Definitions preferences to default values
+[2022-12-21 12:21:49,899 INFO  L181        SettingsManager]: Resetting SyntaxChecker preferences to default values
+[2022-12-21 12:21:49,901 INFO  L181        SettingsManager]: Resetting Sifa preferences to default values
+[2022-12-21 12:21:49,906 INFO  L184        SettingsManager]: Büchi Program Product provides no preferences, ignoring...
+[2022-12-21 12:21:49,906 INFO  L181        SettingsManager]: Resetting LTL2Aut preferences to default values
+[2022-12-21 12:21:49,908 INFO  L181        SettingsManager]: Resetting PEA to Boogie preferences to default values
+[2022-12-21 12:21:49,910 INFO  L181        SettingsManager]: Resetting BlockEncodingV2 preferences to default values
+[2022-12-21 12:21:49,912 INFO  L181        SettingsManager]: Resetting ChcToBoogie preferences to default values
+[2022-12-21 12:21:49,913 INFO  L181        SettingsManager]: Resetting AutomataScriptInterpreter preferences to default values
+[2022-12-21 12:21:49,915 INFO  L181        SettingsManager]: Resetting BuchiAutomizer preferences to default values
+[2022-12-21 12:21:49,917 INFO  L181        SettingsManager]: Resetting CACSL2BoogieTranslator preferences to default values
+[2022-12-21 12:21:49,919 INFO  L181        SettingsManager]: Resetting CodeCheck preferences to default values
+[2022-12-21 12:21:49,922 INFO  L181        SettingsManager]: Resetting InvariantSynthesis preferences to default values
+[2022-12-21 12:21:49,923 INFO  L181        SettingsManager]: Resetting RCFGBuilder preferences to default values
+[2022-12-21 12:21:49,925 INFO  L181        SettingsManager]: Resetting Referee preferences to default values
+[2022-12-21 12:21:49,926 INFO  L181        SettingsManager]: Resetting TraceAbstraction preferences to default values
+[2022-12-21 12:21:49,930 INFO  L184        SettingsManager]: TraceAbstractionConcurrent provides no preferences, ignoring...
+[2022-12-21 12:21:49,931 INFO  L184        SettingsManager]: TraceAbstractionWithAFAs provides no preferences, ignoring...
+[2022-12-21 12:21:49,931 INFO  L181        SettingsManager]: Resetting TreeAutomizer preferences to default values
+[2022-12-21 12:21:49,932 INFO  L181        SettingsManager]: Resetting IcfgToChc preferences to default values
+[2022-12-21 12:21:49,933 INFO  L181        SettingsManager]: Resetting IcfgTransformer preferences to default values
+[2022-12-21 12:21:49,935 INFO  L184        SettingsManager]: ReqToTest provides no preferences, ignoring...
+[2022-12-21 12:21:49,935 INFO  L181        SettingsManager]: Resetting ThufvLTL2Aut preferences to default values
+[2022-12-21 12:21:49,939 INFO  L181        SettingsManager]: Resetting ThufvSpecLang preferences to default values
+[2022-12-21 12:21:49,940 INFO  L181        SettingsManager]: Resetting Boogie Printer preferences to default values
+[2022-12-21 12:21:49,941 INFO  L181        SettingsManager]: Resetting ChcSmtPrinter preferences to default values
+[2022-12-21 12:21:49,942 INFO  L181        SettingsManager]: Resetting ReqPrinter preferences to default values
+[2022-12-21 12:21:49,943 INFO  L181        SettingsManager]: Resetting Witness Printer preferences to default values
+[2022-12-21 12:21:49,944 INFO  L184        SettingsManager]: Boogie PL CUP Parser provides no preferences, ignoring...
+[2022-12-21 12:21:49,945 INFO  L181        SettingsManager]: Resetting CDTParser preferences to default values
+[2022-12-21 12:21:49,946 INFO  L184        SettingsManager]: AutomataScriptParser provides no preferences, ignoring...
+[2022-12-21 12:21:49,946 INFO  L184        SettingsManager]: ReqParser provides no preferences, ignoring...
+[2022-12-21 12:21:49,946 INFO  L181        SettingsManager]: Resetting SmtParser preferences to default values
+[2022-12-21 12:21:49,947 INFO  L181        SettingsManager]: Resetting Witness Parser preferences to default values
+[2022-12-21 12:21:49,948 INFO  L188        SettingsManager]: Finished resetting all preferences to default values...
+[2022-12-21 12:21:49,949 INFO  L101        SettingsManager]: Beginning loading settings from /media/yec/WORK/Programs/lab/P4LTL/releaseScripts/default/UP4LTL-linux/config/Automizer.epf
+[2022-12-21 12:21:49,962 INFO  L113        SettingsManager]: Loading preferences was successful
+[2022-12-21 12:21:49,965 INFO  L115        SettingsManager]: Preferences different from defaults after loading the file:
+[2022-12-21 12:21:49,966 INFO  L136        SettingsManager]: Preferences of LTL2Aut differ from their defaults:
+[2022-12-21 12:21:49,967 INFO  L138        SettingsManager]:  * Read property from file=true
+[2022-12-21 12:21:49,967 INFO  L136        SettingsManager]: Preferences of BlockEncodingV2 differ from their defaults:
+[2022-12-21 12:21:49,967 INFO  L138        SettingsManager]:  * Minimize states using LBE with the strategy=NONE
+[2022-12-21 12:21:49,968 INFO  L136        SettingsManager]: Preferences of BuchiAutomizer differ from their defaults:
+[2022-12-21 12:21:49,968 INFO  L138        SettingsManager]:  * Compute Interpolants along a Counterexample=Craig_TreeInterpolation
+[2022-12-21 12:21:49,968 INFO  L138        SettingsManager]:  * Use old map elimination=false
+[2022-12-21 12:21:49,969 INFO  L138        SettingsManager]:  * Try twofold refinement=false
+[2022-12-21 12:21:49,969 INFO  L136        SettingsManager]: Preferences of CACSL2BoogieTranslator differ from their defaults:
+[2022-12-21 12:21:49,969 INFO  L138        SettingsManager]:  * Overapproximate operations on floating types=true
+[2022-12-21 12:21:49,970 INFO  L138        SettingsManager]:  * Check division by zero=IGNORE
+[2022-12-21 12:21:49,970 INFO  L138        SettingsManager]:  * Pointer to allocated memory at dereference=IGNORE
+[2022-12-21 12:21:49,970 INFO  L138        SettingsManager]:  * If two pointers are subtracted or compared they have the same base address=IGNORE
+[2022-12-21 12:21:49,971 INFO  L138        SettingsManager]:  * Check array bounds for arrays that are off heap=IGNORE
+[2022-12-21 12:21:49,971 INFO  L138        SettingsManager]:  * Check if freed pointer was valid=false
+[2022-12-21 12:21:49,971 INFO  L138        SettingsManager]:  * Pointer base address is valid at dereference=IGNORE
+[2022-12-21 12:21:49,972 INFO  L136        SettingsManager]: Preferences of RCFGBuilder differ from their defaults:
+[2022-12-21 12:21:49,972 INFO  L138        SettingsManager]:  * Size of a code block=SingleStatement
+[2022-12-21 12:21:49,972 INFO  L138        SettingsManager]:  * SMT solver=Internal_SMTInterpol
+[2022-12-21 12:21:49,972 INFO  L138        SettingsManager]:  * Remove assume true statements=false
+[2022-12-21 12:21:49,973 INFO  L136        SettingsManager]: Preferences of TraceAbstraction differ from their defaults:
+[2022-12-21 12:21:49,973 INFO  L138        SettingsManager]:  * Compute Interpolants along a Counterexample=FPandBP
+[2022-12-21 12:21:49,973 INFO  L138        SettingsManager]:  * Trace refinement strategy=CAMEL
+[2022-12-21 12:21:49,974 INFO  L138        SettingsManager]:  * Command for external solver=z3 SMTLIB2_COMPLIANT=true -memory:2024 -smt2 -in
+[2022-12-21 12:21:49,974 INFO  L138        SettingsManager]:  * Stop after first violation was found=false
+[2022-12-21 12:21:49,974 INFO  L138        SettingsManager]:  * SMT solver=External_ModelsAndUnsatCoreMode
+[2022-12-21 12:21:49,976 INFO  L136        SettingsManager]: Preferences of Boogie Printer differ from their defaults:
+[2022-12-21 12:21:49,976 INFO  L138        SettingsManager]:  * Dump path:=C:\Users\Greenie\Desktop\Project\P4LTL\trunk\examples\P4LTL
+[2022-12-21 12:21:50,737 INFO  L75    nceAwareModelManager]: Repository-Root is: /tmp
+[2022-12-21 12:21:50,916 INFO  L261   ainManager$Toolchain]: [Toolchain 1]: Applicable parser(s) successfully (re)initialized
+[2022-12-21 12:21:50,918 INFO  L217   ainManager$Toolchain]: [Toolchain 1]: Toolchain selected.
+[2022-12-21 12:21:50,919 INFO  L271        PluginConnector]: Initializing Boogie PL CUP Parser...
+[2022-12-21 12:21:50,920 INFO  L275        PluginConnector]: Boogie PL CUP Parser initialized
+[2022-12-21 12:21:50,921 INFO  L432   ainManager$Toolchain]: [Toolchain 1]: Parsing single file: /media/yec/WORK/Programs/lab/P4LTL-datasets/Case_study/Bfs/ua-assertion.bpl
+[2022-12-21 12:21:50,921 INFO  L110           BoogieParser]: Parsing: '/media/yec/WORK/Programs/lab/P4LTL-datasets/Case_study/Bfs/ua-assertion.bpl'
+[2022-12-21 12:21:50,963 INFO  L299   ainManager$Toolchain]: ####################### [Toolchain 1] #######################
+[2022-12-21 12:21:50,964 INFO  L131        ToolchainWalker]: Walking toolchain with 3 elements.
+[2022-12-21 12:21:50,965 INFO  L113        PluginConnector]: ------------------------Boogie Preprocessor----------------------------
+[2022-12-21 12:21:50,965 INFO  L271        PluginConnector]: Initializing Boogie Preprocessor...
+[2022-12-21 12:21:50,965 INFO  L275        PluginConnector]: Boogie Preprocessor initialized
+[2022-12-21 12:21:50,988 INFO  L185        PluginConnector]: Executing the observer EnsureBoogieModelObserver from plugin Boogie Preprocessor for "ua-assertion.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 21.12 12:21:50" (1/1) ...
+[2022-12-21 12:21:50,990 INFO  L185        PluginConnector]: Executing the observer TypeChecker from plugin Boogie Preprocessor for "ua-assertion.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 21.12 12:21:50" (1/1) ...
+[2022-12-21 12:21:51,001 INFO  L185        PluginConnector]: Executing the observer ConstExpander from plugin Boogie Preprocessor for "ua-assertion.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 21.12 12:21:50" (1/1) ...
+[2022-12-21 12:21:51,002 INFO  L185        PluginConnector]: Executing the observer StructExpander from plugin Boogie Preprocessor for "ua-assertion.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 21.12 12:21:50" (1/1) ...
+[2022-12-21 12:21:51,014 INFO  L185        PluginConnector]: Executing the observer UnstructureCode from plugin Boogie Preprocessor for "ua-assertion.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 21.12 12:21:50" (1/1) ...
+[2022-12-21 12:21:51,018 INFO  L185        PluginConnector]: Executing the observer FunctionInliner from plugin Boogie Preprocessor for "ua-assertion.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 21.12 12:21:50" (1/1) ...
+[2022-12-21 12:21:51,031 INFO  L185        PluginConnector]: Executing the observer BoogieSymbolTableConstructor from plugin Boogie Preprocessor for "ua-assertion.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 21.12 12:21:50" (1/1) ...
+[2022-12-21 12:21:51,035 INFO  L132        PluginConnector]: ------------------------ END Boogie Preprocessor----------------------------
+[2022-12-21 12:21:51,036 INFO  L113        PluginConnector]: ------------------------RCFGBuilder----------------------------
+[2022-12-21 12:21:51,036 INFO  L271        PluginConnector]: Initializing RCFGBuilder...
+[2022-12-21 12:21:51,037 INFO  L275        PluginConnector]: RCFGBuilder initialized
+[2022-12-21 12:21:51,038 INFO  L185        PluginConnector]: Executing the observer RCFGBuilderObserver from plugin RCFGBuilder for "ua-assertion.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 21.12 12:21:50" (1/1) ...
+[2022-12-21 12:21:51,070 INFO  L127          SolverBuilder]: Constructing new instance of SMTInterpol with explicit timeout -1 ms and remaining time -1 ms
+[2022-12-21 12:21:51,231 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_0 given in one single declaration
+[2022-12-21 12:21:51,231 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_0
+[2022-12-21 12:21:51,231 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_0
+[2022-12-21 12:21:51,232 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_21 given in one single declaration
+[2022-12-21 12:21:51,232 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_21
+[2022-12-21 12:21:51,232 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_21
+[2022-12-21 12:21:51,233 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_22 given in one single declaration
+[2022-12-21 12:21:51,233 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_22
+[2022-12-21 12:21:51,233 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_22
+[2022-12-21 12:21:51,233 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_23 given in one single declaration
+[2022-12-21 12:21:51,233 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_23
+[2022-12-21 12:21:51,234 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_23
+[2022-12-21 12:21:51,234 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_24 given in one single declaration
+[2022-12-21 12:21:51,234 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_24
+[2022-12-21 12:21:51,234 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_24
+[2022-12-21 12:21:51,234 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_25 given in one single declaration
+[2022-12-21 12:21:51,235 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_25
+[2022-12-21 12:21:51,235 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_25
+[2022-12-21 12:21:51,235 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_26 given in one single declaration
+[2022-12-21 12:21:51,235 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_26
+[2022-12-21 12:21:51,235 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_26
+[2022-12-21 12:21:51,236 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_27 given in one single declaration
+[2022-12-21 12:21:51,236 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_27
+[2022-12-21 12:21:51,236 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_27
+[2022-12-21 12:21:51,236 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_28 given in one single declaration
+[2022-12-21 12:21:51,236 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_28
+[2022-12-21 12:21:51,236 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_28
+[2022-12-21 12:21:51,237 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_29 given in one single declaration
+[2022-12-21 12:21:51,237 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_29
+[2022-12-21 12:21:51,237 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_29
+[2022-12-21 12:21:51,237 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_30 given in one single declaration
+[2022-12-21 12:21:51,237 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_30
+[2022-12-21 12:21:51,238 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_30
+[2022-12-21 12:21:51,238 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_31 given in one single declaration
+[2022-12-21 12:21:51,238 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_31
+[2022-12-21 12:21:51,238 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_31
+[2022-12-21 12:21:51,238 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_32 given in one single declaration
+[2022-12-21 12:21:51,238 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_32
+[2022-12-21 12:21:51,239 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_32
+[2022-12-21 12:21:51,239 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_33 given in one single declaration
+[2022-12-21 12:21:51,239 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_33
+[2022-12-21 12:21:51,239 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_33
+[2022-12-21 12:21:51,239 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_34 given in one single declaration
+[2022-12-21 12:21:51,239 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_34
+[2022-12-21 12:21:51,240 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_34
+[2022-12-21 12:21:51,240 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_35 given in one single declaration
+[2022-12-21 12:21:51,240 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_35
+[2022-12-21 12:21:51,240 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_35
+[2022-12-21 12:21:51,240 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_36 given in one single declaration
+[2022-12-21 12:21:51,240 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_36
+[2022-12-21 12:21:51,241 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_36
+[2022-12-21 12:21:51,241 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_37 given in one single declaration
+[2022-12-21 12:21:51,241 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_37
+[2022-12-21 12:21:51,241 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_37
+[2022-12-21 12:21:51,241 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_38 given in one single declaration
+[2022-12-21 12:21:51,241 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_38
+[2022-12-21 12:21:51,242 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_38
+[2022-12-21 12:21:51,242 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure NoAction_39 given in one single declaration
+[2022-12-21 12:21:51,242 INFO  L130     BoogieDeclarations]: Found specification of procedure NoAction_39
+[2022-12-21 12:21:51,242 INFO  L138     BoogieDeclarations]: Found implementation of procedure NoAction_39
+[2022-12-21 12:21:51,242 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure ULTIMATE.start given in one single declaration
+[2022-12-21 12:21:51,243 INFO  L130     BoogieDeclarations]: Found specification of procedure ULTIMATE.start
+[2022-12-21 12:21:51,243 INFO  L138     BoogieDeclarations]: Found implementation of procedure ULTIMATE.start
+[2022-12-21 12:21:51,243 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _check_out_failed.apply given in one single declaration
+[2022-12-21 12:21:51,243 INFO  L130     BoogieDeclarations]: Found specification of procedure _check_out_failed.apply
+[2022-12-21 12:21:51,243 INFO  L138     BoogieDeclarations]: Found implementation of procedure _check_out_failed.apply
+[2022-12-21 12:21:51,243 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _check_outport_status.apply given in one single declaration
+[2022-12-21 12:21:51,244 INFO  L130     BoogieDeclarations]: Found specification of procedure _check_outport_status.apply
+[2022-12-21 12:21:51,244 INFO  L138     BoogieDeclarations]: Found implementation of procedure _check_outport_status.apply
+[2022-12-21 12:21:51,244 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _curr_par_eq_neq_ingress.apply given in one single declaration
+[2022-12-21 12:21:51,244 INFO  L130     BoogieDeclarations]: Found specification of procedure _curr_par_eq_neq_ingress.apply
+[2022-12-21 12:21:51,244 INFO  L138     BoogieDeclarations]: Found implementation of procedure _curr_par_eq_neq_ingress.apply
+[2022-12-21 12:21:51,245 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _curr_par_eq_zero.apply given in one single declaration
+[2022-12-21 12:21:51,245 INFO  L130     BoogieDeclarations]: Found specification of procedure _curr_par_eq_zero.apply
+[2022-12-21 12:21:51,245 INFO  L138     BoogieDeclarations]: Found implementation of procedure _curr_par_eq_zero.apply
+[2022-12-21 12:21:51,245 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _curr_par_neq_in.apply given in one single declaration
+[2022-12-21 12:21:51,245 INFO  L130     BoogieDeclarations]: Found specification of procedure _curr_par_neq_in.apply
+[2022-12-21 12:21:51,245 INFO  L138     BoogieDeclarations]: Found implementation of procedure _curr_par_neq_in.apply
+[2022-12-21 12:21:51,246 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _go_to_next_0 given in one single declaration
+[2022-12-21 12:21:51,246 INFO  L130     BoogieDeclarations]: Found specification of procedure _go_to_next_0
+[2022-12-21 12:21:51,246 INFO  L138     BoogieDeclarations]: Found implementation of procedure _go_to_next_0
+[2022-12-21 12:21:51,246 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _hit_depth.apply given in one single declaration
+[2022-12-21 12:21:51,246 INFO  L130     BoogieDeclarations]: Found specification of procedure _hit_depth.apply
+[2022-12-21 12:21:51,247 INFO  L138     BoogieDeclarations]: Found implementation of procedure _hit_depth.apply
+[2022-12-21 12:21:51,247 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _if_status.apply given in one single declaration
+[2022-12-21 12:21:51,247 INFO  L130     BoogieDeclarations]: Found specification of procedure _if_status.apply
+[2022-12-21 12:21:51,247 INFO  L138     BoogieDeclarations]: Found implementation of procedure _if_status.apply
+[2022-12-21 12:21:51,247 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _jump_to_next.apply given in one single declaration
+[2022-12-21 12:21:51,247 INFO  L130     BoogieDeclarations]: Found specification of procedure _jump_to_next.apply
+[2022-12-21 12:21:51,248 INFO  L138     BoogieDeclarations]: Found implementation of procedure _jump_to_next.apply
+[2022-12-21 12:21:51,248 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _next_outport_0 given in one single declaration
+[2022-12-21 12:21:51,248 INFO  L130     BoogieDeclarations]: Found specification of procedure _next_outport_0
+[2022-12-21 12:21:51,248 INFO  L138     BoogieDeclarations]: Found implementation of procedure _next_outport_0
+[2022-12-21 12:21:51,248 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _out_eq_zero.apply given in one single declaration
+[2022-12-21 12:21:51,249 INFO  L130     BoogieDeclarations]: Found specification of procedure _out_eq_zero.apply
+[2022-12-21 12:21:51,249 INFO  L138     BoogieDeclarations]: Found implementation of procedure _out_eq_zero.apply
+[2022-12-21 12:21:51,249 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _outport_to_parent_0 given in one single declaration
+[2022-12-21 12:21:51,249 INFO  L130     BoogieDeclarations]: Found specification of procedure _outport_to_parent_0
+[2022-12-21 12:21:51,249 INFO  L138     BoogieDeclarations]: Found implementation of procedure _outport_to_parent_0
+[2022-12-21 12:21:51,250 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _parser_ParserImpl given in one single declaration
+[2022-12-21 12:21:51,250 INFO  L130     BoogieDeclarations]: Found specification of procedure _parser_ParserImpl
+[2022-12-21 12:21:51,250 INFO  L138     BoogieDeclarations]: Found implementation of procedure _parser_ParserImpl
+[2022-12-21 12:21:51,250 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _send_to_parent_0 given in one single declaration
+[2022-12-21 12:21:51,250 INFO  L130     BoogieDeclarations]: Found specification of procedure _send_to_parent_0
+[2022-12-21 12:21:51,250 INFO  L138     BoogieDeclarations]: Found implementation of procedure _send_to_parent_0
+[2022-12-21 12:21:51,251 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _set_egress_port.apply given in one single declaration
+[2022-12-21 12:21:51,251 INFO  L130     BoogieDeclarations]: Found specification of procedure _set_egress_port.apply
+[2022-12-21 12:21:51,251 INFO  L138     BoogieDeclarations]: Found implementation of procedure _set_egress_port.apply
+[2022-12-21 12:21:51,251 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _set_if_status_0 given in one single declaration
+[2022-12-21 12:21:51,251 INFO  L130     BoogieDeclarations]: Found specification of procedure _set_if_status_0
+[2022-12-21 12:21:51,251 INFO  L138     BoogieDeclarations]: Found implementation of procedure _set_if_status_0
+[2022-12-21 12:21:51,252 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _set_next_port_0 given in one single declaration
+[2022-12-21 12:21:51,252 INFO  L130     BoogieDeclarations]: Found specification of procedure _set_next_port_0
+[2022-12-21 12:21:51,252 INFO  L138     BoogieDeclarations]: Found implementation of procedure _set_next_port_0
+[2022-12-21 12:21:51,252 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _set_out_to_ingress_0 given in one single declaration
+[2022-12-21 12:21:51,252 INFO  L130     BoogieDeclarations]: Found specification of procedure _set_out_to_ingress_0
+[2022-12-21 12:21:51,253 INFO  L138     BoogieDeclarations]: Found implementation of procedure _set_out_to_ingress_0
+[2022-12-21 12:21:51,253 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _set_par_to_ingress_0 given in one single declaration
+[2022-12-21 12:21:51,253 INFO  L130     BoogieDeclarations]: Found specification of procedure _set_par_to_ingress_0
+[2022-12-21 12:21:51,253 INFO  L138     BoogieDeclarations]: Found implementation of procedure _set_par_to_ingress_0
+[2022-12-21 12:21:51,253 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _set_parent_out.apply given in one single declaration
+[2022-12-21 12:21:51,254 INFO  L130     BoogieDeclarations]: Found specification of procedure _set_parent_out.apply
+[2022-12-21 12:21:51,254 INFO  L138     BoogieDeclarations]: Found implementation of procedure _set_parent_out.apply
+[2022-12-21 12:21:51,254 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _skip_failures_0 given in one single declaration
+[2022-12-21 12:21:51,254 INFO  L130     BoogieDeclarations]: Found specification of procedure _skip_failures_0
+[2022-12-21 12:21:51,254 INFO  L138     BoogieDeclarations]: Found implementation of procedure _skip_failures_0
+[2022-12-21 12:21:51,254 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _skip_parent_0 given in one single declaration
+[2022-12-21 12:21:51,255 INFO  L130     BoogieDeclarations]: Found specification of procedure _skip_parent_0
+[2022-12-21 12:21:51,255 INFO  L138     BoogieDeclarations]: Found implementation of procedure _skip_parent_0
+[2022-12-21 12:21:51,255 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _start_from_one_0 given in one single declaration
+[2022-12-21 12:21:51,255 INFO  L130     BoogieDeclarations]: Found specification of procedure _start_from_one_0
+[2022-12-21 12:21:51,255 INFO  L138     BoogieDeclarations]: Found implementation of procedure _start_from_one_0
+[2022-12-21 12:21:51,256 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _starting_port_meta_0 given in one single declaration
+[2022-12-21 12:21:51,256 INFO  L130     BoogieDeclarations]: Found specification of procedure _starting_port_meta_0
+[2022-12-21 12:21:51,256 INFO  L138     BoogieDeclarations]: Found implementation of procedure _starting_port_meta_0
+[2022-12-21 12:21:51,256 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _to_parent.apply given in one single declaration
+[2022-12-21 12:21:51,259 INFO  L130     BoogieDeclarations]: Found specification of procedure _to_parent.apply
+[2022-12-21 12:21:51,259 INFO  L138     BoogieDeclarations]: Found implementation of procedure _to_parent.apply
+[2022-12-21 12:21:51,259 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _try_next.apply given in one single declaration
+[2022-12-21 12:21:51,260 INFO  L130     BoogieDeclarations]: Found specification of procedure _try_next.apply
+[2022-12-21 12:21:51,260 INFO  L138     BoogieDeclarations]: Found implementation of procedure _try_next.apply
+[2022-12-21 12:21:51,260 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure _xor_outport_0 given in one single declaration
+[2022-12-21 12:21:51,260 INFO  L130     BoogieDeclarations]: Found specification of procedure _xor_outport_0
+[2022-12-21 12:21:51,261 INFO  L138     BoogieDeclarations]: Found implementation of procedure _xor_outport_0
+[2022-12-21 12:21:51,261 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure accept given in one single declaration
+[2022-12-21 12:21:51,261 INFO  L130     BoogieDeclarations]: Found specification of procedure accept
+[2022-12-21 12:21:51,261 INFO  L138     BoogieDeclarations]: Found implementation of procedure accept
+[2022-12-21 12:21:51,261 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure all_ports_status.write given in one single declaration
+[2022-12-21 12:21:51,262 INFO  L130     BoogieDeclarations]: Found specification of procedure all_ports_status.write
+[2022-12-21 12:21:51,262 INFO  L138     BoogieDeclarations]: Found implementation of procedure all_ports_status.write
+[2022-12-21 12:21:51,262 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure computeChecksum given in one single declaration
+[2022-12-21 12:21:51,262 INFO  L130     BoogieDeclarations]: Found specification of procedure computeChecksum
+[2022-12-21 12:21:51,263 INFO  L138     BoogieDeclarations]: Found implementation of procedure computeChecksum
+[2022-12-21 12:21:51,263 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure default_route_0.apply given in one single declaration
+[2022-12-21 12:21:51,263 INFO  L130     BoogieDeclarations]: Found specification of procedure default_route_0.apply
+[2022-12-21 12:21:51,263 INFO  L138     BoogieDeclarations]: Found implementation of procedure default_route_0.apply
+[2022-12-21 12:21:51,264 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure egress given in one single declaration
+[2022-12-21 12:21:51,264 INFO  L130     BoogieDeclarations]: Found specification of procedure egress
+[2022-12-21 12:21:51,264 INFO  L138     BoogieDeclarations]: Found implementation of procedure egress
+[2022-12-21 12:21:51,264 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure fwd given in one single declaration
+[2022-12-21 12:21:51,265 INFO  L130     BoogieDeclarations]: Found specification of procedure fwd
+[2022-12-21 12:21:51,265 INFO  L138     BoogieDeclarations]: Found implementation of procedure fwd
+[2022-12-21 12:21:51,265 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure fwd_parent_0.apply given in one single declaration
+[2022-12-21 12:21:51,265 INFO  L130     BoogieDeclarations]: Found specification of procedure fwd_parent_0.apply
+[2022-12-21 12:21:51,266 INFO  L138     BoogieDeclarations]: Found implementation of procedure fwd_parent_0.apply
+[2022-12-21 12:21:51,266 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure fwd_pkt_0.apply given in one single declaration
+[2022-12-21 12:21:51,266 INFO  L130     BoogieDeclarations]: Found specification of procedure fwd_pkt_0.apply
+[2022-12-21 12:21:51,266 INFO  L138     BoogieDeclarations]: Found implementation of procedure fwd_pkt_0.apply
+[2022-12-21 12:21:51,267 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure havocProcedure given in one single declaration
+[2022-12-21 12:21:51,267 INFO  L130     BoogieDeclarations]: Found specification of procedure havocProcedure
+[2022-12-21 12:21:51,267 INFO  L138     BoogieDeclarations]: Found implementation of procedure havocProcedure
+[2022-12-21 12:21:51,267 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure ingress given in one single declaration
+[2022-12-21 12:21:51,267 INFO  L130     BoogieDeclarations]: Found specification of procedure ingress
+[2022-12-21 12:21:51,268 INFO  L138     BoogieDeclarations]: Found implementation of procedure ingress
+[2022-12-21 12:21:51,268 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure main given in one single declaration
+[2022-12-21 12:21:51,268 INFO  L130     BoogieDeclarations]: Found specification of procedure main
+[2022-12-21 12:21:51,268 INFO  L138     BoogieDeclarations]: Found implementation of procedure main
+[2022-12-21 12:21:51,268 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure mainProcedure given in one single declaration
+[2022-12-21 12:21:51,269 INFO  L130     BoogieDeclarations]: Found specification of procedure mainProcedure
+[2022-12-21 12:21:51,269 INFO  L138     BoogieDeclarations]: Found implementation of procedure mainProcedure
+[2022-12-21 12:21:51,269 INFO  L130     BoogieDeclarations]: Found specification of procedure mark_to_drop
+[2022-12-21 12:21:51,273 INFO  L130     BoogieDeclarations]: Found specification of procedure reject
+[2022-12-21 12:21:51,273 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure send_in given in one single declaration
+[2022-12-21 12:21:51,273 INFO  L130     BoogieDeclarations]: Found specification of procedure send_in
+[2022-12-21 12:21:51,274 INFO  L138     BoogieDeclarations]: Found implementation of procedure send_in
+[2022-12-21 12:21:51,274 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure send_in_ingress_0.apply given in one single declaration
+[2022-12-21 12:21:51,274 INFO  L130     BoogieDeclarations]: Found specification of procedure send_in_ingress_0.apply
+[2022-12-21 12:21:51,274 INFO  L138     BoogieDeclarations]: Found implementation of procedure send_in_ingress_0.apply
+[2022-12-21 12:21:51,274 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure send_on_parent given in one single declaration
+[2022-12-21 12:21:51,274 INFO  L130     BoogieDeclarations]: Found specification of procedure send_on_parent
+[2022-12-21 12:21:51,275 INFO  L138     BoogieDeclarations]: Found implementation of procedure send_on_parent
+[2022-12-21 12:21:51,275 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure send_parent_0.apply given in one single declaration
+[2022-12-21 12:21:51,275 INFO  L130     BoogieDeclarations]: Found specification of procedure send_parent_0.apply
+[2022-12-21 12:21:51,275 INFO  L138     BoogieDeclarations]: Found implementation of procedure send_parent_0.apply
+[2022-12-21 12:21:51,275 INFO  L130     BoogieDeclarations]: Found specification of procedure setInvalid
+[2022-12-21 12:21:51,275 INFO  L130     BoogieDeclarations]: Found specification of procedure setValid
+[2022-12-21 12:21:51,275 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure set_bfs_tags given in one single declaration
+[2022-12-21 12:21:51,276 INFO  L130     BoogieDeclarations]: Found specification of procedure set_bfs_tags
+[2022-12-21 12:21:51,276 INFO  L138     BoogieDeclarations]: Found implementation of procedure set_bfs_tags
+[2022-12-21 12:21:51,276 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure set_default_route given in one single declaration
+[2022-12-21 12:21:51,276 INFO  L130     BoogieDeclarations]: Found specification of procedure set_default_route
+[2022-12-21 12:21:51,276 INFO  L138     BoogieDeclarations]: Found implementation of procedure set_default_route
+[2022-12-21 12:21:51,276 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure set_out_meta given in one single declaration
+[2022-12-21 12:21:51,276 INFO  L130     BoogieDeclarations]: Found specification of procedure set_out_meta
+[2022-12-21 12:21:51,276 INFO  L138     BoogieDeclarations]: Found implementation of procedure set_out_meta
+[2022-12-21 12:21:51,277 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure set_out_port_0.apply given in one single declaration
+[2022-12-21 12:21:51,277 INFO  L130     BoogieDeclarations]: Found specification of procedure set_out_port_0.apply
+[2022-12-21 12:21:51,277 INFO  L138     BoogieDeclarations]: Found implementation of procedure set_out_port_0.apply
+[2022-12-21 12:21:51,277 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure start given in one single declaration
+[2022-12-21 12:21:51,277 INFO  L130     BoogieDeclarations]: Found specification of procedure start
+[2022-12-21 12:21:51,277 INFO  L138     BoogieDeclarations]: Found implementation of procedure start
+[2022-12-21 12:21:51,277 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure start_bfs_0.apply given in one single declaration
+[2022-12-21 12:21:51,278 INFO  L130     BoogieDeclarations]: Found specification of procedure start_bfs_0.apply
+[2022-12-21 12:21:51,278 INFO  L138     BoogieDeclarations]: Found implementation of procedure start_bfs_0.apply
+[2022-12-21 12:21:51,278 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure towards_parent given in one single declaration
+[2022-12-21 12:21:51,278 INFO  L130     BoogieDeclarations]: Found specification of procedure towards_parent
+[2022-12-21 12:21:51,278 INFO  L138     BoogieDeclarations]: Found implementation of procedure towards_parent
+[2022-12-21 12:21:51,278 INFO  L124     BoogieDeclarations]: Specification and implementation of procedure verifyChecksum given in one single declaration
+[2022-12-21 12:21:51,278 INFO  L130     BoogieDeclarations]: Found specification of procedure verifyChecksum
+[2022-12-21 12:21:51,278 INFO  L138     BoogieDeclarations]: Found implementation of procedure verifyChecksum
+[2022-12-21 12:21:51,364 INFO  L234             CfgBuilder]: Building ICFG
+[2022-12-21 12:21:51,366 INFO  L260             CfgBuilder]: Building CFG for each procedure with an implementation
+[2022-12-21 12:21:51,857 INFO  L275             CfgBuilder]: Performing block encoding
+[2022-12-21 12:21:51,875 INFO  L294             CfgBuilder]: Using the 1 location(s) as analysis (start of procedure ULTIMATE.start)
+[2022-12-21 12:21:51,875 INFO  L299             CfgBuilder]: Removed 0 assume(true) statements.
+[2022-12-21 12:21:51,878 INFO  L202        PluginConnector]: Adding new model ua-assertion.bpl de.uni_freiburg.informatik.ultimate.plugins.generator.rcfgbuilder CFG 21.12 12:21:51 BoogieIcfgContainer
+[2022-12-21 12:21:51,878 INFO  L132        PluginConnector]: ------------------------ END RCFGBuilder----------------------------
+[2022-12-21 12:21:51,880 INFO  L113        PluginConnector]: ------------------------TraceAbstraction----------------------------
+[2022-12-21 12:21:51,880 INFO  L271        PluginConnector]: Initializing TraceAbstraction...
+[2022-12-21 12:21:51,919 INFO  L275        PluginConnector]: TraceAbstraction initialized
+[2022-12-21 12:21:51,919 INFO  L185        PluginConnector]: Executing the observer TraceAbstractionObserver from plugin TraceAbstraction for "ua-assertion.bpl de.uni_freiburg.informatik.ultimate.boogie.parser AST 21.12 12:21:50" (1/2) ...
+[2022-12-21 12:21:51,920 INFO  L205        PluginConnector]: Invalid model from TraceAbstraction for observer de.uni_freiburg.informatik.ultimate.plugins.generator.traceabstraction.TraceAbstractionObserver@b767ad0 and model type ua-assertion.bpl de.uni_freiburg.informatik.ultimate.plugins.generator.traceabstraction AST 21.12 12:21:51, skipping insertion in model container
+[2022-12-21 12:21:51,921 INFO  L185        PluginConnector]: Executing the observer TraceAbstractionObserver from plugin TraceAbstraction for "ua-assertion.bpl de.uni_freiburg.informatik.ultimate.plugins.generator.rcfgbuilder CFG 21.12 12:21:51" (2/2) ...
+[2022-12-21 12:21:51,928 INFO  L111   eAbstractionObserver]: Analyzing ICFG ua-assertion.bpl
+[2022-12-21 12:21:51,994 INFO  L201   ceAbstractionStarter]: Automizer settings: Hoare:false NWA Interpolation:FPandBP Determinization: PREDICATE_ABSTRACTION
+[2022-12-21 12:21:51,995 INFO  L160   ceAbstractionStarter]: Applying trace abstraction to program that has 13 error locations.
+[2022-12-21 12:21:52,135 INFO  L356      AbstractCegarLoop]: ======== Iteration 0 == of CEGAR loop == AllErrorsAtOnce ========
+[2022-12-21 12:21:52,150 INFO  L357      AbstractCegarLoop]: Settings: SEPARATE_VIOLATION_CHECK=true, mInterprocedural=true, mMaxIterations=1000000, mWatchIteration=1000000, mArtifact=RCFG, mInterpolation=FPandBP, mInterpolantAutomaton=STRAIGHT_LINE, mDumpAutomata=false, mAutomataFormat=ATS_NUMERATE, mDumpPath=., mDeterminiation=PREDICATE_ABSTRACTION, mMinimize=MINIMIZE_SEVPA, mHoare=false, mAutomataTypeConcurrency=FINITE_AUTOMATA, mHoareTripleChecks=INCREMENTAL, mHoareAnnotationPositions=All, mDumpOnlyReuseAutomata=false, mLimitTraceHistogram=0, mErrorLocTimeLimit=0, mLimitPathProgramCount=0, mCollectInterpolantStatistics=true, mHeuristicEmptinessCheck=false, mHeuristicEmptinessCheckAStarHeuristic=ZERO, mHeuristicEmptinessCheckAStarHeuristicRandomSeed=1337, mHeuristicEmptinessCheckSmtFeatureScoringMethod=DAGSIZE, mSMTFeatureExtraction=false, mSMTFeatureExtractionDumpPath=., mOverrideInterpolantAutomaton=false, mMcrInterpolantMethod=WP, mPorIndependenceSettings=de.uni_freiburg.informatik.ultimate.lib.tracecheckerutils.partialorder.independence.IndependenceSettings@4115b720, mLbeIndependenceSettings=de.uni_freiburg.informatik.ultimate.lib.tracecheckerutils.partialorder.independence.IndependenceSettings@70384560
+[2022-12-21 12:21:52,151 INFO  L358      AbstractCegarLoop]: Starting to check reachability of 13 error locations.
+[2022-12-21 12:21:52,172 INFO  L276                IsEmpty]: Start isEmpty. Operand  has 452 states, 298 states have (on average 1.24496644295302) internal successors, (371), 364 states have internal predecessors, (371), 70 states have call successors, (70), 70 states have call predecessors, (70), 70 states have return successors, (70), 45 states have call predecessors, (70), 70 states have call successors, (70)
+[2022-12-21 12:21:52,196 INFO  L282                IsEmpty]: Finished isEmpty. Found accepting run of length 107
+[2022-12-21 12:21:52,197 INFO  L187           NwaCegarLoop]: Found error trace
+[2022-12-21 12:21:52,199 INFO  L195           NwaCegarLoop]: trace histogram [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2022-12-21 12:21:52,200 INFO  L420      AbstractCegarLoop]: === Iteration 1 === Targeting startErr0ASSERT_VIOLATIONASSERT === [_set_par_to_ingress_0Err0ASSERT_VIOLATIONASSERT, ingressErr0ASSERT_VIOLATIONASSERT, fwdErr0ASSERT_VIOLATIONASSERT, fwdErr1ASSERT_VIOLATIONASSERT (and 9 more)] ===
+[2022-12-21 12:21:52,211 INFO  L144       PredicateUnifier]: Initialized classic predicate unifier
+[2022-12-21 12:21:52,212 INFO  L85        PathProgramCache]: Analyzing trace with hash -557314175, now seen corresponding path program 1 times
+[2022-12-21 12:21:52,250 INFO  L118   FreeRefinementEngine]: Executing refinement strategy CAMEL
+[2022-12-21 12:21:52,250 INFO  L333   FreeRefinementEngine]: Using trace check IpTcStrategyModuleSmtInterpolCraig [511221780]
+[2022-12-21 12:21:52,251 INFO  L95    rtionOrderModulation]: Keeping assertion order NOT_INCREMENTALLY
+[2022-12-21 12:21:52,252 INFO  L127          SolverBuilder]: Constructing new instance of SMTInterpol with explicit timeout -1 ms and remaining time -1 ms
+[2022-12-21 12:21:52,331 INFO  L136    AnnotateAndAsserter]: Conjunction of SSA is unsat
+[2022-12-21 12:21:52,554 INFO  L376   atingTraceCheckCraig]: Compute interpolants for subsequence at non-pending call position 3
+[2022-12-21 12:21:52,562 INFO  L136    AnnotateAndAsserter]: Conjunction of SSA is unsat
+[2022-12-21 12:21:52,584 INFO  L134       CoverageAnalysis]: Checked inductivity of 0 backedges. 0 proven. 0 refuted. 0 times theorem prover too weak. 0 trivial. 0 not checked.
+[2022-12-21 12:21:52,585 INFO  L136   FreeRefinementEngine]: Strategy CAMEL found an infeasible trace
+[2022-12-21 12:21:52,585 INFO  L333   FreeRefinementEngine]: Using interpolant generator IpTcStrategyModuleSmtInterpolCraig [511221780]
+[2022-12-21 12:21:52,586 INFO  L157   FreeRefinementEngine]: IpTcStrategyModuleSmtInterpolCraig [511221780] provided 1 perfect and 0 imperfect interpolant sequences
+[2022-12-21 12:21:52,586 INFO  L184   FreeRefinementEngine]: Found 1 perfect and 0 imperfect interpolant sequences.
+[2022-12-21 12:21:52,586 INFO  L197   FreeRefinementEngine]: Number of different interpolants: perfect sequences [3] imperfect sequences [] total 3
+[2022-12-21 12:21:52,587 INFO  L121   tionRefinementEngine]: Using interpolant automaton builder IpAbStrategyModuleStraightlineAll [297890644]
+[2022-12-21 12:21:52,588 INFO  L85    oduleStraightlineAll]: Using 1 perfect interpolants to construct interpolant automaton
+[2022-12-21 12:21:52,593 INFO  L571      AbstractCegarLoop]: INTERPOLANT automaton has 4 states
+[2022-12-21 12:21:52,593 INFO  L100   FreeRefinementEngine]: Using predicate unifier PredicateUnifier provided by strategy CAMEL
+[2022-12-21 12:21:52,620 INFO  L143   InterpolantAutomaton]: Constructing interpolant automaton starting with 4 interpolants.
+[2022-12-21 12:21:52,621 INFO  L145   InterpolantAutomaton]: CoverageRelationStatistics Valid=5, Invalid=7, Unknown=0, NotChecked=0, Total=12
+[2022-12-21 12:21:52,624 INFO  L87              Difference]: Start difference. First operand  has 452 states, 298 states have (on average 1.24496644295302) internal successors, (371), 364 states have internal predecessors, (371), 70 states have call successors, (70), 70 states have call predecessors, (70), 70 states have return successors, (70), 45 states have call predecessors, (70), 70 states have call successors, (70) Second operand  has 4 states, 3 states have (on average 33.333333333333336) internal successors, (100), 3 states have internal predecessors, (100), 1 states have call successors, (5), 2 states have call predecessors, (5), 1 states have return successors, (1), 1 states have call predecessors, (1), 1 states have call successors, (1)
+[2022-12-21 12:21:54,169 INFO  L144             Difference]: Subtrahend was deterministic. Have not used determinization.
+[2022-12-21 12:21:54,170 INFO  L93              Difference]: Finished difference Result 542 states and 648 transitions.
+[2022-12-21 12:21:54,174 INFO  L141   InterpolantAutomaton]: Switched to read-only mode: deterministic interpolant automaton has 5 states. 
+[2022-12-21 12:21:54,176 INFO  L78                 Accepts]: Start accepts. Automaton has  has 4 states, 3 states have (on average 33.333333333333336) internal successors, (100), 3 states have internal predecessors, (100), 1 states have call successors, (5), 2 states have call predecessors, (5), 1 states have return successors, (1), 1 states have call predecessors, (1), 1 states have call successors, (1) Word has length 106
+[2022-12-21 12:21:54,177 INFO  L84                 Accepts]: Finished accepts. some prefix is accepted.
+[2022-12-21 12:21:54,193 INFO  L225             Difference]: With dead ends: 542
+[2022-12-21 12:21:54,194 INFO  L226             Difference]: Without dead ends: 542
+[2022-12-21 12:21:54,198 INFO  L412           NwaCegarLoop]: 0 DeclaredPredicates, 6 GetRequests, 3 SyntacticMatches, 0 SemanticMatches, 3 ConstructedPredicates, 0 IntricatePredicates, 0 DeprecatedPredicates, 0 ImplicationChecksByTransitivity, 0.3s TimeCoverageRelationStatistics Valid=9, Invalid=11, Unknown=0, NotChecked=0, Total=20
+[2022-12-21 12:21:54,201 INFO  L413           NwaCegarLoop]: 346 mSDtfsCounter, 580 mSDsluCounter, 103 mSDsCounter, 0 mSdLazyCounter, 562 mSolverCounterSat, 243 mSolverCounterUnsat, 0 mSolverCounterUnknown, 0 mSolverCounterNotChecked, 1.1s Time, 0 mProtectedPredicate, 0 mProtectedAction, 588 SdHoareTripleChecker+Valid, 449 SdHoareTripleChecker+Invalid, 805 SdHoareTripleChecker+Unknown, 0 SdHoareTripleChecker+Unchecked, 0.0s SdHoareTripleChecker+Time, 243 IncrementalHoareTripleChecker+Valid, 562 IncrementalHoareTripleChecker+Invalid, 0 IncrementalHoareTripleChecker+Unknown, 0 IncrementalHoareTripleChecker+Unchecked, 1.3s IncrementalHoareTripleChecker+Time
+[2022-12-21 12:21:54,203 INFO  L414           NwaCegarLoop]: SdHoareTripleChecker [588 Valid, 449 Invalid, 805 Unknown, 0 Unchecked, 0.0s Time], IncrementalHoareTripleChecker [243 Valid, 562 Invalid, 0 Unknown, 0 Unchecked, 1.3s Time]
+[2022-12-21 12:21:54,227 INFO  L82        GeneralOperation]: Start minimizeSevpa. Operand 542 states.
+[2022-12-21 12:21:54,262 INFO  L88        GeneralOperation]: Finished minimizeSevpa. Reduced states from 542 to 441.
+[2022-12-21 12:21:54,264 INFO  L82        GeneralOperation]: Start removeUnreachable. Operand  has 441 states, 296 states have (on average 1.2162162162162162) internal successors, (360), 354 states have internal predecessors, (360), 70 states have call successors, (70), 70 states have call predecessors, (70), 69 states have return successors, (69), 44 states have call predecessors, (69), 69 states have call successors, (69)
+[2022-12-21 12:21:54,265 INFO  L88        GeneralOperation]: Finished removeUnreachable. Reduced from 441 states to 441 states and 499 transitions.
+[2022-12-21 12:21:54,267 INFO  L78                 Accepts]: Start accepts. Automaton has 441 states and 499 transitions. Word has length 106
+[2022-12-21 12:21:54,267 INFO  L84                 Accepts]: Finished accepts. word is rejected.
+[2022-12-21 12:21:54,268 INFO  L495      AbstractCegarLoop]: Abstraction has 441 states and 499 transitions.
+[2022-12-21 12:21:54,268 INFO  L496      AbstractCegarLoop]: INTERPOLANT automaton has  has 4 states, 3 states have (on average 33.333333333333336) internal successors, (100), 3 states have internal predecessors, (100), 1 states have call successors, (5), 2 states have call predecessors, (5), 1 states have return successors, (1), 1 states have call predecessors, (1), 1 states have call successors, (1)
+[2022-12-21 12:21:54,269 INFO  L276                IsEmpty]: Start isEmpty. Operand 441 states and 499 transitions.
+[2022-12-21 12:21:54,270 INFO  L282                IsEmpty]: Finished isEmpty. Found accepting run of length 111
+[2022-12-21 12:21:54,270 INFO  L187           NwaCegarLoop]: Found error trace
+[2022-12-21 12:21:54,270 INFO  L195           NwaCegarLoop]: trace histogram [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[2022-12-21 12:21:54,270 WARN  L477      AbstractCegarLoop]: Destroyed unattended storables created during the last iteration: SelfDestructingSolverStorable1
+[2022-12-21 12:21:54,271 INFO  L420      AbstractCegarLoop]: === Iteration 2 === Targeting startErr2ASSERT_VIOLATIONASSERT === [_set_par_to_ingress_0Err0ASSERT_VIOLATIONASSERT, ingressErr0ASSERT_VIOLATIONASSERT, fwdErr0ASSERT_VIOLATIONASSERT, fwdErr1ASSERT_VIOLATIONASSERT (and 9 more)] ===
+[2022-12-21 12:21:54,271 INFO  L144       PredicateUnifier]: Initialized classic predicate unifier
+[2022-12-21 12:21:54,272 INFO  L85        PathProgramCache]: Analyzing trace with hash 372190437, now seen corresponding path program 1 times
+[2022-12-21 12:21:54,272 INFO  L118   FreeRefinementEngine]: Executing refinement strategy CAMEL
+[2022-12-21 12:21:54,272 INFO  L333   FreeRefinementEngine]: Using trace check IpTcStrategyModuleSmtInterpolCraig [1528049238]
+[2022-12-21 12:21:54,272 INFO  L95    rtionOrderModulation]: Keeping assertion order NOT_INCREMENTALLY
+[2022-12-21 12:21:54,273 INFO  L127          SolverBuilder]: Constructing new instance of SMTInterpol with explicit timeout -1 ms and remaining time -1 ms
+[2022-12-21 12:21:54,293 INFO  L136    AnnotateAndAsserter]: Conjunction of SSA is unsat
+[2022-12-21 12:21:54,415 INFO  L376   atingTraceCheckCraig]: Compute interpolants for subsequence at non-pending call position 3
+[2022-12-21 12:21:54,423 INFO  L136    AnnotateAndAsserter]: Conjunction of SSA is unsat
+[2022-12-21 12:21:54,437 INFO  L134       CoverageAnalysis]: Checked inductivity of 0 backedges. 0 proven. 0 refuted. 0 times theorem prover too weak. 0 trivial. 0 not checked.
+[2022-12-21 12:21:54,438 INFO  L136   FreeRefinementEngine]: Strategy CAMEL found an infeasible trace
+[2022-12-21 12:21:54,438 INFO  L333   FreeRefinementEngine]: Using interpolant generator IpTcStrategyModuleSmtInterpolCraig [1528049238]
+[2022-12-21 12:21:54,438 INFO  L157   FreeRefinementEngine]: IpTcStrategyModuleSmtInterpolCraig [1528049238] provided 1 perfect and 0 imperfect interpolant sequences
+[2022-12-21 12:21:54,439 INFO  L184   FreeRefinementEngine]: Found 1 perfect and 0 imperfect interpolant sequences.
+[2022-12-21 12:21:54,439 INFO  L197   FreeRefinementEngine]: Number of different interpolants: perfect sequences [3] imperfect sequences [] total 3
+[2022-12-21 12:21:54,439 INFO  L121   tionRefinementEngine]: Using interpolant automaton builder IpAbStrategyModuleStraightlineAll [1818368832]
+[2022-12-21 12:21:54,439 INFO  L85    oduleStraightlineAll]: Using 1 perfect interpolants to construct interpolant automaton
+[2022-12-21 12:21:54,441 INFO  L571      AbstractCegarLoop]: INTERPOLANT automaton has 4 states
+[2022-12-21 12:21:54,441 INFO  L100   FreeRefinementEngine]: Using predicate unifier PredicateUnifier provided by strategy CAMEL
+[2022-12-21 12:21:54,441 INFO  L143   InterpolantAutomaton]: Constructing interpolant automaton starting with 4 interpolants.
+[2022-12-21 12:21:54,442 INFO  L145   InterpolantAutomaton]: CoverageRelationStatistics Valid=5, Invalid=7, Unknown=0, NotChecked=0, Total=12
+[2022-12-21 12:21:54,442 INFO  L87              Difference]: Start difference. First operand 441 states and 499 transitions. Second operand  has 4 states, 3 states have (on average 34.666666666666664) internal successors, (104), 3 states have internal predecessors, (104), 1 states have call successors, (5), 2 states have call predecessors, (5), 1 states have return successors, (1), 1 states have call predecessors, (1), 1 states have call successors, (1)
+[2022-12-21 12:21:55,626 INFO  L144             Difference]: Subtrahend was deterministic. Have not used determinization.
+[2022-12-21 12:21:55,626 INFO  L93              Difference]: Finished difference Result 562 states and 668 transitions.
+[2022-12-21 12:21:55,626 INFO  L141   InterpolantAutomaton]: Switched to read-only mode: deterministic interpolant automaton has 5 states. 
+[2022-12-21 12:21:55,627 INFO  L78                 Accepts]: Start accepts. Automaton has  has 4 states, 3 states have (on average 34.666666666666664) internal successors, (104), 3 states have internal predecessors, (104), 1 states have call successors, (5), 2 states have call predecessors, (5), 1 states have return successors, (1), 1 states have call predecessors, (1), 1 states have call successors, (1) Word has length 110
+[2022-12-21 12:21:55,627 INFO  L84                 Accepts]: Finished accepts. some prefix is accepted.
+[2022-12-21 12:21:55,628 INFO  L225             Difference]: With dead ends: 562
+[2022-12-21 12:21:55,628 INFO  L226             Difference]: Without dead ends: 0
+[2022-12-21 12:21:55,629 INFO  L412           NwaCegarLoop]: 0 DeclaredPredicates, 6 GetRequests, 3 SyntacticMatches, 0 SemanticMatches, 3 ConstructedPredicates, 0 IntricatePredicates, 0 DeprecatedPredicates, 0 ImplicationChecksByTransitivity, 0.2s TimeCoverageRelationStatistics Valid=9, Invalid=11, Unknown=0, NotChecked=0, Total=20
+[2022-12-21 12:21:55,630 INFO  L413           NwaCegarLoop]: 365 mSDtfsCounter, 596 mSDsluCounter, 103 mSDsCounter, 0 mSdLazyCounter, 582 mSolverCounterSat, 241 mSolverCounterUnsat, 0 mSolverCounterUnknown, 0 mSolverCounterNotChecked, 0.9s Time, 0 mProtectedPredicate, 0 mProtectedAction, 604 SdHoareTripleChecker+Valid, 468 SdHoareTripleChecker+Invalid, 823 SdHoareTripleChecker+Unknown, 0 SdHoareTripleChecker+Unchecked, 0.0s SdHoareTripleChecker+Time, 241 IncrementalHoareTripleChecker+Valid, 582 IncrementalHoareTripleChecker+Invalid, 0 IncrementalHoareTripleChecker+Unknown, 0 IncrementalHoareTripleChecker+Unchecked, 1.0s IncrementalHoareTripleChecker+Time
+[2022-12-21 12:21:55,631 INFO  L414           NwaCegarLoop]: SdHoareTripleChecker [604 Valid, 468 Invalid, 823 Unknown, 0 Unchecked, 0.0s Time], IncrementalHoareTripleChecker [241 Valid, 582 Invalid, 0 Unknown, 0 Unchecked, 1.0s Time]
+[2022-12-21 12:21:55,632 INFO  L82        GeneralOperation]: Start minimizeSevpa. Operand 0 states.
+[2022-12-21 12:21:55,633 INFO  L88        GeneralOperation]: Finished minimizeSevpa. Reduced states from 0 to 0.
+[2022-12-21 12:21:55,633 INFO  L82        GeneralOperation]: Start removeUnreachable. Operand  has 0 states, 0 states have (on average 0.0) internal successors, (0), 0 states have internal predecessors, (0), 0 states have call successors, (0), 0 states have call predecessors, (0), 0 states have return successors, (0), 0 states have call predecessors, (0), 0 states have call successors, (0)
+[2022-12-21 12:21:55,633 INFO  L88        GeneralOperation]: Finished removeUnreachable. Reduced from 0 states to 0 states and 0 transitions.
+[2022-12-21 12:21:55,634 INFO  L78                 Accepts]: Start accepts. Automaton has 0 states and 0 transitions. Word has length 110
+[2022-12-21 12:21:55,634 INFO  L84                 Accepts]: Finished accepts. word is rejected.
+[2022-12-21 12:21:55,634 INFO  L495      AbstractCegarLoop]: Abstraction has 0 states and 0 transitions.
+[2022-12-21 12:21:55,634 INFO  L496      AbstractCegarLoop]: INTERPOLANT automaton has  has 4 states, 3 states have (on average 34.666666666666664) internal successors, (104), 3 states have internal predecessors, (104), 1 states have call successors, (5), 2 states have call predecessors, (5), 1 states have return successors, (1), 1 states have call predecessors, (1), 1 states have call successors, (1)
+[2022-12-21 12:21:55,634 INFO  L276                IsEmpty]: Start isEmpty. Operand 0 states and 0 transitions.
+[2022-12-21 12:21:55,635 INFO  L282                IsEmpty]: Finished isEmpty. No accepting run.
+[2022-12-21 12:21:55,637 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location _set_par_to_ingress_0Err0ASSERT_VIOLATIONASSERT (12 of 13 remaining)
+[2022-12-21 12:21:55,638 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location ingressErr0ASSERT_VIOLATIONASSERT (11 of 13 remaining)
+[2022-12-21 12:21:55,638 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location fwdErr0ASSERT_VIOLATIONASSERT (10 of 13 remaining)
+[2022-12-21 12:21:55,639 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location fwdErr1ASSERT_VIOLATIONASSERT (9 of 13 remaining)
+[2022-12-21 12:21:55,639 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location set_bfs_tagsErr0ASSERT_VIOLATIONASSERT (8 of 13 remaining)
+[2022-12-21 12:21:55,640 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location set_bfs_tagsErr1ASSERT_VIOLATIONASSERT (7 of 13 remaining)
+[2022-12-21 12:21:55,640 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location send_inErr0ASSERT_VIOLATIONASSERT (6 of 13 remaining)
+[2022-12-21 12:21:55,641 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location towards_parentErr0ASSERT_VIOLATIONASSERT (5 of 13 remaining)
+[2022-12-21 12:21:55,641 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location towards_parentErr1ASSERT_VIOLATIONASSERT (4 of 13 remaining)
+[2022-12-21 12:21:55,642 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location send_on_parentErr0ASSERT_VIOLATIONASSERT (3 of 13 remaining)
+[2022-12-21 12:21:55,642 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location startErr0ASSERT_VIOLATIONASSERT (2 of 13 remaining)
+[2022-12-21 12:21:55,643 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location startErr1ASSERT_VIOLATIONASSERT (1 of 13 remaining)
+[2022-12-21 12:21:55,643 INFO  L805   garLoopResultBuilder]: Registering result SAFE for location startErr2ASSERT_VIOLATIONASSERT (0 of 13 remaining)
+[2022-12-21 12:21:55,643 WARN  L477      AbstractCegarLoop]: Destroyed unattended storables created during the last iteration: SelfDestructingSolverStorable2
+[2022-12-21 12:21:55,647 INFO  L356         BasicCegarLoop]: Path program histogram: [1, 1]
+[2022-12-21 12:21:55,650 INFO  L176   ceAbstractionStarter]: Computing trace abstraction results
+[2022-12-21 12:21:55,654 INFO  L202        PluginConnector]: Adding new model ua-assertion.bpl de.uni_freiburg.informatik.ultimate.plugins.generator.traceabstraction CFG 21.12 12:21:55 BoogieIcfgContainer
+[2022-12-21 12:21:55,654 INFO  L132        PluginConnector]: ------------------------ END TraceAbstraction----------------------------
+[2022-12-21 12:21:55,655 INFO  L158              Benchmark]: Toolchain (without parser) took 4690.57ms. Allocated memory was 27.3MB in the beginning and 370.1MB in the end (delta: 342.9MB). Free memory was 12.0MB in the beginning and 303.4MB in the end (delta: -291.4MB). Peak memory consumption was 51.2MB. Max. memory is 4.3GB.
+[2022-12-21 12:21:55,656 INFO  L158              Benchmark]: Boogie PL CUP Parser took 0.18ms. Allocated memory is still 27.3MB. Free memory is still 9.3MB. There was no memory consumed. Max. memory is 4.3GB.
+[2022-12-21 12:21:55,656 INFO  L158              Benchmark]: Boogie Preprocessor took 70.57ms. Allocated memory is still 27.3MB. Free memory was 12.0MB in the beginning and 10.6MB in the end (delta: 1.4MB). Peak memory consumption was 6.7MB. Max. memory is 4.3GB.
+[2022-12-21 12:21:55,657 INFO  L158              Benchmark]: RCFGBuilder took 842.39ms. Allocated memory was 27.3MB in the beginning and 40.9MB in the end (delta: 13.6MB). Free memory was 10.5MB in the beginning and 17.2MB in the end (delta: -6.6MB). Peak memory consumption was 11.7MB. Max. memory is 4.3GB.
+[2022-12-21 12:21:55,658 INFO  L158              Benchmark]: TraceAbstraction took 3774.44ms. Allocated memory was 40.9MB in the beginning and 370.1MB in the end (delta: 329.3MB). Free memory was 16.5MB in the beginning and 303.4MB in the end (delta: -286.9MB). Peak memory consumption was 41.6MB. Max. memory is 4.3GB.
+[2022-12-21 12:21:55,659 INFO  L339   ainManager$Toolchain]: #######################  End [Toolchain 1] #######################
+ --- Results ---
+ * Results from de.uni_freiburg.informatik.ultimate.core:
+  - StatisticsResult: Toolchain Benchmarks
+    Benchmark results are:
+ * Boogie PL CUP Parser took 0.18ms. Allocated memory is still 27.3MB. Free memory is still 9.3MB. There was no memory consumed. Max. memory is 4.3GB.
+ * Boogie Preprocessor took 70.57ms. Allocated memory is still 27.3MB. Free memory was 12.0MB in the beginning and 10.6MB in the end (delta: 1.4MB). Peak memory consumption was 6.7MB. Max. memory is 4.3GB.
+ * RCFGBuilder took 842.39ms. Allocated memory was 27.3MB in the beginning and 40.9MB in the end (delta: 13.6MB). Free memory was 10.5MB in the beginning and 17.2MB in the end (delta: -6.6MB). Peak memory consumption was 11.7MB. Max. memory is 4.3GB.
+ * TraceAbstraction took 3774.44ms. Allocated memory was 40.9MB in the beginning and 370.1MB in the end (delta: 329.3MB). Free memory was 16.5MB in the beginning and 303.4MB in the end (delta: -286.9MB). Peak memory consumption was 41.6MB. Max. memory is 4.3GB.
+ * Results from de.uni_freiburg.informatik.ultimate.plugins.generator.traceabstraction:
+  - StatisticsResult: ErrorAutomatonStatistics
+    NumberErrorTraces: 0, NumberStatementsAllTraces: 0, NumberRelevantStatements: 0, 0.0s ErrorAutomatonConstructionTimeTotal, 0.0s FaulLocalizationTime, NumberStatementsFirstTrace: -1, TraceLengthAvg: 0, 0.0s ErrorAutomatonConstructionTimeAvg, 0.0s ErrorAutomatonDifferenceTimeAvg, 0.0s ErrorAutomatonDifferenceTimeTotal, NumberOfNoEnhancement: 0, NumberOfFiniteEnhancement: 0, NumberOfInfiniteEnhancement: 0
+  - PositiveResult [Line: 634]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 887]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 754]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 756]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 1037]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 1040]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 989]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 1104]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 1109]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 1012]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 1079]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 1081]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - PositiveResult [Line: 1083]: assertion always holds
+    For all program executions holds that assertion always holds at this location
+  - StatisticsResult: Ultimate Automizer benchmark data
+    CFG has 72 procedures, 455 locations, 13 error locations. Started 1 CEGAR loops. OverallTime: 3.6s, OverallIterations: 2, TraceHistogramMax: 1, PathProgramHistogramMax: 1, EmptinessCheckTime: 0.0s, AutomataDifference: 2.8s, DeadEndRemovalTime: 0.0s, HoareAnnotationTime: 0.0s, InitialAbstractionConstructionTime: 0.0s, HoareTripleCheckerStatistics: 0 mSolverCounterUnknown, 1192 SdHoareTripleChecker+Valid, 2.3s IncrementalHoareTripleChecker+Time, 0 mSdLazyCounter, 1176 mSDsluCounter, 917 SdHoareTripleChecker+Invalid, 2.1s Time, 0 mProtectedAction, 0 SdHoareTripleChecker+Unchecked, 0 IncrementalHoareTripleChecker+Unchecked, 206 mSDsCounter, 484 IncrementalHoareTripleChecker+Valid, 0 mProtectedPredicate, 1144 IncrementalHoareTripleChecker+Invalid, 1628 SdHoareTripleChecker+Unknown, 0 mSolverCounterNotChecked, 484 mSolverCounterUnsat, 711 mSDtfsCounter, 1144 mSolverCounterSat, 0.0s SdHoareTripleChecker+Time, 0 IncrementalHoareTripleChecker+Unknown, PredicateUnifierStatistics: 0 DeclaredPredicates, 12 GetRequests, 6 SyntacticMatches, 0 SemanticMatches, 6 ConstructedPredicates, 0 IntricatePredicates, 0 DeprecatedPredicates, 0 ImplicationChecksByTransitivity, 0.4s Time, 0.0s BasicInterpolantAutomatonTime, BiggestAbstraction: size=452occurred in iteration=0, InterpolantAutomatonStates: 10, traceCheckStatistics: No data available, InterpolantConsolidationStatistics: No data available, PathInvariantsStatistics: No data available, 0/0 InterpolantCoveringCapability, TotalInterpolationStatistics: No data available, 0.0s DumpTime, AutomataMinimizationStatistics: 0.0s AutomataMinimizationTime, 2 MinimizatonAttempts, 101 StatesRemovedByMinimization, 1 NontrivialMinimizations, HoareAnnotationStatistics: No data available, RefinementEngineStatistics: TRACE_CHECK: 0.0s SsaConstructionTime, 0.0s SatisfiabilityAnalysisTime, 0.4s InterpolantComputationTime, 216 NumberOfCodeBlocks, 216 NumberOfCodeBlocksAsserted, 2 NumberOfCheckSat, 214 ConstructedInterpolants, 0 QuantifiedInterpolants, 700 SizeOfPredicates, 0 NumberOfNonLiveVariables, 0 ConjunctsInSsa, 0 ConjunctsInUnsatCore, 2 InterpolantComputations, 2 PerfectInterpolantSequences, 0/0 InterpolantCoveringCapability, INVARIANT_SYNTHESIS: No data available, INTERPOLANT_CONSOLIDATION: No data available, ABSTRACT_INTERPRETATION: No data available, PDR: No data available, ACCELERATED_INTERPOLATION: No data available, SIFA: No data available, ReuseStatistics: No data available
+  - AllSpecificationsHoldResult: All specifications hold
+    13 specifications checked. All of them hold
+RESULT: Ultimate proved your program to be correct!
+Received shutdown request...

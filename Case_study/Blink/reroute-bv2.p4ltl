@@ -1,0 +1,3 @@
+//#LTLVariables: a:bv32
+//#LTLProperty: [](AP(meta.id == a && nh_avaibility_1[a] == 0) ==>  X(AP(meta.id == a ==> nh_avaibility_1[a] == 0) W AP(sw_sum_0[a] > threshold_registers_0[a])))
+//#LTLFairness: [](AP((valid(hdr.tcp) && meta.use_blink == 1 && hdr.ipv4.ttl != 1)))

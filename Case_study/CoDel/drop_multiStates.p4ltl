@@ -1,3 +1,3 @@
 //#LTLVariables: a:int
-//#LTLProperty: [](AP(meta.codel.ok_to_drop != 0 && meta.codel.queue_id == a && meta.codel.state_dropping == 1) ==> (AP(meta.codel.queue_id == a && meta.codel.time_now >= meta.codel.drop_next ==> drop) W AP(meta.codel.queue_id == a && standard_metadata.deq_timedelta < 5000)))
+//#LTLProperty: [](AP(meta.codel.ok_to_drop != 0 && meta.codel.queue_id == a && meta.codel.state_dropping == 1) ==> X(AP(meta.codel.queue_id == a && meta.codel.time_now >= meta.codel.drop_next ==> drop) W AP(meta.codel.queue_id == a && standard_metadata.deq_timedelta < 5000)))
 //#LTLFairness: [](AP(standard_metadata.ingress_port == 1))

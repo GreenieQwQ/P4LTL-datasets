@@ -1,0 +1,33 @@
+--- Results ---
+ * Results from de.uni_freiburg.informatik.ultimate.plugins.blockencoding:
+  - StatisticsResult: Initial Icfg
+    849 locations, 946 edges
+  - StatisticsResult: Encoded RCFG
+    841 locations, 935 edges
+ * Results from de.uni_freiburg.informatik.ultimate.core:
+  - StatisticsResult: Toolchain Benchmarks
+    Benchmark results are:
+ * Boogie PL CUP Parser took 0.12ms. Allocated memory is still 38.8MB. Free memory was 17.0MB in the beginning and 16.9MB in the end (delta: 28.9kB). There was no memory consumed. Max. memory is 4.3GB.
+ * Boogie Preprocessor took 61.07ms. Allocated memory is still 38.8MB. Free memory was 21.8MB in the beginning and 17.3MB in the end (delta: 4.5MB). Peak memory consumption was 4.2MB. Max. memory is 4.3GB.
+ * ThufvSpecLang took 49.17ms. Allocated memory is still 38.8MB. Free memory was 17.3MB in the beginning and 15.0MB in the end (delta: 2.3MB). Peak memory consumption was 3.1MB. Max. memory is 4.3GB.
+ * RCFGBuilder took 562.24ms. Allocated memory was 38.8MB in the beginning and 51.4MB in the end (delta: 12.6MB). Free memory was 14.9MB in the beginning and 19.3MB in the end (delta: -4.4MB). Peak memory consumption was 8.7MB. Max. memory is 4.3GB.
+ * ThufvLTL2Aut took 68.95ms. Allocated memory is still 51.4MB. Free memory was 19.3MB in the beginning and 33.1MB in the end (delta: -13.9MB). Peak memory consumption was 3.3MB. Max. memory is 4.3GB.
+ * Büchi Program Product took 477.24ms. Allocated memory was 51.4MB in the beginning and 61.9MB in the end (delta: 10.5MB). Free memory was 33.1MB in the beginning and 31.5MB in the end (delta: 1.7MB). Peak memory consumption was 27.0MB. Max. memory is 4.3GB.
+ * BlockEncodingV2 took 97.35ms. Allocated memory is still 61.9MB. Free memory was 31.5MB in the beginning and 40.5MB in the end (delta: -9.0MB). Peak memory consumption was 15.7MB. Max. memory is 4.3GB.
+ * BuchiAutomizer took 16269.20ms. Allocated memory was 61.9MB in the beginning and 536.9MB in the end (delta: 475.0MB). Free memory was 40.0MB in the beginning and 189.2MB in the end (delta: -149.1MB). Peak memory consumption was 326.3MB. Max. memory is 4.3GB.
+ * Results from de.uni_freiburg.informatik.ultimate.buchiprogramproduct:
+  - StatisticsResult: Initial property automaton
+    2 locations, 4 edges
+  - StatisticsResult: Initial RCFG
+    371 locations, 418 edges
+  - StatisticsResult: BuchiProgram size
+    849 locations, 946 edges
+ * Results from de.uni_freiburg.informatik.ultimate.plugins.generator.traceabstraction:
+  - StatisticsResult: Constructed decomposition of program
+    Your program was decomposed into 3 terminating modules (3 trivial, 0 deterministic, 0 nondeterministic). 3 modules have a trivial ranking function, the largest among these consists of 20 locations.
+  - StatisticsResult: Timing statistics
+    BüchiAutomizer plugin needed 16.2s and 4 iterations.  TraceHistogramMax:1. Analysis of lassos took 3.4s. Construction of modules took 6.8s. Büchi inclusion checks took 5.5s. Highest rank in rank-based complementation 0. Minimization of det autom 3. Minimization of nondet autom 0. Automata minimization 0.1s AutomataMinimizationTime, 2 MinimizatonAttempts, 150 StatesRemovedByMinimization, 2 NontrivialMinimizations. Non-live state removal took 0.0s Buchi closure took 0.0s. Biggest automaton had -1 states and ocurred in iteration -1.	Nontrivial modules had stage [0, 0, 0, 0, 0].	InterpolantCoveringCapabilityFinite: 0/0	InterpolantCoveringCapabilityBuchi: 0/0	HoareTripleCheckerStatistics: 0 mSolverCounterUnknown, 8872 SdHoareTripleChecker+Valid, 7.8s IncrementalHoareTripleChecker+Time, 0 mSdLazyCounter, 8848 mSDsluCounter, 3609 SdHoareTripleChecker+Invalid, 6.9s Time, 0 mProtectedAction, 0 SdHoareTripleChecker+Unchecked, 0 IncrementalHoareTripleChecker+Unchecked, 1334 mSDsCounter, 1530 IncrementalHoareTripleChecker+Valid, 0 mProtectedPredicate, 13862 IncrementalHoareTripleChecker+Invalid, 15392 SdHoareTripleChecker+Unknown, 0 mSolverCounterNotChecked, 1530 mSolverCounterUnsat, 2275 mSDtfsCounter, 13862 mSolverCounterSat, 0.2s SdHoareTripleChecker+Time, 0 IncrementalHoareTripleChecker+Unknown	LassoAnalysisResults: nont0 unkn0 SFLI0 SFLT0 conc1 concLT0 SILN0 SILU2 SILI0 SILT0 lasso0 LassoPreprocessingBenchmarks: LassoTerminationAnalysisBenchmarks: not availableLassoTerminationAnalysisBenchmarks: LassoNonterminationAnalysisSatFixpoint: 0	LassoNonterminationAnalysisSatUnbounded: 0	LassoNonterminationAnalysisUnsat: 0	LassoNonterminationAnalysisUnknown: 0	LassoNonterminationAnalysisTime: 0.0s	InitialAbstractionConstructionTime: 0.0s
+  - AllSpecificationsHoldResult: All specifications hold
+    Buchi Automizer proved that the LTL property !(( [](( <>((((_p4ltl_7 == true && _p4ltl_6 == true) && _p4ltl_5 == true) && _p4ltl_4 == true)) )) )) || ( ( !(( [](((((_p4ltl_3 == true && _p4ltl_2 == true) && _p4ltl_1 == true) && _p4ltl_0 == true) && standard_metadata.egress_port == 1)) )) )) holds
+RESULT: Ultimate proved your program to be correct!
+Received shutdown request...
