@@ -362,7 +362,8 @@ control ingress(inout headers hdr, inout metadata meta, inout standard_metadata_
     }
     @name(".cleanPitEntry") action cleanPitEntry() {
         readPit();
-        pit_r.write((bit<16>)16w0x0, (bit<8>)meta.name_metadata.name_hash);
+        // pit_r.write((bit<16>)16w0x0, (bit<8>)meta.name_metadata.name_hash);
+        pit_r.write((bit<16>)meta.name_metadata.name_hash, (bit<8>)16w0x0);
     }
     @name(".setOutputIface") action setOutputIface(bit<9> out_iface) {
         standard_metadata.egress_spec = out_iface;

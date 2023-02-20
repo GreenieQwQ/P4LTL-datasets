@@ -1,0 +1,9 @@
+//#LTLVariables: a:bv16
+//#LTLProperty: [](AP(meta.name_metadata.name_hash == a && meta.flow_metadata.packetType == 0x06) ==> X(AP((meta.name_metadata.name_hash == a && meta.flow_metadata.packetType == 0x06) ==> drop)))
+//#LTLFairness: [](AP(meta.name_metadata.components != 0 && (meta.flow_metadata.packetType == 0x05 || meta.flow_metadata.packetType == 0x06)))
+//#CPI: [](AP((Apply(pit_table_0) && Key(pit_table_0, meta.flow_metadata.packetType) == 0x05) ==> Apply(pit_table_0, readPitEntry)))
+//#CPI: [](AP((Apply(pit_table_0) && Key(pit_table_0, meta.flow_metadata.packetType) == 0x06) ==> Apply(pit_table_0, cleanPitEntry)))
+//#CPI: [](AP((Apply(updatePit_table_0) && Key(updatePit_table_0, meta.flow_metadata.hasFIBentry) == 1) ==> Apply(updatePit_table_0, updatePit_entry)))
+//#CPI: [](AP((Apply(updatePit_table_0) && Key(updatePit_table_0, meta.flow_metadata.hasFIBentry) == 0) ==> Apply(updatePit_table_0, _drop_6)))
+//#CPI: [](AP((Apply(routeData_table_0) && Key(routeData_table_0, meta.flow_metadata.isInPIT) == 0) ==> (Apply(routeData_table_0, _drop_5))))
+//#!CPI: [](AP((Apply(routeData_table_0) && Key(routeData_table_0, meta.flow_metadata.isInPIT) != 0)) ==> (Apply(routeData_table_0, setOutputIface) && routeData_table_0.setOutputIface.out_iface == Key(routeData_table_0, meta.flow_metadata.isInPIT) + 1 )))

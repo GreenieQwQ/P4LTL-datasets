@@ -1,0 +1,2 @@
+//#LTLProperty: [](AP(meta.codel.state_dropping == 1 && meta.codel.ok_to_drop == 0)==> X(AP(meta.codel.ok_to_drop == 0) W AP(meta.codel.time_now >= meta.codel.drop_time)))
+//#LTLFairness: [](AP(standard_metadata.ingress_port == 1))

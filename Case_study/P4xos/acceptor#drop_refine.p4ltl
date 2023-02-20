@@ -1,0 +1,3 @@
+//#LTLVariables: a:bv32, b:bv16
+//#LTLProperty: [](AP(hdr.paxos.rnd == b && !drop) ==> X([](AP(hdr.paxos.rnd < b ==> drop))))
+//#LTLFairness: [](AP(valid(hdr.ipv4) && valid(hdr.paxos) && !valid(hdr.arp) && hdr.paxos.inst == a))

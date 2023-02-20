@@ -3,3 +3,5 @@ output_*
 out.json
 __p4ltl_ast.json
 cleanLog.py
+~log
+log~~

@@ -3,7 +3,7 @@ import sys
 import subprocess
 import time
 
-timeoutSecs = 3600
+timeoutSecs = 3600 * 10
 
 logDir = "./log"
 if not os.path.isdir(logDir):
@@ -34,7 +34,7 @@ def testDir(dirName):
 
         for property in properties:
             
-            if not p4program:
+            if not p4program or property.find('#') != -1:
                 if property.find('#') == -1:
                     continue
                 p4program = os.path.join(dirName, property.split('#')[0] + ".p4")
@@ -58,15 +58,19 @@ def testDir(dirName):
             def checkCorrect(tol=10):
                 lines = strout.splitlines()
                 for index in range(-tol, 0):
-                    line = lines[index]
-                    if line == "RESULT: Ultimate proved your program to be correct!":
-                        return True
+                    try:
+                        line = lines[index]
+                        if line == "RESULT: Ultimate proved your program to be correct!":
+                            return True
+                    except IndexError:
+                        break
                 # endfor
                 return False
 
             isProved = checkCorrect()
             strout = f"Total verification running time: {time.strftime('%H:%M:%S', time.gmtime(end-start))}\n"  + \
-                    f"Result: {'Proved' if isProved else 'Timeout/Counter Example/Error'}\n" + \
+                    f"Result: {'Proved' if isProved else 'Timeout/Counterexample/Error'}\n" + \
+                    f"Path: {p4program}\n" +    \
                     strout
             with open(logFile, "w") as f:
                 f.write(strout)
@@ -88,4 +92,8 @@ if __name__ == "__main__":
     # test all
     # main()
     # test some dir
-    testDir("NdN")
+    # testDir("NdN")
+    testDir("P4xos")
+    # testDir("P4sp")
+    # testDir("CoDel")
+    # testDir("P4NIS")
